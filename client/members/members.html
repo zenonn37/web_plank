@@ -1,5 +1,18 @@
 <template name="Members">
-    <h1>Members</h1>
+  <div class="row">
+       <div class="col s12 m6 l6">
+<i class=" top-margin large material-icons">account_circle</i>
+
+       </div>
+       <div class="col s12 m6 l6">
+           <a class=" top-margin right btn-floating btn-large waves-effect waves-light red" id="open-form"><i class="material-icons">add</i></a>
+       </div>
+
+
+
+
+  </div>
+
  <div class="row">
 
    {{#each members}}
@@ -30,7 +43,7 @@
 
 
  </div>
-  <a class="modal-trigger waves-effect waves-light btn" id="open-form">Modal</a>
+
 
   {{> memberModel}}
 

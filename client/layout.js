@@ -12,8 +12,15 @@ Template.layout.helpers({
   },
 });
 
-Template.name.events({
-  "click #foo": function(event, template){
+Template.layout.onRendered(function() {
+   $('.open-menu').sideNav({
+     closeOnClick:true
+   });
+});
 
+Template.layout.events({
+  "click .open-menu": function(event, template){
+     //$('#mobile-demo').sideNav('show');
+     console.log('open');
   }
 });

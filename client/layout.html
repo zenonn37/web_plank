@@ -1,5 +1,12 @@
 <template name="layout">
+
+  <header>
+
+
   <nav>
+    <div class="container">
+
+
       <div class="nav-wrapper">
         <a href="#" class="brand-logo">{{brand}}</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
@@ -7,10 +14,46 @@
           <li><a href="{{pathFor 'About'}}">About</a></li>
           <li><a href="{{pathFor 'Members'}}">Members</a></li>
         </ul>
-      </div>
+
+        <div class="side-nav fixed">
+          <div class="nav2">
+            <div class="avatar-header">
+              <img src="http://api.randomuser.me/portraits/women/56.jpg" alt="Avatar" class="circle img-size responsive-img"/>
+              <p>
+              Salley Profile
+              </p>
+
+            </div>
+          </div>
+          <ul>
+          <li><a href="{{pathFor 'Home'}}">Dashboard</a></li>
+          <li><a href="{{pathFor 'Members'}}">Members</a></li>
+          <li><a href="{{pathFor 'Staff'}}">Staff</a></li>
+          <li><a href="{{pathFor 'Companion'}}">Companion</a></li>
+        </ul>
+        </div>
+
+        </div>
+
+
+
+
+
+
+        </div>
     </nav>
+
+
+
+
+
+      </header>
+      <main>
+
+
   <div class="container">
+    <button  data-activates="slide-out" class="open-menu  show-on-large">Open</button>
   {{> yield}}
   </div>
-
+  </main>
 </template>
