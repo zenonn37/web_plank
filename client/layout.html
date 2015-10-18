@@ -1,0 +1,16 @@
+<template name="layout">
+  <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">{{brand}}</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="{{pathFor 'Home'}}">Home</a></li>
+          <li><a href="{{pathFor 'About'}}">About</a></li>
+          <li><a href="{{pathFor 'Members'}}">Members</a></li>
+        </ul>
+      </div>
+    </nav>
+  <div class="container">
+  {{> yield}}
+  </div>
+
+</template>
