@@ -1,6 +1,14 @@
 /* CSS declarations go here */
 
+/*icon colors*/
 
+.red{
+  color:#F44336;
+}
+
+.page-titles h4{
+  margin-top: 1.6em;
+}
 
 nav {
     color: #fff;
@@ -11,11 +19,34 @@ nav {
 }
 
 .nav2{
-    background-color: #00897B;
+    background-color: #fff;
     width: 100%;
     height: 120px;
     line-height: 56px;
+    color: #262626;
 }
+
+.utility-icons{
+  color: #00ACC1;
+}
+
+.utility-icons-red{
+  color: #F44336;
+}
+
+.utility-icons-green{
+  color: #4CAF50;
+}
+
+.utility-icons-yellow{
+  color: #FFEB3B;
+}
+
+.utility-icons-bgrey{
+  color: #607D8B;
+}
+
+
 
 header, main, footer {
     padding-left: 100px;
@@ -28,7 +59,7 @@ header, main, footer {
   }
 
   .avatar-header{
-  
+
     padding-top: 1.0em;
       text-align: center;
 
