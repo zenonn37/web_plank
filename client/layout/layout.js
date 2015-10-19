@@ -13,14 +13,16 @@ Template.layout.helpers({
 });
 
 Template.layout.onRendered(function() {
-   $('.open-menu').sideNav({
+   this.$(".button-collapse").sideNav({
+     menuWidth:240,
+     edge:'left',
      closeOnClick:true
    });
 });
 
 Template.layout.events({
   "click .open-menu": function(event, template){
-     //$('#mobile-demo').sideNav('show');
+
      console.log('open');
   }
 });
