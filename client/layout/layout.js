@@ -32,6 +32,13 @@ Meteor.setTimeout(function() {
       edge: 'left', // Choose the horizontal origin
   });
 
+  this.$('.button-collapse2').sideNav({
+    menuWidth: 400,
+    activationWidth: 70,
+    closeOnClick: true,
+      edge: 'right', // Choose the horizontal origin
+  });
+
 }.bind(this), 200);
 };
 
