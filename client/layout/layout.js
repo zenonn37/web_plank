@@ -4,8 +4,10 @@ Template.layout.helpers({
      var brand = "Saratoga Yoga";
      return brand;
   },
-  rendered: function(){
-
+  current: function(){
+    var routeName = Router.current().route.getName();
+    console.log(routeName);
+    return routeName;
   },
   destroyed: function(){
 

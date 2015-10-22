@@ -4,13 +4,13 @@ Template.Members.helpers({
   members:function() {
     var list = Members.find();
    return list;
-  }
+ },
 
 });
 
-Template.Members.onRendered = function(){
 
-}
+
+
 
 Template.Members.events({
   "click #open-form": function(event, template){
@@ -23,11 +23,26 @@ Template.Members.events({
 
     var obj = {
       first: event.target.first.value,
+      age:  event.target.age.value,
+      gender: $('#new-member').find(':selected').data('gen'),
       last:  event.target.last.value,
-      email: event.target.email.value
+      email: event.target.email.value,
+      phone: event.target.phone.value,
+      street: event.target.street.value,
+      city: event.target.city.value,
+      state: $('#member-state').find(':selected').data('state'),
+      zip: event.target.zip.value,
+      photo: event.target.photo.value
     }
 
-    Members.insert(obj);
+    //Members.insert(obj);
+
+    Meteor.call("newMembers", obj, function(error){
+      if(error){
+        console.log("error", error);
+      }
+
+    });
 
     event.target.first.value = "";
     event.target.last.value = "";
