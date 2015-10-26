@@ -11,7 +11,7 @@
           <li><a href="{{pathFor 'Edu'}}"><i class="utility-icons-dark fa fa-graduation-cap"></i></a></li>
           <li><a href="{{pathFor 'Help'}}"><i class="utility-icons-dark fa fa-question-circle"></i></a></li>
             <li><a href="{{pathFor 'Message'}}"><i class="utility-icons-dark material-icons">email</i></a></li>
-          <li> <a href="#" data-activates="slide-out2" class="button-collapse2 show-on-large"><i class=" utility-icons-dark ion-grid"></i></a>
+          <li><a href="#"><i id="logout" class="utility-icons-dark material-icons">power_settings_new</i></a>
 
 
         </li>
@@ -20,11 +20,12 @@
         <div class="side-nav" id="slide-out">
           <div class="nav2">
             <div class="avatar-header">
+              {{#if  currentUser}}
               <img src="http://api.randomuser.me/portraits/women/42.jpg" alt="Avatar" class="circle img-size responsive-img"/>
               <p>
-              Jen Smith
+              {{currentUser.profile.firstname}} {{currentUser.profile.lastname}}
               </p>
-
+               {{/if}}
             </div>
           </div>
 

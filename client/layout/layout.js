@@ -1,5 +1,5 @@
 
-Template.layout.helpers({
+Template.plankNav.helpers({
   brand: function(){
      var brand = "Saratoga Yoga";
      return brand;
@@ -49,5 +49,16 @@ Template.layout.events({
   "click .open-menu": function(event, template){
 
      console.log('open');
+  }
+});
+
+
+
+
+Template.plankNav.events({
+  "click #logout": function(e){
+     e.preventDefault();
+    AccountsTemplates.logout();
+    Router.go('signin');
   }
 });
