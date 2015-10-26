@@ -1,4 +1,4 @@
-
+  Meteor.subscribe("members");
 Template.Members.helpers({
 
   members:function() {
