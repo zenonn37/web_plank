@@ -1,4 +1,83 @@
 <template name="memberPage">
-  {{>memberItem}}
+
+<div class="over-power-global-m">
+
+
+  <div class="row">
+        <div class="col s12 m12 l12">
+          <div class="card-panel white covers cards">
+            <ul class="collection">
+    <li class="collection-item avatar">
+      <img src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg" class="circle">
+      <span class="title">{{first}} {{last}}</span>
+      <p>
+        More Info
+      </p>
+
+
+
+
+    </li>
+  </ul>
+          </div>
+        </div>
+      </div>
+
+</div>
+
+
+<div class="row">
+ <div class="col s12 m12 l12">
+
+
+        <div class="card-panel white covers cards">
+          <div class="row">
+
+
+          <div class="col s12 m6 l6 center-align">
+              <canvas id="guageChart" width="400" height="300"></canvas>
+          </div>
+
+          <div class="col s12 m6 l6 center-align">
+
+                <canvas id="guageChart2" width="300" height="300"></canvas>
+
+          </div>
+  </div>
+
+
+        </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+     <div class="col s12 m12 l12">
+
+
+            <div class="card-panel white covers cards">
+              <div class="row">
+
+
+              <div class="col s12 m6 l6 center-align">
+                 <input data-angleOffset="90" data-linecap="round" type="text" class="dial" data-min="-50" data-max="50">
+              </div>
+
+              <div class="col s12 m6 l6 center-align">
+               <input data-fgColor="#66CC66" data-angleOffset="-125" data-angleArc="250" type="text" class="arc" data-min="-50" data-max="50">
+                 <div class="desp">
+                   Your Current Weight Loss
+                 </div>
+              </div>
+      </div>
+
+
+            </div>
+            </div>
+
+        </div>
+
+
+
 
 </template>

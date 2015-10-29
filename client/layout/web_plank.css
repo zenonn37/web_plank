@@ -1,5 +1,53 @@
 /* CSS declarations go here */
 
+.over-power-global-m .collection {
+  margin: 0.5rem 0 1rem 0;
+  border: none;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.over-power-global-m .collection .collection-item {
+  background-color: #fff;
+  line-height: 1.5rem;
+  padding: 10px 20px;
+  margin: 0;
+
+}
+
+.over-power-global-m .collection .collection-item.avatar {
+  min-height: 86px;
+  padding-left: 100px;
+  position: relative;
+}
+
+.over-power-global-m .collection .collection-item.avatar .circle {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  overflow: hidden;
+  left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.over-power-global-m .collection .collection-item.avatar i.circle {
+  font-size: 18px;
+  line-height: 42px;
+  color: #fff;
+  background-color: #999;
+  text-align: center;
+}
+.over-power-global-m{
+  margin-top: -150px;
+
+}
+
+
+.covers{
+  z-index: 2000;
+}
 /*icon colors*/
 
 .auth .container{
