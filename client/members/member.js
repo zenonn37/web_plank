@@ -1,3 +1,42 @@
+Template.editMember.rendered = function() {
+    $('.select-gender').material_select();
+    $('.select-state').material_select();
+}
+
+
+Template.editMember.helpers({
+  create: function(){
+
+  },
+  rendered: function(){
+
+  },
+  destroyed: function(){
+
+  },
+});
+
+Template.editMember.events({
+  "submit .edit-members": function(event){
+     event.preventDefault();
+
+     var obj = {
+       first: event.target.first.value,
+       age:  event.target.age.value,
+       gender: $('.select-gender').find(':selected').data('gen'),
+       last:  event.target.last.value,
+       email: event.target.email.value,
+       phone: event.target.phone.value,
+       street: event.target.street.value,
+       city: event.target.city.value,
+       state: $('.select-state').find(':selected').data('state'),
+       zip: event.target.zip.value,
+       photo: event.target.photo.value
+     }
+
+     console.log(obj.first);
+  }
+});
 
 
 Template.memberPage.helpers({

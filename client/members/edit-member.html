@@ -1,0 +1,116 @@
+<template name="editMember">
+  <div class="row">
+   <form class="col s12 edit-members">
+     <div class="row">
+       <div class="input-field col s6">
+         <i class="material-icons prefix">account_circle</i>
+         <input  id="first_name" name="first" type="text" value={{first}} class="validate">
+         <label class="active" for="first_name">First Name</label>
+       </div>
+       <div class="input-field col s6">
+         <i class="material-icons prefix">account_circle</i>
+         <input id="last_name" type="text" name="last" class="validate" value={{last}}>
+         <label class="active" for="last_name">Last Name</label>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="input-field col s6">
+         <i class="material-icons prefix">account_circle</i>
+         <input id="age" name="age" type="text" class="validate" value={{age}}>
+         <label class="active" for="email">Age</label>
+       </div>
+
+       <div class="input-field col s6">
+
+
+      <select class="select-gender">
+        <option value="{{gender}}" disabled selected>{{gender}}</option>
+        <option data-gen="women">Female</option>
+        <option data-gen="men">Male</option>
+
+      </select>
+    <label>Gender</label>
+    </div>
+
+     </div>
+
+
+
+     <div class="row">
+       <div class="input-field col s6">
+         <i class="material-icons prefix">account_circle</i>
+         <input id="email" name="email" type="email" class="validate" value={{email}}>
+         <label class="active" for="email">Email</label>
+       </div>
+
+       <div class="input-field col s6">
+         <i class="material-icons prefix">account_circle</i>
+         <input id="phone" name="phone" type="tel" class="validate" value={{phone}}>
+         <label class="active" for="phone">Phone</label>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="input-field col s6">
+         <i class="material-icons prefix">account_circle</i>
+         <input id="street" name="street" type="text" class="validate" value={{street}}>
+         <label class="active" for="street">Street</label>
+       </div>
+
+       <div class="input-field col s6">
+         <i class="material-icons prefix">account_circle</i>
+         <input id="city" name="city" type="text" class="validate" value={{city}}>
+         <label class="active" for="city">City</label>
+       </div>
+     </div>
+
+     <div class="row">
+       <div class="input-field col s6">
+
+      <select class="select-state" id="member-state">
+        <option value="{{state}}" disabled selected>{{state}}</option>
+        <option data-state="Arizona">Arizona</option>
+        <option data-state="Alabama">Alabama</option>
+        <option data-state="New York">New York</option>
+        <option data-state="Vermont">Vermont</option>
+
+      </select>
+      <label>State</label>
+    </div>
+
+
+    <div class="input-field col s6">
+      <i class="material-icons prefix">account_circle</i>
+      <input id="zip" name="zip" type="text" class="validate" value={{zip}}>
+      <label class="active" for="zip">Zip Code</label>
+    </div>
+
+     </div>
+
+      <div class="row">
+
+
+          <div class="input-field col s12">
+            <i class="material-icons prefix">account_circle</i>
+            <input id="photo" name="photo" type="text" class="validate" value={{photo}}>
+            <label class="active" for="photo">Photo</label>
+          </div>
+
+
+
+
+      </div>
+
+
+     <div class="row">
+       <div class="input-field col s12">
+         <button class="btn waves-effect waves-light" type="submit" name="action">Edit
+   <i class="material-icons right">send</i>
+ </button>
+
+       </div>
+     </div>
+   </form>
+ </div>
+</template>
