@@ -1,5 +1,23 @@
 
 
+Template.memberPage.helpers({
+  create: function(){
+
+  },
+  rendered: function(){
+
+  },
+  destroyed: function(){
+
+  },
+});
+
+Template.memberPage.events({
+  "click btn": function(event, template){
+      $('.fixed-action-btn').openFAB();
+  }
+});
+
 
 
 var data = [
@@ -119,10 +137,12 @@ Template.memberPage.rendered = function() {
   var guageChart2 = new Chart(ctx2).Pie(data,options);
 
   $(".dial").knob({
-    'stepsize': 0.1
+    'stepsize': 0.1,
+    val:45
   });
 
   $(".arc").knob({
-    'stepsize': 0.1
+    'stepsize': 0.1,
+      val:20
   });
 }
