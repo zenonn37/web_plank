@@ -1,5 +1,11 @@
 /* CSS declarations go here */
+/*bert*/
 
+
+.bert-alert.now-playing{
+  background: purple;
+  color: #fff;
+}
 
 /* single views*/
 .over-power-global-m .collection {

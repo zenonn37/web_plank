@@ -40,7 +40,12 @@ Template.Members.events({
     Meteor.call("newMembers", obj, function(error){
       if(error){
         console.log("error", error);
+      }else {
+        Bert.alert( 'New Memeber Created', 'danger', 'growl-top-right', 'fa-bolt' );
+        
       }
+
+
 
     });
 

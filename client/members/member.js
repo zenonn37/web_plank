@@ -51,15 +51,7 @@ Template.editMember.events({
 
 
 Template.memberPage.helpers({
-  create: function(){
 
-  },
-  rendered: function(){
-
-  },
-  destroyed: function(){
-
-  },
 });
 
 Template.memberPage.events({
@@ -79,9 +71,20 @@ Template.memberPage.events({
       }else{
            Router.go('/members');
       }
-    
+
 
     });
+  },
+  'click .note':function(e) {
+    e.preventDefault();
+      Bert.icons['now-playing'] = 'fa-bolt';
+      Bert.alert({
+        title:'Notes',
+        message:'<strong>New Note Created</strong>',
+        type:'now-playing'
+
+      });
+
   }
 });
 
