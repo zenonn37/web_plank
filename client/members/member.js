@@ -20,6 +20,8 @@ Template.editMember.events({
   "submit .edit-members": function(event){
      event.preventDefault();
 
+     var currentId = this._id;
+
      var obj = {
        first: event.target.first.value,
        age:  event.target.age.value,
@@ -31,11 +33,20 @@ Template.editMember.events({
        city: event.target.city.value,
        state: $('.select-state').find(':selected').data('state'),
        zip: event.target.zip.value,
-       photo: event.target.photo.value
+       photo: event.target.photo.value,
+       id:currentId
      }
 
      console.log(obj.first);
-  }
+
+     Meteor.call('editMember', obj, function(error){
+       if(error){
+         console.log("error", error);
+       }
+  });
+
+}
+
 });
 
 
