@@ -53,7 +53,7 @@ Meteor.methods({
         zip:String,
         photo: String,
         state: String,
-        id:String
+        _id:String
       });
 
       var data = {
@@ -78,10 +78,21 @@ Meteor.methods({
         console.log('no user');
         Router.go('signin');
       }else {
-        Members.update(currentId, {$set:data
+        Members.update(data.currentId, {$set:data
         });
 
       }
+
+  },
+  deleteMember:function(obj) {
+     check(obj, String);
+         console.log(obj);
+     Members.remove(obj);
+
+     console.log(obj + "removed");
+
+    
+
 
   }
 });

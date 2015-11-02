@@ -34,7 +34,7 @@ Template.editMember.events({
        state: $('.select-state').find(':selected').data('state'),
        zip: event.target.zip.value,
        photo: event.target.photo.value,
-       id:currentId
+       _id:currentId
      }
 
      console.log(obj.first);
@@ -65,6 +65,23 @@ Template.memberPage.helpers({
 Template.memberPage.events({
   "click btn": function(event, template){
       $('.fixed-action-btn').openFAB();
+  },
+  "click #edit-members":function(e) {
+    e.preventDefault();
+    $('#edit-member-form').openModal();
+  },
+  "click .delete":function(e) {
+     var currentId = this._id;
+    e.preventDefault();
+    Meteor.call("deleteMember", currentId, function(error){
+      if(error){
+        console.log("error", error);
+      }else{
+           Router.go('/members');
+      }
+    
+
+    });
   }
 });
 
