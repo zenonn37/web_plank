@@ -1,5 +1,7 @@
 /* CSS declarations go here */
 
+
+/* single views*/
 .over-power-global-m .collection {
   margin: 0.5rem 0 1rem 0;
   border: none;
@@ -48,6 +50,59 @@
 .covers{
   z-index: 2000;
 }
+
+/* single views*/
+.over-power-global-s .collection {
+  margin: 0.5rem 0 1rem 0;
+  border: none;
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.over-power-global-s .collection .collection-item {
+  background-color: #fff;
+  line-height: 1.5rem;
+  padding: 10px 20px;
+  margin: 0;
+
+}
+
+.over-power-global-s .collection .collection-item.avatar {
+  min-height: 66px;
+  padding-left: 80px;
+  position: relative;
+}
+
+.over-power-global-s .collection .collection-item.avatar .circle {
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  overflow: hidden;
+  left: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.over-power-global-s .collection .collection-item.avatar i.circle {
+  font-size: 20px;
+  line-height: 45px;
+  color: #fff;
+  background-color: #999;
+  text-align: center;
+}
+.over-power-global-s{
+  margin-top: -150px;
+
+}
+
+.over-power-global-s .row{
+  margin-bottom: 2px;
+}
+
+
+
+
 /*icon colors*/
 
 .auth .container{

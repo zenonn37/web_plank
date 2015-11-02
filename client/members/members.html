@@ -1,4 +1,81 @@
 <template name="Members">
+
+ <div class="over-power-global-s">
+    <div class="fixed-action-btn" style="bottom:125px; right:22px;">
+      <a class="btn-floating btn-large blue waves-effect waves-light" id="open-form">
+          <i class="material-icons">add</i>
+      </a>
+    </div>
+
+
+<div class="row">
+
+  <div class="col s12 m12 l12">
+     <div class="card-panel white covers cards">
+
+          {{#each members}}
+        <div class="row">
+
+
+     <div class="col s12 m4 l4">
+
+
+       <ul class="collection">
+
+
+
+          <li class="collection-item avatar">
+            <img src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg" class="circle">
+            <span class="title">{{first}} {{last}}</span>
+            <p style="color:green">
+              Status: Active
+            </p>
+
+
+          </li>
+       </ul>
+
+        </div>
+
+
+        <div class="col s12 m4 l4">
+            <ul class="collection">
+              <li class="collection-item avatar">
+                <i class="material-icons circle green">call</i>
+                <span class="title">Contact</span>
+                <p>
+                   {{phone}}<br/>
+
+                     {{email}}
+                </p>
+              </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="col s12 m4 l4 center-align">
+            <ul class="collection">
+              <li class="collection-item">
+                  <p><a href="{{pathFor 'memberPage'}}" class="waves-effect waves-light btn white-text green">Profile</a></p>
+
+              </li>
+
+            </ul>
+
+        </div>
+
+     </div>
+
+   {{/each}}
+       </div>
+  </div>
+
+</div>
+
+</div>
+  <!-- old
   <div class="row">
        <div class="col s12 m6 l6">
 
@@ -13,36 +90,42 @@
 
   </div>
 
- <div class="row">
-
-   {{#each members}}
-
-   <div class="col s12 m4 l4">
 
 
+  <div class="row">
+
+    {{#each members}}
+
+    <div class="col s12 m4 l4">
 
 
 
-  <div class="card large">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">{{first}} {{last}}<i class="material-icons right">more_vert</i></span>
-      <p><a href="{{pathFor 'memberPage'}}" class="waves-effect waves-light btn">Profile</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Basic Information<i class="material-icons right">close</i></span>
-    {{> memberReveal}}
-    </div>
-  </div>
 
+
+   <div class="card large">
+     <div class="card-image waves-effect waves-block waves-light">
+       <img class="activator" src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg">
+     </div>
+     <div class="card-content">
+       <span class="card-title activator grey-text text-darken-4">{{first}} {{last}}<i class="material-icons right">more_vert</i></span>
+       <p><a href="{{pathFor 'memberPage'}}" class="waves-effect waves-light btn">Profile</a></p>
+     </div>
+     <div class="card-reveal">
+       <span class="card-title grey-text text-darken-4">Basic Information<i class="material-icons right">close</i></span>
+     {{> memberReveal}}
+     </div>
    </div>
 
-   {{/each}}
+    </div>
+
+    {{/each}}
 
 
- </div>
+  </div>
+
+  -->
+
+
 
 
   {{> memberModel}}
