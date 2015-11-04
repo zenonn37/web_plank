@@ -1,10 +1,25 @@
-  Meteor.subscribe("members");
+
+Session.setDefault("Status", "Active");
+
+ Meteor.subscribe("members");
+
+
 Template.Members.helpers({
 
   members:function() {
-    var list = Members.find();
+    var list = Members.find(
+      {
+        status:Session.get('Status')
+      },{sort:{a:1}});
    return list;
  },
+ checkStatus:function(status) {
+    if (status === "Active") {
+       return 'green';
+    }else{
+      return 'red';
+    }
+ }
 
 });
 
@@ -42,7 +57,7 @@ Template.Members.events({
         console.log("error", error);
       }else {
         Bert.alert( 'New Memeber Created', 'danger', 'growl-top-right', 'fa-bolt' );
-        
+
       }
 
 
@@ -57,6 +72,16 @@ Template.Members.events({
 
 
         console.log(obj.first + obj.last + obj.email);
+  },
+  'click .toggle-status':function(e) {
+    e.preventDefault();
+      Session.set("Status", 'Active');
+
+  },
+  'click .toggle-stat':function(e) {
+    e.preventDefault();
+      Session.set("Status", 'suspend');
+
   }
 
 });

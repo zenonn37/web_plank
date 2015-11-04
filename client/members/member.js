@@ -85,6 +85,22 @@ Template.memberPage.events({
 
       });
 
+  },
+  'click .suspend':function(e) {
+    e.preventDefault();
+    var currentId = this._id;
+    var obj ={
+      suspend:"suspend",
+      currentId:currentId
+    };
+    Meteor.call("suspendMember", obj, function(error){
+      if(error){
+        console.log("error", error);
+      }else {
+        Bert.alert('Memeber Suspended', 'danger', 'growl-top-right', 'fa-bolt');
+      }
+
+    });
   }
 });
 

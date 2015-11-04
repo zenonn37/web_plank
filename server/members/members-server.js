@@ -32,7 +32,8 @@ Meteor.methods({
 
    _.extend(data,{
      userId:user._id,
-     createdAt: new Date().getTime()
+     createdAt: new Date().getTime(),
+     status:"Active"
    })
     Members.insert(data);
 
@@ -91,7 +92,23 @@ Meteor.methods({
 
      console.log(obj + "removed");
 
-    
+
+
+
+  },
+  suspendMember:function(obj) {
+    check(obj,{
+      suspend:String,
+      currentId:String
+    });
+    if (!Meteor.user()) {
+      console.log('not logged');
+    }else {
+      Members.update(obj.currentId, {$set:{
+         status:obj.suspend
+      }});
+    }
+
 
 
   }

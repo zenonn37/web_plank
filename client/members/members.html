@@ -1,6 +1,18 @@
 <template name="Members">
 
  <div class="over-power-global-s">
+
+   <div class="fixed-action-btn" style="top:50px; right:300px;">
+     <a class="btn-floating btn-medium green waves-effect waves-light toggle-status">
+         <i class="material-icons">thumb_up</i>
+     </a>
+   </div>
+
+   <div class="fixed-action-btn" style="top:50px; right:240px;">
+     <a class="btn-floating btn-medium red waves-effect waves-light toggle-stat">
+         <i class="material-icons">thumb_down</i>
+     </a>
+   </div>
     <div class="fixed-action-btn" style="bottom:125px; right:22px;">
       <a class="btn-floating btn-large blue waves-effect waves-light" id="open-form">
           <i class="material-icons">add</i>
@@ -27,8 +39,9 @@
           <li class="collection-item avatar">
             <img src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg" class="circle">
             <span class="title">{{first}} {{last}}</span>
-            <p style="color:green">
-              Status: Active
+
+            <p style="color:{{checkStatus status}}">
+              Status: {{status}}
             </p>
 
 
