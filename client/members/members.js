@@ -1,5 +1,12 @@
 
 Session.setDefault("Status", "Active");
+Session.setDefault("Order", -1);
+//reactive var
+Template.Members.created = function(){
+   this.order = new ReactiveVar(false);
+   this.active = new ReactiveVar(true);
+   //console.log(this.order.get());
+};
 
  Meteor.subscribe("members");
 
@@ -10,7 +17,7 @@ Template.Members.helpers({
     var list = Members.find(
       {
         status:Session.get('Status')
-      },{sort:{a:1}});
+      },{sort:{createdAt: Session.get('Order')}});
    return list;
  },
  checkStatus:function(status) {
@@ -19,6 +26,12 @@ Template.Members.helpers({
     }else{
       return 'red';
     }
+ },
+ orders:function() {
+   return Template.instance().order.get();
+ },
+ active:function() {
+   return Template.instance().active.get();
  }
 
 });
@@ -73,15 +86,33 @@ Template.Members.events({
 
         console.log(obj.first + obj.last + obj.email);
   },
-  'click .toggle-status':function(e) {
+  'click .toggle-status':function(e,template) {
     e.preventDefault();
+    template.active.set(!template.active.get());
+      Session.set("Status", 'suspend');
+
+  },
+  'click .toggle-stat':function(e,template) {
+    e.preventDefault();
+    template.active.set(!template.active.get());
       Session.set("Status", 'Active');
 
   },
-  'click .toggle-stat':function(e) {
+  'click .toggle-order':function(e,template) {
     e.preventDefault();
-      Session.set("Status", 'suspend');
+     template.order.set(!template.order.get());
+
+      Session.set("Order", -1);
+
+  },
+  'click .toggle-back':function(e,template) {
+    e.preventDefault();
+     template.order.set(!template.order.get());
+
+      Session.set("Order", 1);
 
   }
+
+
 
 });

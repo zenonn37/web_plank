@@ -1,18 +1,36 @@
 <template name="Members">
 
  <div class="over-power-global-s">
+   {{#if orders}}
+   <div class="fixed-action-btn" style="top:50px; left:150px;">
 
+     <a class="btn-floating btn-medium green waves-effect waves-light toggle-order">
+         <i class="material-icons">today</i>
+     </a>
+   </div>
+   {{else}}
+   <div class="fixed-action-btn" style="top:50px; left:150px;">
+
+     <a class="btn-floating btn-medium red waves-effect waves-light toggle-back">
+         <i class="material-icons">today</i>
+     </a>
+   </div>
+   {{/if}}
+
+{{#if active}}
    <div class="fixed-action-btn" style="top:50px; right:300px;">
      <a class="btn-floating btn-medium green waves-effect waves-light toggle-status">
-         <i class="material-icons">thumb_up</i>
+         <i class="material-icons">check_circle</i>
      </a>
    </div>
-
-   <div class="fixed-action-btn" style="top:50px; right:240px;">
+{{else}}
+   <div class="fixed-action-btn" style="top:50px; right:300px;">
      <a class="btn-floating btn-medium red waves-effect waves-light toggle-stat">
-         <i class="material-icons">thumb_down</i>
+         <i class="material-icons">info</i>
      </a>
+
    </div>
+    {{/if}}
     <div class="fixed-action-btn" style="bottom:125px; right:22px;">
       <a class="btn-floating btn-large blue waves-effect waves-light" id="open-form">
           <i class="material-icons">add</i>
