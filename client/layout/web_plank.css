@@ -1,4 +1,26 @@
 /* CSS declarations go here */
+
+.back{
+  font-size: 15px;
+}
+
+.filter-parent{
+  position: relative;
+  width: 100%;
+  height:auto;
+}
+
+.filter-buttons{
+  padding-top: 15px;
+  margin-bottom: 0;
+  z-index: 998;
+}
+
+.filter-parent .filter_sort{
+  position: absolute;
+  top:-50px;
+
+}
 /*bert*/
 
 

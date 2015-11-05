@@ -14,6 +14,13 @@ Template.plankNav.helpers({
   },
 });
 
+Template.plankNav.events({
+  "click .back": function(e, template){
+     e.preventDefault();
+     window.history.back();
+  }
+});
+
 Template.layout.rendered = function() {
 Meteor.setTimeout(function() {
 

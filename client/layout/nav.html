@@ -6,7 +6,9 @@
 
 
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">{{current}}</a>
+
+        <a href="#" class="brand-logo">  {{current}}  <span class="back fa fa-arrow-left fa-lg">back</span>  </a>
+
         <ul id="nav-mobile" class="right hide-on-med-and-down right-nav-padding">
           <li><a href="{{pathFor 'Edu'}}"><i class="utility-icons-dark fa fa-graduation-cap"></i></a></li>
           <li><a href="{{pathFor 'Help'}}"><i class="utility-icons-dark fa fa-question-circle"></i></a></li>
@@ -21,7 +23,7 @@
           <div class="nav2">
             <div class="avatar-header">
               {{#if  currentUser}}
-              <img src="http://api.randomuser.me/portraits/women/42.jpg" alt="Avatar" class="circle img-size responsive-img"/>
+              <img src="http://api.randomuser.me/portraits/men/42.jpg" alt="Avatar" class="circle img-size responsive-img"/>
               <p>
               {{currentUser.profile.firstname}} {{currentUser.profile.lastname}}
               </p>
@@ -35,7 +37,7 @@
           <li><a href="{{pathFor 'Members'}}">Members<i class="utility-icons-green material-icons left">perm_identity</i></a></li>
           <li><a href="{{pathFor 'Staff'}}">Staff<i class="utility-icons material-icons left">supervisor_account</i></a></li>
           <li><a href="{{pathFor 'Companion'}}">Companion<i class="utility-icons-bgrey material-icons left">phonelink_setup</i></a></li>
-          <hr style="background-color:#efefef;"/>
+            <li><a href="{{pathFor 'Coach'}}">Coach<i class="utility-icons-bgrey material-icons left">phonelink_setup</i></a></li>
           <li><a href="{{pathFor 'Services'}}">Services<i class="utility-icons material-icons left">work</i></a></li>
           <li><a href="{{pathFor 'Schedule'}}">Schedule<i class="utility-icons material-icons left">perm_contact_calendar</i></a></li>
             <li><a href="{{pathFor 'Challenges'}}">Challenges<i class="utility-icons fa fa-trophy left"></i></a></li>

@@ -1,48 +1,52 @@
 <template name="Members">
 
- <div class="over-power-global-s">
-   {{#if orders}}
-   <div class="fixed-action-btn" style="top:50px; left:150px;">
 
-     <a class="btn-floating btn-medium green waves-effect waves-light toggle-order">
-         <i class="material-icons">today</i>
-     </a>
-   </div>
-   {{else}}
-   <div class="fixed-action-btn" style="top:50px; left:150px;">
 
-     <a class="btn-floating btn-medium red waves-effect waves-light toggle-back">
-         <i class="material-icons">today</i>
-     </a>
-   </div>
-   {{/if}}
-
-{{#if active}}
-   <div class="fixed-action-btn" style="top:50px; right:300px;">
-     <a class="btn-floating btn-medium green waves-effect waves-light toggle-status">
-         <i class="material-icons">check_circle</i>
-     </a>
-   </div>
-{{else}}
-   <div class="fixed-action-btn" style="top:50px; right:300px;">
-     <a class="btn-floating btn-medium red waves-effect waves-light toggle-stat">
-         <i class="material-icons">info</i>
-     </a>
-
-   </div>
-    {{/if}}
     <div class="fixed-action-btn" style="bottom:125px; right:22px;">
       <a class="btn-floating btn-large blue waves-effect waves-light" id="open-form">
           <i class="material-icons">add</i>
       </a>
     </div>
 
-
+ <div class="over-power-global-s">
 <div class="row">
 
   <div class="col s12 m12 l12">
      <div class="card-panel white covers cards">
+        <div class="filter-parent">
 
+
+       {{#if orders}}
+       <div class="filter-buttons filter_sort" style="top:-50px; left:50px;">
+
+         <a class="btn-floating btn-medium green waves-effect waves-light toggle-order">
+             <i class="material-icons">today</i>
+         </a>
+       </div>
+       {{else}}
+       <div class="filter-buttons filter_sort" style="top:-50px; left:50px;">
+
+         <a class="btn-floating btn-medium red waves-effect waves-light toggle-back">
+             <i class="material-icons">today</i>
+         </a>
+       </div>
+       {{/if}}
+
+    {{#if active}}
+       <div class="filter-buttons filter_sort" style="right:100px;">
+         <a class="btn-floating btn-medium green waves-effect waves-light toggle-status">
+             <i class="material-icons">check_circle</i>
+         </a>
+       </div>
+    {{else}}
+       <div class="filter-buttons filter_sort" style="right:100px;">
+         <a class="btn-floating btn-medium red waves-effect waves-light toggle-stat">
+             <i class="material-icons">info</i>
+         </a>
+
+       </div>
+        {{/if}}
+    </div>
           {{#each members}}
         <div class="row">
 
@@ -59,7 +63,7 @@
             <span class="title">{{first}} {{last}}</span>
 
             <p style="color:{{checkStatus status}}">
-              Status: {{status}}
+              Joined: {{time createdAt}}
             </p>
 
 

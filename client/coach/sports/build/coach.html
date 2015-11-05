@@ -1,0 +1,85 @@
+<template name="Coach">
+
+  <div class="fixed-action-btn" style="bottom:125px; right:22px;">
+    <a class="btn-floating btn-large blue waves-effect waves-light open-form">
+        <i class="material-icons">add</i>
+    </a>
+  </div>
+
+
+  <div class="over-power-global-s">
+     <div class="row">
+
+       <div class="col12 m12 l12">
+            <div class="card-panel white covers cards">
+               {{#if teams}}
+                 {{#each teams}}
+                 <div class="row">
+
+
+              <div class="col s12 m4 l4">
+
+
+                <ul class="collection">
+
+
+
+                   <li class="collection-item avatar">
+                       <i class="material-icons circle green">call</i>
+                     <span class="title">{{team}}</span>
+
+                     <p style="color:green">
+                       Team Built: {{time createdAt}}
+                     </p>
+
+
+                   </li>
+                </ul>
+
+                 </div>
+
+
+                 <div class="col s12 m4 l4">
+                     <ul class="collection">
+                       <li class="collection-item avatar">
+                         <i class="material-icons circle green">call</i>
+                         <span class="title">Contact</span>
+                         <p>
+                            {{phone}}<br/>
+
+                              {{email}}
+                         </p>
+                       </li>
+
+                     </ul>
+
+                 </div>
+
+
+                 <div class="col s12 m4 l4 center-align">
+                     <ul class="collection">
+                       <li class="collection-item">
+                           <p><a href="{{pathFor 'memberPage'}}" class="waves-effect waves-light btn white-text green">Profile</a></p>
+
+                       </li>
+
+                     </ul>
+
+                 </div>
+
+              </div>
+
+
+                 {{/each}}
+               {{else}}
+               Build Your Team!
+               {{/if}}
+
+            </div>
+
+       </div>
+
+     </div>
+  </div>
+{{> teamModel}}
+</template>

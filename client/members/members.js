@@ -32,6 +32,9 @@ Template.Members.helpers({
  },
  active:function() {
    return Template.instance().active.get();
+ },
+ time:function() {
+   return moment().format("MM-DD-YYYY");
  }
 
 });

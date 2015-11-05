@@ -32,7 +32,7 @@ Meteor.methods({
 
    _.extend(data,{
      userId:user._id,
-     createdAt: new Date().getTime(),
+     createdAt: new Date(),
      status:"Active"
    })
     Members.insert(data);
