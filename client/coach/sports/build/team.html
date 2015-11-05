@@ -1,0 +1,148 @@
+<template name="Team">
+
+
+
+  <div class="over-power-global-m">
+  <div class="fixed-action-btn" style="bottom: 125px; right: 22px;">
+    <a class="btn-floating btn-large red">
+        <i class="material-icons">mode_edit</i>
+    </a>
+    <ul>
+
+        <li><a class="btn-floating suspend red"><i class="material-icons">highlight_off</i></a></li>
+        <li><a class="btn-floating note green"><i class="material-icons">note_add</i></a></li>
+        <li><a class="btn-floating blue"><i class="material-icons">chat</i></a></li>
+        <li><a  class="btn-floating blue"><i class="material-icons">email</i></a></li>
+          <li><a id="edit-team" class="btn-floating green"><i class="material-icons">border_color</i></a></li>
+      </ul>
+  </div>
+
+
+
+    <div class="row">
+          <div class="col s12 m12 l12">
+            <div class="card-panel white covers cards">
+            <div class="row">
+
+              <div class="col s12 m4 l4">
+
+
+
+              <ul class="collection">
+      <li class="collection-item avatar">
+       <i class="material-icons circle green">stars</i>
+        <span class=" main-title">{{team}}</span>
+
+
+
+      </li>
+    </ul>
+      </div>
+
+
+      <div class="col s12 m4 l4">
+          <ul class="collection">
+            <li class="collection-item avatar">
+              <i class="material-icons circle green">insert_chart</i>
+              <span class="title">Status: Active</span>
+              <p>
+              Age: {{sport}}<br/>
+              Gender :{{lvl}}
+              </p>
+            </li>
+
+          </ul>
+
+      </div>
+
+      <div class="col s12 m4 l4">
+        <ul class="collection">
+          <li class="collection-item avatar">
+            <i class="material-icons circle blue">room</i>
+            <span class="title">City: {{city}}</span>
+            <p>
+            Street: {{street}}<br/>
+            Zip :{{zip}}
+            </p>
+          </li>
+
+        </ul>
+
+      </div>
+
+
+    </div>
+
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+  </div>
+
+
+  <div class="row">
+   <div class="col s12 m12 l12">
+
+
+          <div class="card-panel white covers cards">
+            <div class="row">
+
+
+            <div class="col s12 m6 l6 center-align">
+                <canvas id="guageChart" width="400" height="300"></canvas>
+            </div>
+
+            <div class="col s12 m6 l6 center-align">
+
+                  <canvas id="guageChart2" width="300" height="300"></canvas>
+
+            </div>
+    </div>
+
+
+          </div>
+          </div>
+
+      </div>
+
+      <div class="row">
+       <div class="col s12 m12 l12">
+
+
+              <div class="card-panel white covers cards">
+                <div class="row">
+
+
+                <div class="col s12 m6 l6 center-align">
+                   <input data-readOnly="true" data-angleOffset="90" data-linecap="round" value="20" type="text" class="dial" data-min="0" data-max="100">
+                </div>
+
+                <div class="col s12 m6 l6 center-align">
+                 <input data-fgColor="#66CC66" data-angleOffset="-125" value="150" data-angleArc="250" type="text"
+                 class="arc" data-min="0" data-max="450">
+                   <div class="desp">
+                     Your Current Weight Loss
+                   </div>
+                </div>
+        </div>
+
+
+              </div>
+              </div>
+
+          </div>
+
+     {{>editMemberModel}}
+
+
+
+
+
+
+
+
+</template>

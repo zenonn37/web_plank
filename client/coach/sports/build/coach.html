@@ -17,7 +17,7 @@
                  <div class="row">
 
 
-              <div class="col s12 m4 l4">
+              <div class="col s12 m3 l3">
 
 
                 <ul class="collection">
@@ -25,7 +25,7 @@
 
 
                    <li class="collection-item avatar">
-                       <i class="material-icons circle green">call</i>
+                       <i class="material-icons circle green">stars</i>
                      <span class="title">{{team}}</span>
 
                      <p style="color:green">
@@ -39,15 +39,32 @@
                  </div>
 
 
-                 <div class="col s12 m4 l4">
+                 <div class="col s12 m3 l3">
                      <ul class="collection">
                        <li class="collection-item avatar">
-                         <i class="material-icons circle green">call</i>
-                         <span class="title">Contact</span>
+                         <i class="material-icons circle green">supervisor_account</i>
+                         <span class="title">Players</span>
                          <p>
-                            {{phone}}<br/>
+                            {{players}}
 
-                              {{email}}
+
+                         </p>
+                       </li>
+
+                     </ul>
+
+                 </div>
+
+                 <div class="col s12 m3 l3">
+                     <ul class="collection">
+                       <li class="collection-item avatar">
+                         <i class="material-icons circle green">label</i>
+                         <span class="title">Sport</span>
+                         <p>
+                            {{sport}}<br/>
+                            {{lvl}}
+
+
                          </p>
                        </li>
 
@@ -56,10 +73,11 @@
                  </div>
 
 
-                 <div class="col s12 m4 l4 center-align">
+
+                 <div class="col s12 m3 l3 center-align">
                      <ul class="collection">
                        <li class="collection-item">
-                           <p><a href="{{pathFor 'memberPage'}}" class="waves-effect waves-light btn white-text green">Profile</a></p>
+                           <p><a href="{{pathFor 'Team'}}" class="waves-effect waves-light btn white-text green">Profile</a></p>
 
                        </li>
 

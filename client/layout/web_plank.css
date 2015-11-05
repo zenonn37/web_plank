@@ -30,6 +30,10 @@
 }
 
 /* single views*/
+
+.main-title {
+    font-size: 42px;
+}
 .over-power-global-m .collection {
   margin: 0.5rem 0 1rem 0;
   border: none;
