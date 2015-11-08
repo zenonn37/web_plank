@@ -30,14 +30,13 @@ random
 check
 chart:chart
 almogdesign:parsley.js
-jameslefrere:autoform-jquery-knob
 crowd:jq-knob
 momentjs:moment
 themeteorchef:bert
 chriswessels:back-behaviour
 reactive-var
-aldeed:autoform
 aldeed:collection2
 poetic:materialize-scss
 fourseven:scss
-gildaspk:autoform-materialize
+gildaspk:autoform-materialize@0.0.25
+aldeed:autoform@5.0.0

@@ -1,4 +1,18 @@
 <template name="Challenges">
   <h4>Challenges</h4>
 
+  <ul>
+    {{#each items}}
+    <li>
+      <a href="{{pathFor "challenge-view"}}">   {{name}} -- {{challenge}}</a>
+
+
+    </li>
+    {{/each}}
+  </ul>
+  <a href="#" class="btn new-challenge"><i class="material-icons">add</i></a>
+
+  {{> challengeModel}}
+
+
 </template>
