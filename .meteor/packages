@@ -20,7 +20,6 @@ insecure                # Allow all DB writes from clients (for prototyping)
 iron:router
 aramk:ionicons
 fortawesome:fontawesome
-materialize:materialize
 meteortoys:allthings
 useraccounts:materialize
 accounts-password
@@ -37,3 +36,8 @@ momentjs:moment
 themeteorchef:bert
 chriswessels:back-behaviour
 reactive-var
+aldeed:autoform
+aldeed:collection2
+poetic:materialize-scss
+fourseven:scss
+gildaspk:autoform-materialize
