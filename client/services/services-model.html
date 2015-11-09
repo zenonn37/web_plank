@@ -1,0 +1,27 @@
+<template name="servicesModel">
+  <!-- Modal Structure -->
+  <div id="services-form" class="modal">
+    <div class="modal-content">
+    {{> quickForm collection="Services" id="newServices" type="method" meteormethod="newService"
+  buttonContent="Go"}}
+    </div>
+    <div class="model-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+</template>
+<template name="editServiceModel">
+  <!-- Modal Structure -->
+  <div id="edit-services-form" class="modal">
+    <div class="modal-content">
+    {{> quickForm doc=this
+      collection="Services" id="editService"
+      type="method-update"
+      meteormethod="editServices"
+      buttonContent="Update"}}
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right ">Close</a>
+    </div>
+  </div>
+</template>
