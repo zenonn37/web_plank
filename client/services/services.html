@@ -1,5 +1,5 @@
 <template name="Services">
-  <h4>Services</h4>
+  <h4 class="animated bounceInLeft">Services</h4>
   <div class="fixed-action-btn" style="bottom:125px; right:22px;">
     <a class="btn-floating btn-large blue waves-effect waves-light open-modal">
         <i class="material-icons">add</i>
@@ -8,7 +8,7 @@
 {{#if Template.subscriptionsReady}}
    {{#each items}}
    <p>
-  <a href="{{pathFor 'service-view'}}">{{name}}</a>   
+  <a href="{{pathFor 'service-view'}}">{{name}}</a>
    </p>
    <p>
      {{genre}}

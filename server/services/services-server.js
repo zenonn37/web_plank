@@ -21,19 +21,38 @@ Meteor.methods({
 
      });
 
-     Services.insert(data,function(error) {
-       if (error) {
-         console.log(error + " errors not good");
-       }else{
-         console.log("good");
-       }
-     });
+     if (!user) {
+       Router.go('/login');
+       console.log('no user');
+     }else{
+       Services.insert(data,function(error) {
+         if (error) {
+           console.log(error + " errors not good");
+         }else{
+           console.log("good");
+         }
+       });
+     }
+
+
 
 
   },
   editServices:function(doc,docId){
-     console.log("called edit services" + doc.name);
-     Services.update({_id:docId},doc);
+    var user = Meteor.user();
+  
+    //check(docId, String);
+
+
+    if (!user) {
+      Router.go('/login');
+      console.log('no user');
+    }else{
+      console.log("called edit services" + doc.name);
+      Services.update({_id:docId},doc);
+    }
+
+
 
     // Challenges.update(docId, {$set:{
   //      doc
