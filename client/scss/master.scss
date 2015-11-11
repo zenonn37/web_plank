@@ -1,0 +1,195 @@
+body{
+  background: #F7F7F7;
+}
+
+nav{
+  background-color: #3E50B4;
+}
+nav .brand-logo{
+  left:120;
+  font-weight: lighter;
+}
+
+nav .brand-logo small{
+  left:120;
+  font-weight: lighter;
+  font-size: 18px;
+  color: gray;
+}
+
+.nav-bar-edge{
+  position: fixed;
+  left: 0;
+  top:0;
+  width: 81px;
+  height: 100%;
+  background: #fff;
+  border-right:1px solid #f0f0f0;
+}
+
+.nav-menu{
+  position: fixed;
+  left: 25;
+  top:0;
+  z-index:4;
+  padding: 20px 0 27px 0;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.nav-menu .menu{
+  color: #3E50B4;
+
+}
+.nav-dash .menu{
+  color: #3E50B4;
+
+}
+.nav-members .menu{
+  color: #3E50B4;
+
+}
+.nav-staff .menu{
+  color: #3E50B4;
+
+}
+.nav-companion .menu{
+  color: #3E50B4;
+
+}
+.menu{
+  color: #3E50B4;
+
+}
+
+
+
+.nav-dash{
+  position: fixed;
+  left: 0;
+  top:60px;
+  z-index:4;
+  padding: 15px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.nav-dash .user{
+  position: relative;
+  display: block;
+}
+.nav-dash .user img{
+  width: 50px;
+  text-align: center;
+}
+.nav-members{
+  position: fixed;
+  left: 0;
+  top:120px;
+  z-index:4;
+  padding: 27px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.nav-staff{
+  position: fixed;
+  left: 0;
+  top:180px;
+  z-index:4;
+  padding: 27px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.nav-companion{
+  position: fixed;
+  left: 0;
+  top:220px;
+  z-index:4;
+  padding: 27px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.nav-coach{
+  position: fixed;
+  left: 0;
+  top:280px;
+  z-index:4;
+  padding: 27px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.nav-services{
+  position: fixed;
+  left: 0;
+  top:340px;
+  z-index:4;
+  padding: 27px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.nav-schedule{
+  position: fixed;
+  left: 0;
+  top:400px;
+  z-index:4;
+  padding: 27px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.nav-challenges{
+  position: fixed;
+  left: 0;
+  top:460px;
+  z-index:4;
+  padding: 27px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.nav-diet{
+  position: fixed;
+  left: 0;
+  top:520px;
+  z-index:4;
+  padding: 27px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.nav-goals{
+  position: fixed;
+  left: 0;
+  top:580px;
+  z-index:4;
+  padding: 27px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.nav-store{
+  position: fixed;
+  left: 0;
+  top:640px;
+  z-index:4;
+  padding: 27px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
+.nav-settings{
+  position: fixed;
+  left: 0;
+  top:700px;
+  z-index:4;
+  padding: 27px;
+  width: 80px;
+  cursor: pointer;
+  font-size: 30px;
+}
