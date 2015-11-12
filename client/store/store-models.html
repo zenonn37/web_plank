@@ -1,0 +1,26 @@
+<template name="challengeModel">
+  <!-- Modal Structure -->
+  <div id="challenge-form" class="modal">
+    <div class="modal-content">
+    {{> quickForm collection="Challenges" id="newChallenges" type="method" meteormethod="newChallenge"}}
+    </div>
+    <div class="model-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+</template>
+<template name="editChallengeModel">
+  <!-- Modal Structure -->
+  <div id="edit-challenge-form" class="modal">
+    <div class="modal-content">
+    {{> quickForm doc=this
+      collection="Challenges" id="editChallenge"
+      type="method-update"
+      meteormethod="editChallenges"
+      buttonContent="Update"}}
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right ">Close</a>
+    </div>
+  </div>
+</template>

@@ -1,0 +1,26 @@
+<template name="dietModel">
+  <!-- Modal Structure -->
+  <div id="diet-form" class="modal">
+    <div class="modal-content">
+    {{> quickForm collection="Diets" id="newDiets" type="method" meteormethod="newDiet" buttonContent="Go"}}
+    </div>
+    <div class="model-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn">Close</a>
+    </div>
+  </div>
+</template>
+<template name="editDietModel">
+  <!-- Modal Structure -->
+  <div id="edit-diet-form" class="modal">
+    <div class="modal-content">
+    {{> quickForm doc=this
+      collection="Diets" id="editDiets"
+      type="method-update"
+      meteormethod="editDiets"
+      buttonContent="Update"}}
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right ">Close</a>
+    </div>
+  </div>
+</template>

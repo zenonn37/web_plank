@@ -1,4 +1,20 @@
 <template name="Diet">
   <h4>Diet</h4>
+  {{#if Template.subscriptionsReady}}
+     {{#each items}}
+     <p>
+    <a href="{{pathFor 'diet-view'}}">{{name}}</a>
+     </p>
+     <p>
+       {{genre}}
+     </p>
+     {{/each}}
 
+     {{else}}
+     Loading...
+  {{/if}}
+
+<a href="#" class="btn open-modal"><i class="material-icons">add</i></a>
+
+{{> dietModel}}
 </template>
