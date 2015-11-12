@@ -76,13 +76,28 @@
 
       </div>
       <div class="col sm12 m4">
-        <div class="cards">
-          <div class="cards-body">
-              <h1>card</h1>
+
+        {{#each items}}
+        <div class="cards tile card-member">
+
+        <img src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg" class="user-photo">
+          <div class="member-content">
+            <p class="title">
+
+               {{allCaps first}} {{last}}
+            </p>
+            <p>
+              Start Date: {{epochToHuman createdAt}}
+            </p>
           </div>
 
-
         </div>
+          {{/each}}
+
+
+
+
+
 
       </div>
 

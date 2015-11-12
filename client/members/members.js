@@ -17,14 +17,13 @@ Template.Members.created = function(){
 
  Meteor.subscribe("members");
 
-
+//status:Session.get('Status')
+//sort:{createdAt: Session.get('Order')}});
 Template.Members.helpers({
 
-  members:function() {
-    var list = Members.find(
-      {
-        status:Session.get('Status')
-      },{sort:{createdAt: Session.get('Order')}});
+  items:function() {
+    var list = Members.find({});
+
    return list;
  },
  checkStatus:function(status) {
