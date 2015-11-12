@@ -2,9 +2,16 @@
 Session.setDefault("Status", "Active");
 Session.setDefault("Order", -1);
 //reactive var
+
+Template.Members.rendered = function() {
+    $('.select-gender').material_select();
+    $('.select-state').material_select();
+}
+
 Template.Members.created = function(){
    this.order = new ReactiveVar(false);
    this.active = new ReactiveVar(true);
+
    //console.log(this.order.get());
 };
 

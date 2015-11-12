@@ -36,8 +36,9 @@ themeteorchef:bert
 chriswessels:back-behaviour
 reactive-var
 aldeed:collection2
-poetic:materialize-scss
 fourseven:scss
 gildaspk:autoform-materialize@0.0.25
 aldeed:autoform@5.0.0
 natestrauser:animate-css
+materialize:materialize
+stylus
