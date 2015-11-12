@@ -1,6 +1,9 @@
-Template.Goals.created = function() {
-  // body...
-}
+Template.Goals.onCreated(function() {
+    this.subscribe("goals");
+});
+Template.goalView.onCreated(function() {
+    this.subscribe("goals");
+});
 
 Template.Goals.rendered = function() {
   // body...
@@ -8,7 +11,8 @@ Template.Goals.rendered = function() {
 
 
 Template.Goals.helpers({
-  create: function(){
+  items: function(){
+   return Goals.find({});
 
   },
   rendered: function(){
@@ -20,7 +24,14 @@ Template.Goals.helpers({
 });
 
 Template.Goals.events({
-  "click #foo": function(event, template){
-
+  "click .open-modal": function(e, template){
+     e.preventDefault();
+     $('#goal-form').openModal();
+  }
+});
+Template.goalView.events({
+  "click .open-modal": function(e, template){
+     e.preventDefault();
+     $('#edit-goals-form').openModal();
   }
 });

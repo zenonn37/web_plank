@@ -1,6 +1,6 @@
 Meteor.methods({
-  newDiet:function(doc){
-     console.log("called diets" + doc.name);
+  newGoals:function(doc){
+     console.log("called goals" + doc.name);
 
      var user = Meteor.user();
      check(doc,{
@@ -20,7 +20,7 @@ Meteor.methods({
 
      });
 
-     Diets.insert(data,function(error) {
+     Goals.insert(data,function(error) {
        if (error) {
          console.log(error + "errors");
        }else{
@@ -30,9 +30,9 @@ Meteor.methods({
 
 
   },
-  editDiets:function(doc,docId){
+  editGoals:function(doc,docId){
      console.log("called edit challenges" + doc.name);
-     Diets.update({_id:docId},doc);
+     Goals.update({_id:docId},doc);
 
     // Challenges.update(docId, {$set:{
   //      doc
