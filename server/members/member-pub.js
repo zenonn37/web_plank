@@ -1,6 +1,6 @@
-Meteor.publish("members", function(){
+Meteor.publish("members", function(cursor){
    return Members.find({userId:this.userId},{
-     limit:5
+     limit:5,skip:cursor
    });
 
 });

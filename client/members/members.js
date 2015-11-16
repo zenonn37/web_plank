@@ -1,3 +1,8 @@
+Session.setDefault("cursor", 0);
+
+Tracker.autorun(function(){
+   Meteor.subscribe("members",Session.get('cursor'));
+});
 
 Session.setDefault("Status", "Active");
 Session.setDefault("Order", -1);
@@ -15,7 +20,7 @@ Template.Members.created = function(){
    //console.log(this.order.get());
 };
 
- Meteor.subscribe("members");
+
 
 //status:Session.get('Status')
 //sort:{createdAt: Session.get('Order')}});
@@ -120,7 +125,17 @@ Template.Members.events({
 
       Session.set("Order", 1);
 
-  }
+  },
+  'click .previous':function(e,tmpl) {
+    if (Number(Session.get('cursor')) > 4) {
+       Session.set('cursor',Number(Session.get('cursor'))-5);
+    }
+  },
+    'click .next':function(e,tmpl) {
+       Session.set('cursor',Number(Session.get('cursor'))+5);
+    }
+    // body...
+
 
 
 
