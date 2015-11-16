@@ -2,19 +2,18 @@ Template.editMember.rendered = function() {
     $('.select-gender').material_select();
     $('.select-state').material_select();
 }
+ //Meteor.subscribe("account");
+  var currentId = this._id;
 
+ Template.memberPage.onCreated(function() {
+  var self = this;
+    self.autorun(function(){
+    //var data = Template.currentData();
+      self.subscribe("account");
+  });
 
-Template.editMember.helpers({
-  create: function(){
+ });
 
-  },
-  rendered: function(){
-
-  },
-  destroyed: function(){
-
-  },
-});
 
 Template.editMember.events({
   "submit .edit-members": function(event){

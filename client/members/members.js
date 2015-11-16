@@ -2,6 +2,7 @@ Session.setDefault("cursor", 0);
 
 Tracker.autorun(function(){
    Meteor.subscribe("members",Session.get('cursor'));
+  
 });
 
 Session.setDefault("Status", "Active");

@@ -4,3 +4,7 @@ Meteor.publish("members", function(cursor){
    });
 
 });
+
+Meteor.publish("account", function(){
+   return Account.find({});
+});
