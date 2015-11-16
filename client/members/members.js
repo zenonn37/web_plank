@@ -27,7 +27,7 @@ Template.Members.created = function(){
 Template.Members.helpers({
 
   items:function() {
-    var list = Members.find({});
+    var list = Members.find({},{sort:{createdAt:-1}});
 
    return list;
  },

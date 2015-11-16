@@ -66,7 +66,7 @@ livedata@1.0.15
 localstorage@1.0.5
 logging@1.0.8
 maazalik:highcharts@0.4.0
-materialize:materialize@0.97.2
+materialize:materialize@0.97.3
 meteor@1.1.10
 meteor-base@1.0.1
 meteortoys:allthings@2.2.0

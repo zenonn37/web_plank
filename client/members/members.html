@@ -79,6 +79,7 @@
       <div class="col sm12 m4">
 
         {{#each items}}
+        <a href="{{pathFor 'memberPage'}}">
         <div class="cards tile card-member">
 
         <img src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg" class="user-photo">
@@ -93,6 +94,7 @@
           </div>
 
         </div>
+        </a>
           {{/each}}
 
     <div class="pagination">
