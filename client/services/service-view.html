@@ -1,4 +1,5 @@
 <template name="serviceView">
+
   <div class="fixed-action-btn" style="bottom: 125px; right: 22px;">
     <a class="btn-floating btn-large red">
         <i class="material-icons">mode_edit</i>
@@ -13,10 +14,47 @@
       </ul>
   </div>
 
+ <div class="chips-aside">
 
-<h1>Sevices View</h1>
-{{name}} -- {{genre}}
+   {{#if Template.subscriptionsReady}}
+   {{#each chips}}
+   <div class="chip" style="margin-bottom:10px;">
+      <img src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg">
+      {{first}} {{last}}
+  </div>
 
+
+   {{/each}}
+   {{else}}
+   Loading Data...
+   {{/if}}
+
+ </div>
+ <div class="view-content">
+
+
+  <div class="row">
+    <!--
+  Calendar
+    -->
+    <div class="col s12 m4 l4">
+      cal list
+    </div>
+    <!--
+  content?
+    -->
+    <div class="col s12 m6 l6">
+      content
+    </div>
+    <!--
+  chips member list?
+    -->
+
+    <div class="col s12 m2 l2">
+   empty
+    </div>
+  </div>
+</div>
 {{> editServiceModel}}
 
 </template>

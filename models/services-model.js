@@ -59,5 +59,18 @@ Services.attachSchema(new SimpleSchema({
 
       }
 
+    },
+    enrolled:{
+      type:Array,
+      optional:true,
+      autoform:{
+        omit:true
+      }
+    },
+    'enrolled.$':{
+      type:Object
+    },
+    'enrolled.$.member':{
+      type:String
     }
 }));

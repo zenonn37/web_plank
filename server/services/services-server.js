@@ -14,10 +14,11 @@ Meteor.methods({
         genre:doc.genre
       }
 
-
+       var enrolls = [];
      _.extend(data,{
        created:new Date(),
-       user:user._id
+       user:user._id,
+       enrolled:enrolls
 
      });
 
@@ -40,7 +41,7 @@ Meteor.methods({
   },
   editServices:function(doc,docId){
     var user = Meteor.user();
-  
+
     //check(docId, String);
 
 

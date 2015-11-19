@@ -4,6 +4,19 @@ Meteor.publish("members", function(cursor){
    });
 
 });
+Meteor.publish("members-global", function(){
+   return Members.find({userId:this.userId},{
+     fields:{
+       first:1,
+       last:1,
+       createdAt:1,
+       gender:1,
+       photo:1
+     }
+
+   });
+
+});
 
 Meteor.publish("account", function(){
    return Account.find({});

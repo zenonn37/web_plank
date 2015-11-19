@@ -1,12 +1,17 @@
 Template.Services.onCreated(function() {
-    this.subscribe("services");
+  var self = this;
+  self.autorun(function() {
+  self.subscribe("services");
+  });
+
 });
 Template.serviceView.onCreated(function() {
-    this.subscribe("services");
+    var self = this;
+    self.autorun(function() {
+    self.subscribe("services");
+    self.subscribe("members-global");
+    });
 });
-Template.Services.created = function() {
-  // body...
-}
 
 Template.Services.rendered = function() {
   // body...
@@ -16,15 +21,14 @@ Template.Services.rendered = function() {
 Template.Services.helpers({
   items: function(){
     return Services.find({});
-
-  },
-  rendered: function(){
-
-  },
-  destroyed: function(){
-
-  },
+  }
 });
+Template.serviceView.helpers({
+  chips:function() {
+    return Members.find({});
+
+  }
+})
 
 Template.Services.events({
   "click .open-modal": function(e, template){

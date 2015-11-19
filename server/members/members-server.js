@@ -33,24 +33,11 @@ Meteor.methods({
    _.extend(data,{
      userId:user._id,
      createdAt: new Date(),
-     status:"Active"
+     status:"Active",
+     evaluation:false,
    })
     Members.insert(data);
-      var findLast =  Members.findOne({},{sort:{createdAt:-1}});
-    var accounts = {
-          memberId:findLast._id,
-          userId:user._id,
-          balance:0,
-          monthly:0,
-          weekly:0,
-          day:0,
-          status:'active',
-          evaluation:false,
-          new:true,
-          submitted:new Date().getTime()
-      }
-
-      Account.insert(accounts);
+    
 
 
 
