@@ -1,3 +1,4 @@
+AutoForm.debug()
 Template.Services.onCreated(function() {
   var self = this;
   self.autorun(function() {
@@ -27,6 +28,12 @@ Template.serviceView.helpers({
   chips:function() {
     return Members.find({});
 
+  },
+  enrolled:function() {
+    console.log(this._id);
+    var serid = this._id
+    //var services = Services.find({});
+    return Members.find({service:{$in:[serid]}});
   }
 })
 
@@ -41,5 +48,45 @@ Template.serviceView.events({
   "click .open-modal": function(e, template){
        e.preventDefault();
        $('#edit-services-form').openModal();
+  },
+  'click .chip':function(e,tmpl) {
+    e.preventDefault();
+        console.log(this._id);
+        var member = this._id
+        var serid = Router.current().params;
+        console.log(serid._id);
+
+        var data = {
+          member : member,
+          serid:serid._id
+        }
+
+        Meteor.call("enrollMember", data, function(error){
+          if(error){
+            console.log("error", error);
+          }else {
+            console.log('good');
+          }
+
+        });
+
+
+  },
+  'click .enrolled':function(e,tmpl) {
+    e.preventDefault();
+      var member = this._id
+      var serid = Router.current().params;
+    var data = {
+      member : member,
+      serid:serid._id
+    }
+    Meteor.call("removeMember", data, function(error){
+      if(error){
+        console.log("error", error);
+      }else {
+        console.log('good');
+      }
+
+    });
   }
 });

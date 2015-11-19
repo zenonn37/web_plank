@@ -1,10 +1,14 @@
 <template name="Services">
-  <h4 class="animated bounceInLeft">Services</h4>
+
   <div class="fixed-action-btn" style="bottom:125px; right:22px;">
     <a class="btn-floating btn-large blue waves-effect waves-light open-modal">
         <i class="material-icons">add</i>
     </a>
   </div>
+<div class="content">
+
+
+    <h4 class="animated bounceInLeft">Services</h4>
 {{#if Template.subscriptionsReady}}
    {{#each items}}
    <p>
@@ -20,4 +24,5 @@
 {{/if}}
 
 {{> servicesModel}}
+</div>
 </template>

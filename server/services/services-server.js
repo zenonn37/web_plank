@@ -59,5 +59,39 @@ Meteor.methods({
   //      doc
   //   }});
 
-  }
+},
+enrollMember:function(data) {
+  var user = Meteor.user();
+  check(data,{
+    member:String,
+    serid:String
+  });
+
+  console.log(data.member + data.serid);
+
+  Services.update({_id:data.serid}, {$addToSet:{
+  'enrolled.member':data.member
+ }});
+  Members.update({_id:data.member}, {$addToSet:{
+  service:data.serid
+}});
+
+
+},
+removeMember:function(data) {
+  var user = Meteor.user();
+  check(data,{
+    member:String,
+    serid:String
+  });
+    console.log(data.member + data.serid);
+
+    Services.update({_id:data.serid}, {$pullAll:{
+    'enrolled.member':[data.member]
+   }});
+    Members.update({_id:data.member}, {$pullAll:{
+    service:[data.serid]
+     }});
+
+}
 });

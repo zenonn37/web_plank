@@ -61,16 +61,16 @@ Services.attachSchema(new SimpleSchema({
 
     },
     enrolled:{
-      type:Array,
+      type:Object,
       optional:true,
+      blackbox: true,
       autoform:{
         omit:true
       }
     },
-    'enrolled.$':{
-      type:Object
-    },
-    'enrolled.$.member':{
-      type:String
+
+    'enrolled.member':{
+      type:[String],
+      defaultValue: []
     }
 }));

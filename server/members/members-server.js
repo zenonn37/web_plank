@@ -35,9 +35,10 @@ Meteor.methods({
      createdAt: new Date(),
      status:"Active",
      evaluation:false,
+     services:[]
    })
     Members.insert(data);
-    
+
 
 
 

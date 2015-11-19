@@ -18,9 +18,10 @@
 
    {{#if Template.subscriptionsReady}}
    {{#each chips}}
-   <div class="chip" style="margin-bottom:10px;">
+   <div class="chip cursors" style="margin-bottom:10px;">
       <img src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg">
       {{first}} {{last}}
+      <i class="material-icons">assignment_ind</i>
   </div>
 
 
@@ -38,21 +39,29 @@
   Calendar
     -->
     <div class="col s12 m4 l4">
-      cal list
+     Cal
     </div>
     <!--
   content?
     -->
-    <div class="col s12 m6 l6">
-      content
+    <div class="col s12 m8 l8">
+      <h6>Enrolled</h6>
+
+       <ul>
+         {{#each enrolled}}
+         <div class="chip cursors enrolled" style="margin-bottom:10px;">
+            <img src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg">
+            {{first}} {{last}}
+            <i class="material-icons">assignment_ind</i>
+        </div>
+         {{/each}}
+       </ul>
     </div>
     <!--
   chips member list?
     -->
 
-    <div class="col s12 m2 l2">
-   empty
-    </div>
+
   </div>
 </div>
 {{> editServiceModel}}
