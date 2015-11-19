@@ -2,8 +2,18 @@
   <!-- Modal Structure -->
   <div id="services-form" class="modal">
     <div class="modal-content">
-    {{> quickForm collection="Services" id="newServices" type="method" meteormethod="newService"
+      {{#autoForm collection="Services" id="newServices"
+      type="method" meteormethod="newService" class="col s12"}}
+      <div class="row">
+         {{> afQuickField  class='input-field col s12 m6' name='name'}}
+         {{> afQuickField  class='input-field col s12 m6' name='genre'}}
+      </div>
+      {{/autoForm}}
+      <!--
+    {{> quickForm collection="Services" id="newServices"
+    type="method" meteormethod="newService"
   buttonContent="Go"}}
+      -->
     </div>
     <div class="model-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>

@@ -9,7 +9,8 @@ Template.editMember.rendered = function() {
   var self = this;
     self.autorun(function(){
     //var data = Template.currentData();
-      self.subscribe("account");
+      //self.subscribe("account");
+    self.subscribe("services");
   });
 
  });
@@ -50,7 +51,10 @@ Template.editMember.events({
 
 
 Template.memberPage.helpers({
-
+ items:function() {
+   var memid = this._id
+  return Services.find({'enrolled.member':{$in:[memid]}});
+ }
 });
 
 Template.memberPage.events({

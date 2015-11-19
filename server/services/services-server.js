@@ -14,11 +14,11 @@ Meteor.methods({
         genre:doc.genre
       }
 
-       var enrolls = [];
+
      _.extend(data,{
        created:new Date(),
        user:user._id,
-       enrolled:enrolls
+       
 
      });
 

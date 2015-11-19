@@ -99,6 +99,27 @@
 
          </div>
 
+         <div class="col s12 m4 l4">
+           <ul class="collection with-header">
+       <li class="collection-header"><h4>Services</h4></li>
+       {{#if items}}
+        {{#each items}}
+
+           <li class="collection-item">
+               <a href="{{pathFor 'service-view'}}">
+
+             {{name}}
+                       </a>
+           </li>
+
+        {{/each}}
+        {{else}}
+           <li class="collection-item">No Services For This Member</li>
+        {{/if}}
+     </ul>
+
+         </div>
+
 
 
 

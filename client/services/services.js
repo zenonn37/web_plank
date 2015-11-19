@@ -26,7 +26,9 @@ Template.Services.helpers({
 });
 Template.serviceView.helpers({
   chips:function() {
-    return Members.find({});
+      var serid = this._id
+    //return Members.find({});
+    return Members.find({service:{$ne:serid}});
 
   },
   enrolled:function() {
