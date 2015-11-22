@@ -2,18 +2,34 @@
   <!-- Modal Structure -->
   <div id="services-form" class="modal">
     <div class="modal-content">
+
       {{#autoForm collection="Services" id="newServices"
-      type="method" meteormethod="newService" class="col s12"}}
-      <div class="row">
-         {{> afQuickField  class='input-field col s12 m6' name='name'}}
-         {{> afQuickField  class='input-field col s12 m6' name='genre'}}
-      </div>
+      type="method" meteormethod="newService"}}
+   <fieldset>
+     <legend>Add a Service</legend>
+      {{> afQuickField  name='name'}}
+      {{> afQuickField  name='genre'}}
+      {{> afQuickField  name='weekly'}}
+      {{> afQuickField  name='revenue'}}
+      {{> afQuickField  name='min'}}
+      {{> afQuickField  name='max'}}
+      {{> afQuickField  name='duration'}}
+      {{> afQuickField  name='goal'}}
+      {{> afQuickField  name='advert'}}
+      {{> afQuickField  name='paid'}}
+      {{> afQuickField  name='trial' options="allowed" noselect=true}}
+        {{#if afFieldValueIs name="trial" value="yes"}}
+            {{> afQuickField  name='period'}}
+        {{/if}}
+   </fieldset>
+   <button class="btn">Go</button>
       {{/autoForm}}
-      <!--
+
+  <!--
     {{> quickForm collection="Services" id="newServices"
     type="method" meteormethod="newService"
   buttonContent="Go"}}
-      -->
+    -->
     </div>
     <div class="model-footer">
       <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
@@ -24,11 +40,34 @@
   <!-- Modal Structure -->
   <div id="edit-services-form" class="modal">
     <div class="modal-content">
+      <!--
     {{> quickForm doc=this
       collection="Services" id="editService"
       type="method-update"
       meteormethod="editServices"
       buttonContent="Update"}}
+    -->
+    {{#autoForm doc=this collection="Services" id="editService"
+    type="method-update" meteormethod="editServices"}}
+ <fieldset>
+   <legend>Add a Service</legend>
+    {{> afQuickField  name='name'}}
+    {{> afQuickField  name='genre'}}
+    {{> afQuickField  name='weekly'}}
+    {{> afQuickField  name='revenue'}}
+    {{> afQuickField  name='min'}}
+    {{> afQuickField  name='max'}}
+    {{> afQuickField  name='duration'}}
+    {{> afQuickField  name='goal'}}
+    {{> afQuickField  name='advert'}}
+    {{> afQuickField  name='paid'}}
+    {{> afQuickField  name='trial' options="allowed" noselect=true}}
+      {{#if afFieldValueIs name="trial" value="yes"}}
+          {{> afQuickField  name='period'}}
+      {{/if}}
+ </fieldset>
+ <button class="btn">Update</button>
+    {{/autoForm}}
     </div>
     <div class="modal-footer">
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right ">Close</a>

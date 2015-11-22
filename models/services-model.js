@@ -39,7 +39,7 @@ Services.attachSchema(new SimpleSchema({
       max:60,
       autoform:{
         placeholder:'Genre',
-        
+
 
       }
 
@@ -55,7 +55,7 @@ Services.attachSchema(new SimpleSchema({
     revenue:{
       type:Number,
       label:"Cost",
-      max:10,
+      max:100,
       autoform:{
         placeholder:'Count'
       }
@@ -64,7 +64,7 @@ Services.attachSchema(new SimpleSchema({
     min:{
       type:Number,
       label:"Minimum attendence",
-      max:10,
+      max:100,
       autoform:{
         placeholder:'Minimum'
       }
@@ -73,7 +73,7 @@ Services.attachSchema(new SimpleSchema({
     max:{
       type:Number,
       label:"Maximum attendence",
-      max:10,
+      max:100,
       autoform:{
         placeholder:'Maximum'
       }
@@ -83,7 +83,7 @@ Services.attachSchema(new SimpleSchema({
     duration:{
       type:Number,
       label:"Service duration",
-      max:10,
+      max:1000,
       autoform:{
         placeholder:'Duration'
       }
@@ -93,9 +93,13 @@ Services.attachSchema(new SimpleSchema({
       type:String,
       optional:true,
       label:"Goal of Service",
-      max:100,
+      max:1000,
       autoform:{
-        placeholder:'Goal'
+        placeholder:'Goal',
+        afFieldInput:{
+          type:"textarea",
+          rows:10
+        }
       }
 
     },
@@ -112,6 +116,35 @@ Services.attachSchema(new SimpleSchema({
         }
       }
 
+    },
+    paid:{
+      type:Boolean,
+
+      autoform:{
+        type:"switch",
+        trueLabel:"Free Service",
+        falseLabel:"Paid Service"
+      }
+    },
+    trial:{
+      type:String,
+      label:"Trial Period",
+      allowedValues:["no","yes"],
+      autoform:{
+        type:"select-radio",
+        
+      }
+
+
+    },
+    period:{
+      type:Number,
+      optional:true,
+      label:"Trial Period",
+      max:100,
+      autoform:{
+        placeholder:'Trial'
+      }
     },
     user:{
       type:String,

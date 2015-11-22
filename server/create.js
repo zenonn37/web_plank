@@ -1,3 +1,4 @@
+
 Accounts.onCreateUser(function(options, user){
    var proCode = Random.id();
 
@@ -13,6 +14,14 @@ Accounts.onCreateUser(function(options, user){
    if (options.profile) {
      user.profile = options.profile
    }
+
+  Meteor.setTimeout(function(){
+       Roles.addUsersToRoles(user._id,'admin');
+  }, 1000);
+
+
+        //Roles.addUsersToRoles(userId,['roleOne','roleTwo','roleThree']);
+
 
   // Connect.insert({
   //   createdAt:new Date().getTime(),

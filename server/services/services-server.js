@@ -5,20 +5,41 @@ Meteor.methods({
      var user = Meteor.user();
      check(doc,{
        name:String,
-       genre:String
+       genre:String,
+       weekly:Number,
+       revenue:Number,
+       min:Number,
+       max:Number,
+       duration:Number,
+       goal:String,
+       advert:String,
+       paid:Boolean,
+       trial:String,
+       period:Number
+
 
      });
 
       var data = {
         name:doc.name,
-        genre:doc.genre
+        genre:doc.genre,
+        weekly:doc.weekly,
+        revenue:doc.revenue,
+        min:doc.min,
+        max:doc.max,
+        duration:doc.duration,
+        goal:doc.goal,
+        advert:doc.advert,
+        paid:doc.paid,
+        trial:doc.trial,
+        period:doc.period
       }
 
 
      _.extend(data,{
        created:new Date(),
        user:user._id,
-       
+
 
      });
 
