@@ -21,3 +21,35 @@ Transactions.deny({
     return true;
   }
 });
+
+//schema
+Transactions.attachSchema(new SimpleSchema({
+    amount:{
+      type:Number,
+      optional:true,
+      autoform:{
+        omit:true
+      }
+    },
+    sessions:{
+      type:Number
+    },
+    user:{
+      type:String,
+       optional:true,
+      autoform:{
+           omit:true
+
+      }
+
+
+    },
+    created:{
+      type:Date,
+      optional:true,
+      autoform:{
+        omit:true
+
+      }
+    }
+}));

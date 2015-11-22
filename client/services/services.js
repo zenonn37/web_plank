@@ -51,7 +51,7 @@ Template.serviceView.events({
        e.preventDefault();
        $('#edit-services-form').openModal();
   },
-  'click .chip':function(e,tmpl) {
+  'click .enroll':function(e,tmpl) {
     e.preventDefault();
         console.log(this._id);
         var member = this._id
@@ -68,6 +68,7 @@ Template.serviceView.events({
             console.log("error", error);
           }else {
             console.log('good');
+              $('#service-transaction-form').openModal();
           }
 
         });
@@ -87,6 +88,7 @@ Template.serviceView.events({
         console.log("error", error);
       }else {
         console.log('good');
+
       }
 
     });

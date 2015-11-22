@@ -74,3 +74,30 @@
     </div>
   </div>
 </template>
+
+<template name="servicesTransactions">
+  <!-- Modal Structure -->
+  <div id="service-transaction-form" class="modal">
+    <div class="modal-content">
+
+      {{#autoForm collection="Transactions" id="newTransaction"
+      type="method" meteormethod="newTransaction"}}
+   <fieldset>
+     <legend>Enrollment</legend>
+      {{> afQuickField  name='sessions'}}
+
+   </fieldset>
+   <button class="btn">Go</button>
+      {{/autoForm}}
+
+  <!--
+    {{> quickForm collection="Services" id="newServices"
+    type="method" meteormethod="newService"
+  buttonContent="Go"}}
+    -->
+    </div>
+    <div class="model-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+    </div>
+  </div>
+</template>

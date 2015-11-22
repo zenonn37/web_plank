@@ -18,7 +18,7 @@
 
    {{#if Template.subscriptionsReady}}
    {{#each chips}}
-   <div class="chip cursors" style="margin-bottom:10px;">
+   <div class="chip enroll cursors" style="margin-bottom:10px;">
       <img src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg">
       {{first}} {{last}}
       <i class="material-icons">assignment_ind</i>
@@ -36,7 +36,7 @@
            <div class="circle"></div>
          </div>
        </div>
-  
+
 
    {{/if}}
 
@@ -75,5 +75,6 @@
   </div>
 </div>
 {{> editServiceModel}}
+{{> servicesTransactions}}
 
 </template>
