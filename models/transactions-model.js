@@ -32,7 +32,11 @@ Transactions.attachSchema(new SimpleSchema({
       }
     },
     sessions:{
-      type:Number
+      type:Number,
+      max:100,
+      autoform:{
+        placeholder:'Please Enter Sessions'
+      }
     },
     user:{
       type:String,
@@ -46,6 +50,32 @@ Transactions.attachSchema(new SimpleSchema({
     },
     created:{
       type:Date,
+      optional:true,
+      autoform:{
+        omit:true
+
+      }
+    },
+    serviceID:{
+      type:String,
+       optional:true,
+      autoform:{
+           omit:true
+
+      }
+
+
+    },
+    memberID:{
+      type:String,
+      optional:true,
+      autoform:{
+        omit:true
+
+      }
+    },
+    flag:{
+      type:String,
       optional:true,
       autoform:{
         omit:true

@@ -1,4 +1,15 @@
-AutoForm.debug()
+AutoForm.debug();
+
+
+
+
+
+
+
+
+
+
+
 Template.Services.onCreated(function() {
   var self = this;
   self.autorun(function() {
@@ -14,9 +25,35 @@ Template.serviceView.onCreated(function() {
     });
 });
 
-Template.Services.rendered = function() {
-  // body...
-}
+AutoForm.hooks({
+
+   newTransaction:{
+
+    onSubmit:function(insertDoc){
+       this.event.preventDefault();
+        var serid = Router.current().params;
+        console.log(serid._id);
+      console.log("good job " + this.insertDoc.sessions +
+     serid._id + Session.get('member'));
+     var data = {
+       sessions:this.insertDoc.sessions,
+       serviceID:serid._id,
+       memberID:Session.get('member')
+     }
+     Meteor.call("newTransaction", data, function(error, result){
+       if(error){
+         console.log("error", error);
+       }
+       if(result){
+      console.log(result);
+       }
+     });
+
+   return false;
+    }
+  }
+
+});
 
 
 Template.Services.helpers({
@@ -55,6 +92,7 @@ Template.serviceView.events({
     e.preventDefault();
         console.log(this._id);
         var member = this._id
+        Session.set('member',member);
         var serid = Router.current().params;
         console.log(serid._id);
 

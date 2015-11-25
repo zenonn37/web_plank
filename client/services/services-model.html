@@ -81,12 +81,12 @@
     <div class="modal-content">
 
       {{#autoForm collection="Transactions" id="newTransaction"
-      type="method" meteormethod="newTransaction"}}
-   <fieldset>
+      type="normal" }}
+
      <legend>Enrollment</legend>
       {{> afQuickField  name='sessions'}}
 
-   </fieldset>
+
    <button class="btn">Go</button>
       {{/autoForm}}
 
