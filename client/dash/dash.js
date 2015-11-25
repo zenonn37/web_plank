@@ -8,8 +8,10 @@ Template.dashboard.helpers({
 });
 
 Template.dashboard.events({
-  "click #foo": function(event, template){
-
+  "click .logout": function(e, template){
+      e.preventDefault();
+      AccountsTemplates.logout();
+      Router.go('login')
   }
 });
 

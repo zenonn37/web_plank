@@ -18,6 +18,11 @@ Template.plankNav.events({
   "click .back": function(e, template){
      e.preventDefault();
      window.history.back();
+  },
+  "click .logout": function(e, template){
+      e.preventDefault();
+      AccountsTemplates.logout();
+      Router.go('login');
   }
 });
 
