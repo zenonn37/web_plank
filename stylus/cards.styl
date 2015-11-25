@@ -1,22 +1,27 @@
+@import 'styl/*'
+//@import 'styl/variables'
+
 .cards
-  width: 100%
-  position: relative
-  margin: 0 0 20px 0
-  border-radius: 3px
-  border: 0
+  width 100%
+  position relative
+  margin 0 0 20px 0
+  border-radius()
+  border 0
   background-color: #fff
-  box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.26)
-  overflow: hidden
+  box-shadow 0 2px 5px -1px rgba(0, 0, 0, 0.26)
+  overflow hidden
+  .cards-body
+    position: relative
+    padding: 20px
 
- .card-charts .info .little-text-dark{
-   font-size:14px
-   color:#fff
-   font-weight:200
- }
+.card-charts .info .little-text-dark
+   font-size 14px
+   color cardPrimary
+   font-weight 200
 
-.cards .cards-body
-  position: relative
-  padding: 20px
+
+
+
 
 
 .cards-icon
@@ -76,7 +81,7 @@
   margin-bottom: 5px
 .tile
   border-radius: 0
-  margin-bottom: 5px
+  margin-bottom: 3px
 
 .card-data .card-blue-grey
     color: #ffffff
@@ -90,6 +95,7 @@
   float:left
   width:100px
   height:auto
+  cf()
 .card-member .member-content
   margin-left:120px;
 
