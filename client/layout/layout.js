@@ -23,6 +23,39 @@ Template.plankNav.events({
       e.preventDefault();
       AccountsTemplates.logout();
       Router.go('login');
+  },
+  "click .close-overlay": function(e, template) {
+      e.preventDefault();
+      $('.nav-overlay')
+         .velocity({
+           left:'-400px'
+         },{
+           duration:150,easing:"swing",delay:300
+         });
+
+         $('.nav-inner')
+           .velocity({
+             left:'-100px'
+           })
+
+  },
+  "click .nav-one":function(e, template) {
+    e.preventDefault();
+    console.log('test2');
+    $('.nav-inner')
+      .velocity({
+        left:'0px'
+      })
+    $('.nav-overlay')
+    .velocity({
+      left:'0px'
+    },{
+      duration:100,easing:"swing"
+    });
+
+
+
+
   }
 });
 

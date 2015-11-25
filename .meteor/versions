@@ -128,5 +128,6 @@ url@1.0.5
 useraccounts:core@1.12.4
 useraccounts:iron-routing@1.12.4
 useraccounts:materialize@1.12.4
+velocityjs:velocityjs@1.2.1
 webapp@1.2.3
 webapp-hashing@1.0.5
