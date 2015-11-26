@@ -1,24 +1,24 @@
 Staff = new Mongo.Collection('staff');
 Staff.attachSchema(new SimpleSchema({
-    name:{
+    firstname:{
       type:String,
-      label:"Name",
+
       max:200
     },
-    challenge:{
+    lastname:{
       type:String,
-      label:"Type",
-      max:60
+
+      max:200
+    },
+    position:{
+      type:String,
+      max:50
     },
     user:{
       type:String,
        optional:true,
       autoform:{
-           omit:true
-
-      }
-
-
+           omit:true      }
     },
     created:{
       type:Date,
@@ -28,6 +28,25 @@ Staff.attachSchema(new SimpleSchema({
 
       }
 
+    },
+    photo:{
+      type:String
+    },
+    gender:{
+      type:String
+    },
+    enrolled:{
+      type:Object,
+      optional:true,
+      blackbox: true,
+      autoform:{
+        omit:true
+      }
+    },
+
+    'enrolled.member':{
+      type:[String],
+      defaultValue: []
     }
 }));
 Staff.allow({

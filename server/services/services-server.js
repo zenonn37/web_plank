@@ -76,9 +76,6 @@ Meteor.methods({
 
 
 
-    // Challenges.update(docId, {$set:{
-  //      doc
-  //   }});
 
 },
 enrollMember:function(data) {

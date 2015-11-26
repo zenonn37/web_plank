@@ -1,7 +1,123 @@
 <template name="Staff">
 <div class="content">
+  <div class="fixed-action-btn" style="bottom:125px; right:22px;">
+    <a class="btn-floating btn-large blue waves-effect waves-light open-form">
+        <i class="material-icons">add</i>
+    </a>
+  </div>
+
+  <div class="row">
 
 
-  <h3>Staff</h3>
+    <div class="col sm12 m4">
+      <div class="cards card-data cards-tile teal lighten-2">
+        <div class="cards-body white-text">
+          <div class="cards-icon">
+            <i class="fa fa-usd"></i>
+          </div>
+            <h4>Staff</h4>
+            <p class="result">
+              {{count}}
+            </p>
+            <small class="teal">
+              <i class="fa fa-caret-up"></i>
+               1 New Staff Member
+            </small>
+        </div>
+
+
+      </div>
+      <div class="cards card-data cards-tile purple lighten-2">
+        <div class="cards-body white-text">
+          <div class="cards-icon">
+            <i class="fa fa-usd"></i>
+          </div>
+            <h4>Staff Weekly Attendence</h4>
+            <p class="result">
+              100%
+            </p>
+            <small class="purple">
+              <i class="fa fa-caret-up"></i>
+               7 for 7
+            </small>
+        </div>
+
+
+      </div>
+      <div class="cards card-data cards-tile blue-grey lighten-1">
+        <div class="cards-body white-text">
+          <div class="cards-icon">
+            <i class="fa fa-usd"></i>
+          </div>
+            <h4>Staff Weekly Expense</h4>
+            <p class="result">
+              $1985.00
+            </p>
+            <small class="blue-grey">
+              <i class="fa fa-caret-up"></i>
+               Total Expense $5684.00
+            </small>
+        </div>
+
+
+      </div>
+
+    </div>
+    <div class="col sm12 m4">
+      <div class="cards">
+        <div class="cards-body">
+            <h1>card</h1>
+
+        </div>
+
+
+      </div>
+
+    </div>
+    <div class="col sm12 m4">
+
+      {{#each items}}
+
+      <div class="cards tile card-member">
+       <a href="{{pathFor 'staff-view'}}">
+      <img src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg" class="user-photo">
+        </a>
+        <div class="member-content">
+          <p class="title">
+
+             {{firstname}} {{lastname}} <small> {{position}}</small>
+             <br/>
+
+
+
+                         <small>
+                        Hired:{{epochToHuman created}}
+                         </small>
+          </p>
+
+
+
+        </div>
+
+      </div>
+
+        {{/each}}
+
+  <div class="pagination">
+    <ul>
+      <li class="previous">Previous'&larr'</li>
+          <li class="next">Next'&rarr'</li>
+    </ul>
+  </div>
+
+
+
+
+    </div>
+
+  </div>
+
+
 </div>
+{{> staffModel}}
 </template>

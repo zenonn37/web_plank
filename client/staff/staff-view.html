@@ -1,4 +1,147 @@
 <template name="staffView">
-  {{first}}
+  <div class="view-content">
+    <div class="row">
+           <div class="col s12 m4">
+             <div class="card">
+               <div class="card-image">
+                <img src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg">
+                 <span class="card-title">{{firstname}} {{lastname}}</span>
+               </div>
+               <div class="card-content">
+                 <ul>
+                   <li><h6><i class="fa  fa-envelope-o "></i> {{email}} </h6></li>
+                        <li><h6><i class="fa fa-mobile fa-2x"></i> {{phone}} </h6></li>
+                 </ul>
+
+               </div>
+
+             </div>
+           </div>
+
+
+           <div class="col sm12 m4">
+             <div class="cards card-data card-charts cards-tile black">
+               <div class="cards-body white-text">
+                 <div class="info right">
+                   <span>825</span> <span class="little-text-dark">Calories</span>
+                   <br/><span  class="little-text-dark">15 mins ago</span>
+                 </div>
+                 <div class="cards-icon-knob">
+                   <i class="ion-fireball"></i>
+                 </div>
+
+                 <input data-width="95" data-height="95"
+                 data-displayInput=false
+                 data-fgColor="#fb8c00"
+                 data-bgColor="#262626"
+                 data-skin="tron"
+                 data-readOnly="true" data-angleOffset="-160"
+                 data-linecap="round" value="825" type="text" class="dial" data-min="0" data-max="3000">
+               </div>
+
+
+             </div>
+             <div class="cards card-data cards-tile purple lighten-2">
+               <div class="cards-body white-text">
+                 <div class="cards-icon">
+                   <i class="fa fa-usd"></i>
+                 </div>
+                   <h4>Payments</h4>
+                   <p class="result">
+                     45
+                   </p>
+                   <small class="purple">
+                     <i class="fa fa-caret-up"></i>
+                      Waiting on 11
+                   </small>
+               </div>
+
+
+             </div>
+             <div class="cards card-data cards-tile blue-grey lighten-1">
+               <div class="cards-body white-text">
+                 <div class="cards-icon">
+                   <i class="fa fa-usd"></i>
+                 </div>
+                   <h4>Class Revenue</h4>
+                   <p class="result">
+                     $8900.00
+                   </p>
+                   <small class="blue-grey">
+                     <i class="fa fa-caret-up"></i>
+                      Total Revenue $15000.00
+                   </small>
+               </div>
+
+
+             </div>
+
+             <div class="cards card-data cards-tile blue-grey lighten-1">
+               <div class="cards-body white-text">
+                 <div class="cards-icon">
+                   <i class="fa fa-usd"></i>
+                 </div>
+                   <h4>Class Revenue</h4>
+                   <p class="result">
+                     $8900.00
+                   </p>
+                   <small class="blue-grey">
+                     <i class="fa fa-caret-up"></i>
+                      Total Revenue $15000.00
+                   </small>
+               </div>
+
+
+             </div>
+
+           </div>
+
+           <div class="col s12 m4 l4">
+             <ul class="collection with-header">
+         <li class="collection-header"><h4>Members</h4></li>
+         {{#if items}}
+          {{#each items}}
+
+             <li class="collection-item">
+                 <a href="{{pathFor 'service-view'}}">
+
+               {{name}}
+                         </a>
+             </li>
+
+          {{/each}}
+          {{else}}
+             <li class="collection-item">Not training anyone at this time.</li>
+          {{/if}}
+       </ul>
+       <ul class="collection with-header">
+   <li class="collection-header"><h4>Assignments</h4></li>
+   {{#if items}}
+    {{#each items}}
+
+       <li class="collection-item">
+           <a href="{{pathFor 'service-view'}}">
+
+         {{name}}
+                   </a>
+       </li>
+
+    {{/each}}
+    {{else}}
+       <li class="collection-item">No Assignments.</li>
+    {{/if}}
+ </ul>
+
+           </div>
+
+
+
+
+
+
+
+         </div>
+  </div>
+
 
 </template>

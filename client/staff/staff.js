@@ -1,26 +1,33 @@
-Template.Staff.created = function() {
-  // body...
-}
+Template.Staff.onCreated(function() {
+  var self = this;
+  self.autorun(function() {
+    self.subscribe('staff');
+  });
+});
+Template.staffView.onCreated(function() {
+  var self = this;
+  var serid = Router.current().params;
+  self.autorun(function() {
+    self.subscribe('one-staff',serid._id);
+  });
+});
 
-Template.Staff.rendered = function() {
-  // body...
-}
 
 
 Template.Staff.helpers({
-  create: function(){
+  items: function(){
+    return Staff.find({});
 
   },
-  rendered: function(){
+  count: function(){
+  return Counts.get('count');
+  }
 
-  },
-  destroyed: function(){
-
-  },
 });
 
 Template.Staff.events({
-  "click #foo": function(event, template){
-
+  "click .open-form": function(event, template){
+   event.preventDefault();
+        $('#staff-form').openModal();
   }
 });

@@ -1,15 +1,5 @@
 AutoForm.debug();
 
-
-
-
-
-
-
-
-
-
-
 Template.Services.onCreated(function() {
   var self = this;
   self.autorun(function() {
