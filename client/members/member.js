@@ -58,12 +58,30 @@ Template.memberPage.helpers({
 });
 
 Template.memberPage.events({
-  "click btn": function(event, template){
-      $('.fixed-action-btn').openFAB();
+  "click .open-overlay-chat":function(e, tmpl) {
+    e.preventDefault();
+    $('.super-cover')
+      .velocity({
+      left:'0px'
+      });
+  },
+  "click .open-overlay-edit":function(e, tmpl) {
+    e.preventDefault();
+    $('.super-cover')
+      .velocity({
+      left:'0px'
+      });
+  },
+  "click .close":function(e, tmpl) {
+    e.preventDefault();
+    $('.super-cover')
+      .velocity({
+      left:'-9999px'
+      });
   },
   "click .results":function(e) {
     e.preventDefault();
-    $('#edit-member-form').openModal();
+    //$('#edit-member-form').openModal();
   },
   "click .delete":function(e) {
      var currentId = this._id;
