@@ -13,6 +13,21 @@ Template.staffView.onCreated(function() {
 });
 
 
+Template.staffView.helpers({
+  go: function(){
+    var test = 'hello'
+     return test;
+  },
+  rendered: function(){
+
+  },
+  destroyed: function(){
+
+  },
+});
+
+
+
 
 Template.Staff.helpers({
   items: function(){
@@ -29,5 +44,15 @@ Template.Staff.events({
   "click .open-form": function(event, template){
    event.preventDefault();
         $('#staff-form').openModal();
+  },
+
+});
+Template.staffView.events({
+  "click .results": function(e, template){
+   e.preventDefault();
+     console.log('test');
+        $('#edit-staff-form').openModal();
+
   }
+
 });

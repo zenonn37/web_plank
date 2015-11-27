@@ -10,6 +10,14 @@ Staff.attachSchema(new SimpleSchema({
 
       max:200
     },
+    phone:{
+      type:String,
+      max:25
+    },
+    email:{
+      type:String,
+      max:100
+    },
     position:{
       type:String,
       max:50

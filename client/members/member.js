@@ -61,7 +61,7 @@ Template.memberPage.events({
   "click btn": function(event, template){
       $('.fixed-action-btn').openFAB();
   },
-  "click #edit-members":function(e) {
+  "click .results":function(e) {
     e.preventDefault();
     $('#edit-member-form').openModal();
   },

@@ -41,7 +41,7 @@ gildaspk:autoform-materialize@0.0.25
 aldeed:autoform@5.0.0
 natestrauser:animate-css
 stylus
-materialize:materialize
 alanning:roles
 velocityjs:velocityjs
 tmeasday:publish-counts
+materialize:materialize

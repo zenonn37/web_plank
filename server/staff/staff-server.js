@@ -60,7 +60,7 @@ Meteor.methods({
       console.log('no user');
     }else{
       console.log("called edit staff" + doc.name);
-      Services.update({_id:docId},doc);
+      Staff.update({_id:docId},doc);
       }
 
 

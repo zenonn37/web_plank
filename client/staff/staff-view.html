@@ -1,5 +1,31 @@
 <template name="staffView">
+
+   <div class="super-button">
+     <div class="btn-floating btn-small blue results">
+             <i class="material-icons open-modals">mode_edit</i>
+     </div>
+   </div>
+
+
+
+
+
   <div class="view-content">
+<!--
+    <div class="fixed-action-btn horizontal" style="bottom: 125px; right: 22px;">
+      <a class="btn-floating btn-large red">
+          <i class="material-icons open-modals">mode_edit</i>
+      </a>
+      <ul>
+
+          <li><a class="btn-floating suspend red"><i class="material-icons">highlight_off</i></a></li>
+          <li><a class="btn-floating note green"><i class="material-icons">note_add</i></a></li>
+          <li><a class="btn-floating blue"><i class="material-icons">chat</i></a></li>
+          <li><a  class="btn-floating blue"><i class="material-icons">email</i></a></li>
+            <li><a class="btn-floating green"><i class="material-icons">border_color</i></a></li>
+        </ul>
+    </div
+  -->
     <div class="row">
            <div class="col s12 m4">
              <div class="card">
@@ -65,7 +91,7 @@
                  </div>
                    <h4>Class Revenue</h4>
                    <p class="result">
-                     $8900.00
+                     {{go}}
                    </p>
                    <small class="blue-grey">
                      <i class="fa fa-caret-up"></i>
@@ -143,5 +169,5 @@
          </div>
   </div>
 
-
+{{> editStaffModel}}
 </template>

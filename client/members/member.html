@@ -1,10 +1,59 @@
 <template name="memberPage">
-
+  <div class="super-button">
+    <div class="btn-floating btn-small blue results">
+            <i class="material-icons open-modals">mode_edit</i>
+    </div>
+  </div>
   <div class="content">
 
 
   <div class="row">
-         <div class="col s12 m4">
+      <div class="col s12 m4">
+          <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg">
+                    <span class="card-title">{{first}}</span>
+              </div>
+     <div class="card-content">
+       <span class="card-title activator grey-text text-darken-4">{{first}}
+      {{last}}
+      <i class="material-icons right">more_vert</i>
+    </span>
+    <p>
+      <a href="#">Profile</a>
+    </p>
+  </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4">{{first}} {{last}}<i class="material-icons right">close</i></span>
+    <ul class="collection">
+
+        <li class="collection-item"><div>Age: {{age}}<a href="#!" class="secondary-content">
+          <i class="material-icons">perm_contact_calendar</i></a></div>
+        </li>
+        <li class="collection-item"><div>Phone: {{phone}}<a href="#!" class="secondary-content">
+          <i class="material-icons">phone_iphone</i></a></div>
+        </li>
+        <li class="collection-item"><div>Email: {{email}}<a href="#!" class="secondary-content">
+          <i class="material-icons">email</i></a></div>
+        </li>
+        <li class="collection-item"><div>Street: {{street}}<a href="#!" class="secondary-content">
+          <i class="material-icons">location_on</i></a></div>
+        </li>
+        <li class="collection-item"><div>City:  {{city}}<a href="#!" class="secondary-content">
+          <i class="material-icons">location_on</i></a></div>
+        </li>
+        <li class="collection-item"><div>State: {{state}}<a href="#!" class="secondary-content">
+          <i class="material-icons">location_on</i></a></div>
+        </li>
+        <li class="collection-item"><div>Zip Code: {{zip}}<a href="#!" class="secondary-content">
+          <i class="material-icons">my_location</i></a></div>
+        </li>
+
+      </ul>
+  </div>
+</div>
+</div>
+<!--
            <div class="card">
              <div class="card-image">
               <img src="http://api.randomuser.me/portraits/{{gender}}/{{photo}}.jpg">
@@ -21,7 +70,7 @@
            </div>
          </div>
 
-
+   -->
          <div class="col sm12 m4">
            <div class="cards card-data card-charts cards-tile black">
              <div class="cards-body white-text">
@@ -127,6 +176,11 @@
 
 
        </div>
+       {{>editMemberModel}}
+
+      </div>
+
+    </template>
 <!--
 <div class="over-power-global-m">
 <div class="fixed-action-btn" style="bottom: 125px; right: 22px;">
@@ -266,7 +320,3 @@
 
         </div>
 -->
-   {{>editMemberModel}}
-
-  </div>
-</template>
