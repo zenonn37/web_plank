@@ -9,9 +9,11 @@ Template.Services.onCreated(function() {
 });
 Template.serviceView.onCreated(function() {
     var self = this;
+    var ID = Router.current().params;
     self.autorun(function() {
-    self.subscribe("services");
+    self.subscribe("service",ID._id);
     self.subscribe("members-global");
+    self.subscribe("schedule",ID._id);
     });
 });
 
@@ -46,6 +48,28 @@ AutoForm.hooks({
 });
 
 
+Template.newSchedule.helpers({
+  services: function(){
+     return "Yoga Advanced";
+  },
+  _id: function(){
+      return 5411225;
+  },
+  destroyed: function(){
+
+  },
+});
+
+
+
+
+Template.newSchedule.rendered = function() {
+  $('.datepicker')
+    .pickadate({
+      selectMonths: true, // Creates a dropdown to control month
+      selectYears: 15 // Creates a dropdown of 15 years to control year
+    })
+}
 Template.Services.helpers({
   items: function(){
     return Services.find({});
@@ -63,6 +87,9 @@ Template.serviceView.helpers({
     var serid = this._id
     //var services = Services.find({});
     return Members.find({service:{$in:[serid]}});
+  },
+  items:function() {
+     return false;
   }
 })
 
@@ -78,6 +105,17 @@ Template.serviceView.events({
        e.preventDefault();
        $('#edit-services-form').openModal();
   },
+  "click .super-button":function(e,tmpl) {
+      $('.super-cover-top')
+          .velocity({top:'0px'},500,"ease-in-out");
+          console.log('call super cover');
+  },
+  "click .close":function(e,tmpl) {
+      $('.super-cover-top')
+          .velocity("reverse");
+          console.log('close super cover');
+  },
+
   'click .enroll':function(e,tmpl) {
     e.preventDefault();
         console.log(this._id);

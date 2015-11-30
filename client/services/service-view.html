@@ -1,4 +1,12 @@
 <template name="serviceView">
+  <div class="super-cover-top">
+    <div class="close cursors">
+        <i class="material-icons">close</i>
+    </div>
+       {{> newSchedule}}
+  </div>
+
+  {{>editButton}}
 
   <div class="fixed-action-btn" style="bottom: 125px; right: 22px;">
     <a class="btn-floating btn-large red">
@@ -49,7 +57,39 @@
   Calendar
     -->
     <div class="col s12 m4 l4">
-     Cal
+      <div class="cards">
+        <div class="cards-body">
+            <ul>
+              {{#if items}}
+               {{#each items}}
+              <li></li>
+              {{/each}}
+              {{else}}
+              {{name}} is not scheduled
+              {{/if}}
+            </ul>
+
+        </div>
+        <div class="btn-hold">
+
+
+        <div class="super-button-suspend">
+          <div class="btn-floating btn-small results">
+                  <i class="material-icons open-modals">note_add</i>
+          </div>
+        </div>
+
+        <div class="super-button-notes">
+          <div class="btn-floating btn-small red results">
+                  <i class="material-icons open-modals">delete</i>
+          </div>
+        </div>
+
+
+
+
+         </div>
+      </div>
     </div>
     <!--
   content?

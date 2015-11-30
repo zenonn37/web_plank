@@ -58,6 +58,33 @@ Template.memberPage.helpers({
 });
 
 Template.memberPage.events({
+
+  "click .edit-intro-start":function(e, tmpl) {
+             e.preventDefault();
+             $('.edit-intro-start')
+                .velocity({
+                  scaleX:2,
+                  scaleY:2
+                });
+
+  },
+
+
+  "click .super-button":function(e, tmpl) {
+      e.preventDefault();
+    
+
+      $('.edit-intro-start')
+        .velocity({opacity:1,scale:5,scale:50},2000,'swing');
+
+
+          $('.super-cover')
+              .velocity({left:'0px'},{duration:300,delay:300});
+
+
+  },
+
+
   "click .open-overlay-chat":function(e, tmpl) {
     e.preventDefault();
     $('.super-cover')
@@ -67,17 +94,31 @@ Template.memberPage.events({
   },
   "click .open-overlay-edit":function(e, tmpl) {
     e.preventDefault();
+/*
     $('.super-cover')
-      .velocity({
-      left:'0px'
+      .velocity({left:'0px'},100,function() {
+        console.log('done animation');
       });
+
+      */
+
   },
   "click .close":function(e, tmpl) {
     e.preventDefault();
-    $('.super-cover')
-      .velocity({
-      left:'-9999px'
-      });
+
+
+    $('.edit-intro-start')
+      .velocity("reverse");
+
+
+        $('.super-cover')
+          .velocity("reverse");
+
+
+
+
+
+
   },
   "click .results":function(e) {
     e.preventDefault();

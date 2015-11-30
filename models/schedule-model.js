@@ -4,11 +4,19 @@ Schedule.attachSchema(new SimpleSchema({
       type:String,
       label:"Name",
       max:200
+
     },
-    challenge:{
-      type:String,
-      label:"Type",
-      max:60
+    id:{
+      type:String
+    },
+    day:{
+      type:Date,
+      autoform:{
+        type:"pickadate"
+      }
+    },
+    time:{
+      type:String
     },
     user:{
       type:String,
