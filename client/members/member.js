@@ -47,6 +47,19 @@ Template.editMember.events({
 }
 
 });
+//hooks
+
+AutoForm.hooks({
+
+ newStats:{
+   onSuccess:function(formType, result) {
+     console.log(result._id);
+   }
+ }
+
+
+});
+
 
 function openOverlayLeft() {
   $('.super-cover')
@@ -83,8 +96,19 @@ function checkStatus() {
   }
 }
 
-function startEval() {
+function finishEval() {
+ if (result._id) {
+    var curID = Router.current().params;
+  
+   Meteor.call("finishEvaluation", curID, function(error, result){
+     if(error){
+       console.log("error", error);
+     }
+     if(result){
 
+     }
+   });
+ }
 }
 
 

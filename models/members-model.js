@@ -77,8 +77,8 @@ Stats.deny({
 //schema
 Stats.attachSchema(new SimpleSchema({
     height:{
-      type:Number,
-       min:10,
+      type:String,
+       min:1,
        max:100,
       label:"Height",
       autoform:{
@@ -93,7 +93,7 @@ Stats.attachSchema(new SimpleSchema({
     weight:{
       type:Number,
       label:"Weight",
-      max:60,
+      max:600,
       autoform:{
         placeholder:'Enter Weight'
 
@@ -179,13 +179,13 @@ Stats.attachSchema(new SimpleSchema({
       }
 
     },
-    claves:{
+    calves:{
       type:Number,
       optional:true,
-      label:"Claves",
+      label:"Calves",
       max:100,
       autoform:{
-        placeholder:'Claves',
+        placeholder:'Calves',
         afFieldInput:{
           type:"text"
 

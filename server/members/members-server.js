@@ -124,7 +124,12 @@ Meteor.methods({
 
 
   },
-  newEvaluation:function(obj) {
+  /*we need to use normal form and onSubmit
+  hook to send memberid for stats and for callback
+  to change flag on member collecton.
+  */
+  newStats:function(obj) {
+      var user = Meteor.user();
     check(obj,{
       height:String,
       weight:Number,
