@@ -1,4 +1,5 @@
 Members = new Mongo.Collection("members");
+Stats = new Mongo.Collection("stats");
 Members.allow({
   insert: function(){
     return false;
@@ -48,8 +49,8 @@ Account.deny({
     return true;
   }
 });
-Stats = new Mongo.Collection("stats");
-Stats.allow({
+ Evaluation = new Mongo.Collection("evals");
+  Evaluation.allow({
   insert: function(){
     return false;
   },
@@ -61,7 +62,7 @@ Stats.allow({
   }
 });
 
-Stats.deny({
+  Evaluation.deny({
   insert: function(){
     return true;
   },
@@ -75,7 +76,15 @@ Stats.deny({
 
 
 //schema
-Stats.attachSchema(new SimpleSchema({
+  Evaluation.attachSchema(new SimpleSchema({
+    memberID:{
+      type:String,
+      optional:true,
+      autoform:{
+        omit:true
+      }
+    },
+
     height:{
       type:String,
        min:1,

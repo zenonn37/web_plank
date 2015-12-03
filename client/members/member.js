@@ -10,7 +10,8 @@ Template.editMember.rendered = function() {
    var id = Router.current().params;
     self.autorun(function(){
     self.subscribe("services");
-      self.subscribe("member",id._id);
+    self.subscribe("member",id._id);
+    self.subscribe("eval",id._id);
   });
  });
 
@@ -52,6 +53,38 @@ Template.editMember.events({
 AutoForm.hooks({
 
  newStats:{
+   onSubmit:function(insertDoc) {
+     this.event.preventDefault();
+     var serid = Router.current().params;
+
+     var data = {
+       memberID:serid._id,
+       height:insertDoc.height,
+       weight:insertDoc.weight,
+       bmi:insertDoc.bmi,
+       bfp:insertDoc.bfp,
+       fitness:insertDoc.fitness,
+       waist:insertDoc.waist,
+       chest:insertDoc.chest,
+       hips:insertDoc.hips,
+       thighs:insertDoc.thighs,
+       biceps: insertDoc.biceps,
+       calves: insertDoc.calves,
+       girth:insertDoc.girth,
+       neck: insertDoc.neck,
+       notes: insertDoc.notes
+     }
+
+     Meteor.call("newStats", data, function(error, result){
+       if(error){
+         console.log("error", error);
+       }
+       if(result){
+
+       }
+     });
+      return false;
+   },
    onSuccess:function(formType, result) {
      console.log(result._id);
    }
@@ -99,7 +132,7 @@ function checkStatus() {
 function finishEval() {
  if (result._id) {
     var curID = Router.current().params;
-  
+
    Meteor.call("finishEvaluation", curID, function(error, result){
      if(error){
        console.log("error", error);

@@ -131,6 +131,7 @@ Meteor.methods({
   newStats:function(obj) {
       var user = Meteor.user();
     check(obj,{
+      memberID:String,
       height:String,
       weight:Number,
       bmi:Number,
@@ -148,6 +149,7 @@ Meteor.methods({
     })
 
     var data = {
+      memberID:obj.memberID,
       height:obj.height,
       weight:obj.weight,
       bmi:obj.bmi,
@@ -168,15 +170,21 @@ Meteor.methods({
      user:user._id,
      created: new Date()
 
+
    })
-    var statsId = Stats.insert(data, function(error) {
+    var evalId =   Evaluation.insert(data, function(error) {
       if (error) {
         console.log(error);
+      }else {
+        Members.update({_id:obj.memberID}, {$set:{
+          evaluation:true
+        }});
+
       }
     });
 
     return{
-      _id:statsId
+      _id:evalId
     };
   }
 });

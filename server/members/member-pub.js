@@ -25,3 +25,7 @@ Meteor.publish("account", function(){
 Meteor.publish("member", function(id){
    return Members.find({_id:id});
 });
+
+Meteor.publish("eval", function(id){
+   return  Evaluation.find({memberID:id});
+});
