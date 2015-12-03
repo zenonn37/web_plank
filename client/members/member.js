@@ -1,17 +1,32 @@
 Template.editMember.rendered = function() {
     $('.select-gender').material_select();
     $('.select-state').material_select();
+
+
 }
  //Meteor.subscribe("account");
   var currentId = this._id;
 
+
+    // body...
+      //var id = Router.current().params;
+
+
+
+
  Template.memberPage.onCreated(function() {
+
   var self = this;
+   var id = Router.current().params;
+
     self.autorun(function(){
     //var data = Template.currentData();
       //self.subscribe("account");
     self.subscribe("services");
+      self.subscribe("member",id._id);
   });
+
+
 
  });
 
@@ -49,15 +64,49 @@ Template.editMember.events({
 
 });
 
+function openOverlay() {
+
+    $('.super-cover-top')
+        .velocity({top:'0px'},500,"ease-in-out");
+        console.log('call super cover');
+}
+
+function checkStatus() {
+  var curID = Router.current().params;
+  console.log(curID._id);
+  var status = Members.findOne({_id:curID._id});
+  console.log(status);
+  var eval = status.evaluation;
+
+  if (eval !== true) {
+    console.log('do eval');
+    openOverlay();
+  }else {
+    console.log('done');
+  }
+}
+
+
 
 Template.memberPage.helpers({
  items:function() {
    var memid = this._id
   return Services.find({'enrolled.member':{$in:[memid]}});
+},
+ status:function() {
+
+
+
  }
 });
 
 Template.memberPage.events({
+
+  "click .close2":function(e,tmpl) {
+      $('.super-cover-top')
+          .velocity("reverse");
+          console.log('close super cover');
+  },
 
   "click .edit-intro-start":function(e, tmpl) {
              e.preventDefault();
@@ -72,7 +121,7 @@ Template.memberPage.events({
 
   "click .super-button":function(e, tmpl) {
       e.preventDefault();
-    
+
 
       $('.edit-intro-start')
         .velocity({opacity:1,scale:5,scale:50},2000,'swing');
@@ -172,6 +221,7 @@ Template.memberPage.events({
 
 
 Template.memberPage.rendered = function() {
+checkStatus();
 
 
   $(".dial").knob({

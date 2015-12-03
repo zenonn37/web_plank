@@ -21,3 +21,7 @@ Meteor.publish("members-global", function(){
 Meteor.publish("account", function(){
    return Account.find({});
 });
+
+Meteor.publish("member", function(id){
+   return Members.find({_id:id});
+});

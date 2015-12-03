@@ -37,11 +37,18 @@ AutoForm.hooks({
          console.log("error", error);
        }
        if(result){
-      console.log(result);
+      console.log(result._id);
        }
      });
 
    return false;
+    }
+  },
+  newServices:{
+    onSuccess:function(formType, result) {
+    console.log(result._id);
+     Router.go('service-view',{_id:result._id});
+      Bert.alert( 'New Service Created', 'success', 'fixed-top', 'fa-bolt' );
     }
   }
 

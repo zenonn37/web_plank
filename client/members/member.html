@@ -1,10 +1,34 @@
 <template name="memberPage">
-
+ {{status}}
   <div class="super-cover">
     <div class="close cursors">
         <i class="material-icons open-modals">close</i>
     </div>
     {{>editMember}}
+  </div>
+  <div class="super-cover-top">
+    <div class="close2 cursors">
+        <i class="material-icons open-modals">close</i>
+    </div>
+
+    <div class="row valign-wrapper">
+      <div class="col s12">
+
+      <h5 class="center-align white-text">
+        {{first}} Needs An Evaluation, would you like to complete now?
+      </h5>
+        <div class="yes btn-floating btn-small green center-align">
+              <i class="material-icons open-overlay-edit">mode_edit</i>
+        </div>
+        <div class="no btn-floating btn-small red center-align">
+              <i class="material-icons open-overlay-edit">mode_edit</i>
+        </div>
+      </div>
+
+    </div>
+
+
+
   </div>
   <div class="super-button">
     <div class="btn-floating btn-small blue results">
@@ -17,7 +41,7 @@
 
    </div>
  -->
- 
+
   <div class="content">
 
   <div class="row">

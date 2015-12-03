@@ -37,7 +37,15 @@ Meteor.methods({
      evaluation:false,
      services:[]
    })
-    Members.insert(data);
+    var membersId = Members.insert(data, function(error) {
+      if (error) {
+        console.log(error);
+      }
+    });
+
+    return{
+      _id:membersId
+    };
 
 
 

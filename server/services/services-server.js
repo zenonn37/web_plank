@@ -47,13 +47,18 @@ Meteor.methods({
        Router.go('/login');
        console.log('no user');
      }else{
-       Services.insert(data,function(error) {
+    var serviceId = Services.insert(data,function(error) {
          if (error) {
            console.log(error + " errors not good");
          }else{
            console.log("good");
+          
          }
        });
+
+       return{
+         _id:serviceId
+       };
      }
 
 

@@ -2,7 +2,7 @@ Session.setDefault("cursor", 0);
 
 Tracker.autorun(function(){
    Meteor.subscribe("members",Session.get('cursor'));
-  
+
 });
 
 Session.setDefault("Status", "Active");
@@ -80,12 +80,13 @@ Template.Members.events({
 
     //Members.insert(obj);
 
-    Meteor.call("newMembers", obj, function(error){
+    Meteor.call("newMembers", obj, function(error,result){
       if(error){
         console.log("error", error);
       }else {
-        Bert.alert( 'New Memeber Created', 'danger', 'growl-top-right', 'fa-bolt' );
 
+         Router.go('memberPage',{_id:result._id});
+           Bert.alert( 'New Memeber Created', 'danger', 'growl-top-right', 'fa-bolt' );
       }
 
 
