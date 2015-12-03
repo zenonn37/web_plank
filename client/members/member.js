@@ -1,33 +1,17 @@
 Template.editMember.rendered = function() {
     $('.select-gender').material_select();
     $('.select-state').material_select();
-
-
 }
- //Meteor.subscribe("account");
+
   var currentId = this._id;
 
-
-    // body...
-      //var id = Router.current().params;
-
-
-
-
  Template.memberPage.onCreated(function() {
-
   var self = this;
    var id = Router.current().params;
-
     self.autorun(function(){
-    //var data = Template.currentData();
-      //self.subscribe("account");
     self.subscribe("services");
       self.subscribe("member",id._id);
   });
-
-
-
  });
 
 
@@ -64,11 +48,24 @@ Template.editMember.events({
 
 });
 
-function openOverlay() {
+function openOverlayLeft() {
+  $('.super-cover')
+    .velocity({
+    left:'0px'
+  },600,"swing");
+}
+
+function openOverlayTop() {
 
     $('.super-cover-top')
         .velocity({top:'0px'},500,"ease-in-out");
         console.log('call super cover');
+}
+
+function closeOverlay() {
+  $('.super-cover-top')
+      .velocity("reverse");
+      console.log('close super cover');
 }
 
 function checkStatus() {
@@ -80,10 +77,14 @@ function checkStatus() {
 
   if (eval !== true) {
     console.log('do eval');
-    openOverlay();
+    openOverlayTop();
   }else {
     console.log('done');
   }
+}
+
+function startEval() {
+
 }
 
 
@@ -102,10 +103,19 @@ Template.memberPage.helpers({
 
 Template.memberPage.events({
 
+
+  "click .yes":function(e,tmpl) {
+       closeOverlay();
+       Meteor.setTimeout(function(){
+          openOverlayLeft();
+       }, 500);
+  },
+  "click .no":function(e,tmpl) {
+      closeOverlay();
+  },
+
   "click .close2":function(e,tmpl) {
-      $('.super-cover-top')
-          .velocity("reverse");
-          console.log('close super cover');
+      closeOverlay();
   },
 
   "click .edit-intro-start":function(e, tmpl) {

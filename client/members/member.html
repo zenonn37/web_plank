@@ -1,11 +1,17 @@
 <template name="memberPage">
  {{status}}
-  <div class="super-cover">
-    <div class="close cursors">
-        <i class="material-icons open-modals">close</i>
-    </div>
-    {{>editMember}}
-  </div>
+{{#overlayLeft title="Evaluation"}}
+  {{> evaluation}}
+{{/overlayLeft}}
+
+<!--
+ <div class="super-cover">
+   <div class="close cursors">
+       <i class="material-icons open-modals">close</i>
+   </div>
+   {{>editMember}}
+ </div>
+-->
   <div class="super-cover-top">
     <div class="close2 cursors">
         <i class="material-icons open-modals">close</i>
@@ -20,7 +26,7 @@
         <div class="yes btn-floating btn-small green center-align">
               <i class="material-icons open-overlay-edit">mode_edit</i>
         </div>
-        <div class="no btn-floating btn-small red center-align">
+        <div class="no btn-floating btn-small red center-alignes">
               <i class="material-icons open-overlay-edit">mode_edit</i>
         </div>
       </div>

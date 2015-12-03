@@ -123,5 +123,55 @@ Meteor.methods({
 
 
 
+  },
+  newEvaluation:function(obj) {
+    check(obj,{
+      height:String,
+      weight:Number,
+      bmi:Number,
+      bfp:Number,
+      fitness:Number,
+      waist:Number,
+      chest:Number,
+      hips:Number,
+      thighs:Number,
+      biceps: Number,
+      calves: Number,
+      girth:Number,
+      neck: Number,
+      notes: String
+    })
+
+    var data = {
+      height:obj.height,
+      weight:obj.weight,
+      bmi:obj.bmi,
+      bfp:obj.bfp,
+      fitness:obj.fitness,
+      waist:obj.waist,
+      chest:obj.chest,
+      hips:obj.hips,
+      thighs:obj.thighs,
+      biceps: obj.biceps,
+      calves: obj.calves,
+      girth:obj.girth,
+      neck: obj.neck,
+      notes: obj.notes
+    }
+
+   _.extend(data,{
+     user:user._id,
+     created: new Date()
+
+   })
+    var statsId = Stats.insert(data, function(error) {
+      if (error) {
+        console.log(error);
+      }
+    });
+
+    return{
+      _id:statsId
+    };
   }
 });
