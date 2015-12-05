@@ -12,6 +12,7 @@ Template.editMember.rendered = function() {
     self.subscribe("services");
     self.subscribe("member",id._id);
     self.subscribe("eval",id._id);
+    self.subscribe("transaction",id._id);
   });
  });
 
@@ -83,66 +84,25 @@ AutoForm.hooks({
 
        }
      });
+        this.done();
       return false;
-   },
-   onSuccess:function(formType, result) {
-     console.log(result._id);
-   }
+   }, onSuccess:function(formType, result) {
+        console.log('Evaluation Completed');
+        Bert.alert( 'Evaluation Completed', 'success', 'fixed-top', 'fa-bolt' );
+        Meteor.setTimeout(function(){
+             closeOverlayLeft();
+        }, 200);
+
+
+    }
+
  }
 
 
 });
 
 
-function openOverlayLeft() {
-  $('.super-cover')
-    .velocity({
-    left:'0px'
-  },600,"swing");
-}
 
-function openOverlayTop() {
-
-    $('.super-cover-top')
-        .velocity({top:'0px'},500,"ease-in-out");
-        console.log('call super cover');
-}
-
-function closeOverlay() {
-  $('.super-cover-top')
-      .velocity("reverse");
-      console.log('close super cover');
-}
-
-function checkStatus() {
-  var curID = Router.current().params;
-  console.log(curID._id);
-  var status = Members.findOne({_id:curID._id});
-  console.log(status);
-  var eval = status.evaluation;
-
-  if (eval !== true) {
-    console.log('do eval');
-    openOverlayTop();
-  }else {
-    console.log('done');
-  }
-}
-
-function finishEval() {
- if (result._id) {
-    var curID = Router.current().params;
-
-   Meteor.call("finishEvaluation", curID, function(error, result){
-     if(error){
-       console.log("error", error);
-     }
-     if(result){
-
-     }
-   });
- }
-}
 
 
 
@@ -221,12 +181,8 @@ Template.memberPage.events({
   },
   "click .close":function(e, tmpl) {
     e.preventDefault();
-
-
     $('.edit-intro-start')
       .velocity("reverse");
-
-
         $('.super-cover')
           .velocity("reverse");
 
@@ -282,22 +238,79 @@ Template.memberPage.events({
   }
 });
 
+function openOverlayLeft() {
+  $('.super-cover')
+    .velocity({
+    left:'0px'
+  },600,"swing");
+};
+
+function closeOverlayLeft() {
+  $('.super-cover')
+   .velocity('reverse');
+ };
 
 
+function openOverlayTop() {
+
+    $('.super-cover-top')
+        .velocity({top:'0px'},500,"ease-in-out");
+        console.log('call super cover');
+};
+
+function closeOverlay() {
+  $('.super-cover-top')
+      .velocity("reverse");
+      console.log('close super cover');
+};
+
+function checkStatus() {
+  var curID = Router.current().params;
+  console.log(curID._id);
+  var status = Members.findOne({_id:curID._id});
+  console.log(status);
+  var eval = status.evaluation;
+
+  if (eval !== true) {
+    console.log('do eval');
+    openOverlayTop();
+  }else {
+    console.log('done');
+  }
+};
+
+function finishEval() {
+ if (result._id) {
+    var curID = Router.current().params;
+
+   Meteor.call("finishEvaluation", curID, function(error, result){
+     if(error){
+       console.log("error", error);
+     }
+     if(result){
+
+     }
+   });
+ }
+};
 
 
+Template.memberPage.onRendered(function() {
+  var self = this;
 
-Template.memberPage.rendered = function() {
-checkStatus();
+  Meteor.setTimeout(function(){
+       checkStatus();
+       console.log('status loaded');
+  }, 2000);
 
-
-  $(".dial").knob({
+  self.$(".dial").knob({
     'stepsize': 0.1,
     val:45
   });
 
-  $(".arc").knob({
+  self.$(".arc").knob({
     'stepsize': 0.1,
       val:20
   });
-}
+
+});

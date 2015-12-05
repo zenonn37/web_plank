@@ -176,6 +176,7 @@ Meteor.methods({
       if (error) {
         console.log(error);
       }else {
+        console.log('good');
         Members.update({_id:obj.memberID}, {$set:{
           evaluation:true
         }});

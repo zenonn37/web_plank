@@ -40,9 +40,14 @@ AutoForm.hooks({
       console.log(result._id);
        }
      });
-
+   this.done();
    return false;
-    }
+ },
+ onSuccess:function(formType, result) {
+   console.log('new transaction');
+     Bert.alert( 'New transaction Created', 'success', 'fixed-top', 'fa-bolt' );
+
+ }
   },
   newServices:{
     onSuccess:function(formType, result) {

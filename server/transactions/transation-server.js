@@ -41,15 +41,15 @@ Meteor.methods({
            console.log(error + " errors not good");
          }else{
            console.log("good " + transactionsId);
-           return {
-             _id: transactionsId
-           };
+
          }
        });
      }
 
 
-
+     return {
+       _id: transactionsId
+     };
 
   }
 });
