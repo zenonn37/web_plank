@@ -26,32 +26,14 @@ Template.plankNav.events({
   },
   "click .close-overlay": function(e, template) {
       e.preventDefault();
-      $('.nav-overlay')
-         .velocity({
-           left:'-400px'
-         },{
-           duration:150,easing:"swing",delay:300
-         });
-
-         $('.nav-inner')
-           .velocity({
-             left:'-100px'
-           })
+      Overlays.closeSideNav();
 
   },
   "click .nav-one":function(e, template) {
     e.preventDefault();
+    Overlays.openSideNav();
     console.log('test2');
-    $('.nav-inner')
-      .velocity({
-        left:'0px'
-      })
-    $('.nav-overlay')
-    .velocity({
-      left:'0px'
-    },{
-      duration:100,easing:"swing"
-    });
+
 
 
 
