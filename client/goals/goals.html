@@ -1,4 +1,8 @@
 <template name="Goals">
+
+  <div class="content">
+
+
   <h4>Goals</h4>
   {{#if Template.subscriptionsReady}}
      {{#each items}}
@@ -15,6 +19,6 @@
   {{/if}}
 
 <a href="#" class="btn open-modal"><i class="material-icons">add</i></a>
-
+  </div>
 {{> goalsModel}}
 </template>
