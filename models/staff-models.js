@@ -16,7 +16,13 @@ Staff.attachSchema(new SimpleSchema({
     },
     email:{
       type:String,
-      max:100
+      regEx: SimpleSchema.RegEx.Email,
+      max:100,
+      autoform:{
+        afFieldInput:{
+          length:"100"
+        }
+      }
     },
     position:{
       type:String,

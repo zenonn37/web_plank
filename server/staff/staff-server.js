@@ -8,7 +8,9 @@ Meteor.methods({
        lastname:String,
        position:String,
        photo:String,
-       gender:String
+       gender:String,
+       phone:String,
+       email:String
 
 
 
@@ -19,14 +21,16 @@ Meteor.methods({
         lastname:doc.lastname,
         position:doc.position,
         photo:doc.photo,
-        gender:doc.gender
+        gender:doc.gender,
+        phone:doc.phone,
+        email:doc.email
 
       }
 
 
      _.extend(data,{
        created:new Date(),
-       user:user._id,
+       user:user._id
 
 
      });
@@ -46,7 +50,7 @@ Meteor.methods({
      }
 
 
-
+       return staffId;
 
   },
   editStaff:function(doc,docId){

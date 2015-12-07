@@ -1,4 +1,6 @@
 Meteor.publish("members", function(cursor){
+
+  Counts.publish(this,'mem-count', Members.find({userId:this.userId}),{noReady:true});
    return Members.find({userId:this.userId},{
      limit:5,skip:cursor
    });

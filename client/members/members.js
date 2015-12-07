@@ -1,5 +1,14 @@
 Session.setDefault("cursor", 0);
 
+
+Template.Members.onCreated(function() {
+  var self = this;
+  self.autorun(function() {
+    self.subscribe("members",Session.get('cursor'));
+  })
+});
+
+
 Tracker.autorun(function(){
    Meteor.subscribe("members",Session.get('cursor'));
 
@@ -26,6 +35,10 @@ Template.Members.created = function(){
 //status:Session.get('Status')
 //sort:{createdAt: Session.get('Order')}});
 Template.Members.helpers({
+
+  count:function() {
+    return Counts.get('mem-count');
+  },
 
   items:function() {
     var list = Members.find({},{sort:{createdAt:-1}});
