@@ -1,5 +1,12 @@
 Meteor.subscribe("Teams");
 
+Template.Coach.onRendered(function() {
+
+       this.$('ul.tabs').tabs();
+
+
+});
+
 Template.Coach.helpers({
   teams:function() {
     return Teams.find({});
