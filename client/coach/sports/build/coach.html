@@ -7,97 +7,148 @@
   </div>
 
 
-  <div class="over-power-global-s">
-     <div class="row">
 
-       <div class="col12 m12 l12">
-            <div class="card-panel white covers cards">
-               {{#if teams}}
-                 {{#each teams}}
-                 <div class="row">
-
-
-              <div class="col s12 m3 l3">
-
-
-                <ul class="collection">
+  <div class="content">
+    <div class="row">
 
 
 
-                   <li class="collection-item avatar">
-                       <i class="material-icons circle green">stars</i>
-                     <span class="title">{{team}}</span>
-
-                     <p style="color:green">
-                       Team Built: {{time createdAt}}
-                     </p>
-
-
-                   </li>
-                </ul>
-
-                 </div>
-
-
-                 <div class="col s12 m3 l3">
-                     <ul class="collection">
-                       <li class="collection-item avatar">
-                         <i class="material-icons circle green">supervisor_account</i>
-                         <span class="title">Players</span>
-                         <p>
-                            {{players}}
+      <div class="col s12 m6 l4">
+        <ul class="collection with-header">
+               <li class="collection-header"><h6>Team Leaders<small> 2016</small></h6></li>
+               <li class="collection-item avatar">
+       <img src="http://api.randomuser.me/portraits/men/3.jpg" alt="" class="circle">
+       <span class="title">Lucas WhiteHouse, QB</span>
+       <p>
+         Passing Yards
+       </p>
+       <h5>1250
+       </h5>
+       <div class="secondary-content">TD 12
+        <br/>
+        102/204, 50%
+       </div>
+     </li>
 
 
-                         </p>
-                       </li>
+     <li class="collection-item avatar">
+<img src="http://api.randomuser.me/portraits/men/3.jpg" alt="" class="circle">
+<span class="title">Mark Brandow, RB</span>
+<p>
+Rushing Yards
+</p>
+<h5>1851
+</h5>
+<div class="secondary-content">CAR 150
+<br/>
+TD 21
+</div>
+</li>
 
-                     </ul>
+             </ul>
 
-                 </div>
+      </div>
 
-                 <div class="col s12 m3 l3">
-                     <ul class="collection">
-                       <li class="collection-item avatar">
-                         <i class="material-icons circle green">label</i>
-                         <span class="title">Sport</span>
-                         <p>
-                            {{sport}}<br/>
-                            {{lvl}}
+      <div class="col s12 m6 l4">
+        <div class="team-stat-card">
+            <div class="coach-title">Team Stats</div>
+          <div class="team-stat-card-body">
 
+              <div class="row seperate">
+                <div class="col s6 center-align">
+                  <span class="team-sub-title">Passing Yards</span>
+                  <div class="thick-stats">
+                    125.9
+                  </div>
+                  <div class="team-sub-title">
+                    3rd
+                  </div>
+                </div>
+                <div class="col s6 center-align">
+                    <span class="team-sub-title">Rushing</span>
 
-                         </p>
-                       </li>
+                    <div class="thick-stats">
+                      275.4
+                    </div>
+                    <div class="team-sub-title">
+                      1st
+                    </div>
 
-                     </ul>
+                </div>
 
-                 </div>
+              </div>
+              <div class="row seperate">
+                <div class="col s6 center-align">
+                    <span class="team-sub-title">Passing Defense</span>
 
+                    <div class="thick-stats">
+                      210.5
+                    </div>
+                    <div class="team-sub-title">
+                      2nd
+                    </div>
 
+                </div>
+                <div class="col s6 center-align">
+                    <span class="team-sub-title">Rushing Defense</span>
 
-                 <div class="col s12 m3 l3 center-align">
-                     <ul class="collection">
-                       <li class="collection-item">
-                           <p><a href="{{pathFor 'Team'}}" class="waves-effect waves-light btn white-text green">Profile</a></p>
+                    <div class="thick-stats">
+                      65
+                    </div>
+                    <div class="team-sub-title">
+                      1st
+                    </div>
 
-                       </li>
-
-                     </ul>
-
-                 </div>
+                </div>
 
               </div>
 
+              <div class="row seperate">
+                <div class="col s6 center-align">
+                    <span class="team-sub-title">Points</span>
 
-                 {{/each}}
-               {{else}}
-               Build Your Team!
-               {{/if}}
+                    <div class="thick-stats">
+                      45
+                    </div>
+                    <div class="team-sub-title">
+                      1st
+                    </div>
 
-            </div>
+                </div>
+                <div class="col s6 center-align">
+                    <span class="team-sub-title">Points Allowed</span>
 
-       </div>
+                    <div class="thick-stats">
+                      13
+                    </div>
+                    <div class="team-sub-title">
+                      1st
+                    </div>
 
-     </div>
+                </div>
+
+              </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <div class="col s12  m6 l4">
+        <!--
+  schedule
+  -->
+  <ul class="collection with-header">
+         <li class="collection-header"><h6>Schedule<small> 2016</small></h6></li>
+         <li class="collection-item">Greenwich vs Granville <span class="right team-result-win"> W  55 - 7</span></li>
+          <li class="collection-item">Greenwich @ Salem <span class="right team-result-lose"> L  30 - 29</span></li>
+
+       </ul>
+      </div>
+    </div>
+
   </div>
 {{> teamModel}}
 </template>
