@@ -1,8 +1,5 @@
 //overlay animatons object
 Overlays = {
-
-
-
  openSideNav:function() {
   var $navInner = $('.nav-inner');
     var $navOverlay = $('.nav-overlay');
@@ -28,6 +25,38 @@ Overlays = {
     ];
 
     $.Velocity.RunSequence(mySeq);
+ },
+
+ smallPopoutOpen:function() {
+    var $superCoverSmall = $('.super-cover-small');
+    var $head = $('.head');
+    var $closeSmallPopout = $('.close-small-popout');
+   //e:element/p:properties/o:options
+    var mySeq = [
+      {e:$superCoverSmall,p:{left:'200px'},o:{duration:400,easing:"swing"}},
+      {e:$head,p:{opacity:1},o:{stagger:150,duration:200,easing:"swing"}},
+      {e:$closeSmallPopout,p:{opacity:1, rotateZ:'360deg'},o:{stagger:150,duration:800,easing:"swing"}},
+
+
+    ];
+
+  $.Velocity.RunSequence(mySeq);
+ },
+ smallPopoutClose:function() {
+   var $superCoverSmall = $('.super-cover-small');
+   var $head = $('.head');
+   var $closeSmallPopout = $('.close-small-popout');
+   var mySeq = [
+     {e:$closeSmallPopout,p:{opacity:0, rotateZ:'-360deg'},o:{duration:400,easing:"swing"}},
+     {e:$head,p:{opacity:0},o:{stagger:150,duration:200,easing:"swing"}},
+     {e:$superCoverSmall,p:{left:'-1000px'},o:{stagger:150,duration:400,easing:"swing"}},
+
+
+
+
+   ];
+
+     $.Velocity.RunSequence(mySeq);
  }
 
 };

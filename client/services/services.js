@@ -80,7 +80,12 @@ Template.newSchedule.rendered = function() {
     .pickadate({
       selectMonths: true, // Creates a dropdown to control month
       selectYears: 15 // Creates a dropdown of 15 years to control year
-    })
+    });
+
+    Meteor.setTimeout(function(){
+         checkStatus();
+         console.log('status loaded');
+    }, 2000);
 }
 Template.Services.helpers({
   items: function(){
@@ -113,6 +118,10 @@ Template.Services.events({
 });
 
 Template.serviceView.events({
+
+  "click .close-small-popout":function(e,tmpl) {
+      Overlays.smallPopoutClose();
+  },
   "click .open-modal": function(e, template){
        e.preventDefault();
        $('#edit-services-form').openModal();
@@ -172,3 +181,18 @@ Template.serviceView.events({
     });
   }
 });
+
+function checkStatus() {
+  var curID = Router.current().params;
+  console.log(curID._id);
+  var status = Services.findOne({_id:curID._id});
+  console.log(status);
+  var schedule = status.scheduled;
+
+  if (schedule !== true) {
+    console.log('plz schedule');
+    Overlays.smallPopoutOpen();
+  }else {
+    console.log('done');
+  }
+};
