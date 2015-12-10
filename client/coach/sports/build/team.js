@@ -32,11 +32,21 @@ Template.Coach.events({
     e.preventDefault();
     //tmpl.leaders.set(!tmpl.leaders.get());
     tmpl.leaders.set(true);
+      $('.defense')
+        .addClass('active-tab');
+        $('.offense')
+          .removeClass('active-tab');
 
   },
   "click .defense":function(e, tmpl) {
     e.preventDefault();
       tmpl.leaders.set(false);
+      $('.offense')
+        .addClass('active-tab');
+        $('.defense')
+          .removeClass('active-tab');
+
+
 
   },
   "click .open-form": function(event, template){
