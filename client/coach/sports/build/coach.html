@@ -20,33 +20,31 @@
 
               <div class="coach-title">Team Leaders 2015</div>
                    <div class="team-stat-card-body">
-                     <div class="row">
-                  <div class="col s12">
-                    <ul class="tabs">
-                      <li class="tab col s3"><a class="active" href="#passing">Passing</a></li>
-                      <li class="tab col s3"><a  href="#defense">Defense</a></li>
-                      <li class="tab col s3"><a href="#sp">SP</a></li>
-
-                    </ul>
-                  </div>
-                  <div id="passing" class="col s12">
-                     <div class="team-avatar">
-                      <span class="team-sub-title">Passing Yards</span>
-                      <img class="circle avatar" src="http://api.randomuser.me/portraits/men/5.jpg"
-                      alt="Player" />
+                     <div class="mini-nav">
+                       <span class="offense cursors">Offense</span>
+                        <span class="defense cursors">Defense</span>
                      </div>
+                      {{#if default}}
+                     <div class="leaders-offense">
+                           <div class="team-sub-title">Passing Yards</div>
+                         <img class="circle avatar left" src="http://api.randomuser.me/portraits/men/6.jpg" alt="Player" />
+                         <span class="player-name">Lucas Whitehouse, 8, QB</span>
+                         <div class="thick-stats">
+                            <p>
+                              1389
+                              <span class="right">TD 12,
+                                <br/>98/150 46%
+                              </span>
+                            </p>
 
-                     <div class="player center-align">
-                       Lucas Whitehouse
+                         </div>
+
                      </div>
-
-
-                  </div>
-
-                  <div id="defense" class="col s12">defense</div>
-                  <div id="sp" class="col s12">sp</div>
-
-                </div>
+                         {{else}}
+                     <div class="leaders-defense">
+                          defense
+                     </div>
+                      {{/if}}
 
               </div>
          </div>

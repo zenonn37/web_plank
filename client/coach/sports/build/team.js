@@ -2,7 +2,8 @@ Meteor.subscribe("Teams");
 
 Template.Coach.onRendered(function() {
 
-       this.$('ul.tabs').tabs();
+
+
 
 
 });
@@ -14,6 +15,9 @@ Template.Coach.helpers({
   },
   time:function() {
     return moment().format("MM-DD-YYYY");
+  },
+  default:function() {
+  return Template.instance().leaders.get();
   }
 
 
@@ -23,6 +27,18 @@ Template.Coach.helpers({
 });
 
 Template.Coach.events({
+
+  "click .offense":function(e, tmpl) {
+    e.preventDefault();
+    //tmpl.leaders.set(!tmpl.leaders.get());
+    tmpl.leaders.set(true);
+
+  },
+  "click .defense":function(e, tmpl) {
+    e.preventDefault();
+      tmpl.leaders.set(false);
+
+  },
   "click .open-form": function(event, template){
         $('#team-form').openModal();
   },
@@ -58,7 +74,7 @@ Template.Coach.events({
 });
 
 Template.Coach.created = function() {
-  // body...
+    this.leaders = new ReactiveVar(true);
 }
 
 
