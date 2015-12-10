@@ -109,6 +109,7 @@ reactive-var@1.0.6
 reload@1.1.4
 retry@1.0.4
 routepolicy@1.0.6
+scmart:jquery-timepicker@1.3.8
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4

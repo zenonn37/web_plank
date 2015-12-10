@@ -8,7 +8,8 @@
         {{> quickForm collection="Schedule" id="newSchedule" type="method" meteormethod="newSchedule"}}
       -->
       {{#autoForm collection="Schedule" id="newSchedule" type="method" meteormethod="newSchedule"}}
-      
+              {{> afQuickField name="start"}}
+              {{> afQuickField name="end"}}
       {{/autoForm}}
     </div>
 

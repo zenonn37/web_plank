@@ -6,6 +6,26 @@ Schedule.attachSchema(new SimpleSchema({
       max:200
 
     },
+    start:{
+      type:String,
+      autoform:{
+        afFieldInput:{
+          class:"time-start",
+          type:"text"
+
+        }
+      }
+    },
+    end:{
+      type:String,
+      autoform:{
+        afFieldInput:{
+          class:"end-start",
+          type:"text"
+
+        }
+      }
+    },
     id:{
       type:String
     },

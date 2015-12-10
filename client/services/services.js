@@ -63,19 +63,23 @@ AutoForm.hooks({
 Template.newSchedule.helpers({
   services: function(){
      return "Yoga Advanced";
-  },
-  _id: function(){
-      return 5411225;
-  },
-  destroyed: function(){
+  }
 
-  },
 });
 
 
 
 
+
+
 Template.newSchedule.rendered = function() {
+
+  $('.time-start')
+    .timepicker();
+
+   $('.end-start')
+     .timepicker();
+
   $('.datepicker')
     .pickadate({
       selectMonths: true, // Creates a dropdown to control month
