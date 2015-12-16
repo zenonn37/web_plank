@@ -23,6 +23,55 @@ Members.deny({
     return true;
   }
 });
+
+
+Members.attachSchema(new SimpleSchema({
+  first:{
+    type:String
+  },
+  last:{
+    type:String
+  },
+
+  age:{
+    type:String,
+     min:1,
+     max:100,
+
+
+  },
+  gender:{
+    type:String,
+
+  },
+
+
+
+  user:{
+    type:String,
+     optional:true,
+    autoform:{
+         omit:true
+
+    }
+
+
+  },
+  created:{
+    type:Date,
+    optional:true,
+    autoform:{
+      omit:true
+
+    }
+
+  }
+
+
+}));
+
+
+
 //schema
 
 Account = new Mongo.Collection("accounts");
