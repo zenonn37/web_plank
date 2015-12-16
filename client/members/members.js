@@ -65,14 +65,22 @@ Template.Members.helpers({
 });
 
 
-
+Template.globalDataPopout.events({
+  "click .close-data-popout":function(e, tmpl) {
+    e.preventDefault();
+    Presentation.globalDataPopoutClose();
+    console.log('pushed');
+  }
+});
 
 
 Template.Members.events({
   "click #open-form": function(event, template){
    event.preventDefault();
-        $('#member-form').openModal();
+        //$('#member-form').openModal();
+        Presentation.globalDataPopout();
   },
+
 
   "submit .new-members":function(event) {
     event.preventDefault();
