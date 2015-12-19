@@ -42,6 +42,17 @@ Members.attachSchema(new SimpleSchema({
   },
   gender:{
     type:String,
+    autoform:{
+      type:"select-checkbox-inline",
+      options: function() {
+        return[
+          {label:"Male",value:"Male"},
+          {label:"Female",value:"Female"}
+        ];
+      }
+
+
+    }
 
   },
 

@@ -1,5 +1,76 @@
-<template name="NewMembers">
+<template name="newMembers">
 
+
+
+
+ {{#autoForm collection = "Members" type="normal" id="newMembers"}}
+  <div class="col s12 m6 l8">
+ <div class="q-content">
+    <div class="questions">
+      <p>Create A New  Member</p>
+      </div>
+      <div class="row">
+      <div class="input-field col s12">
+      {{> afQuickField  name='first'}}
+     </div>
+
+
+      <div class="input-field col s12">
+      {{> afQuickField  name='last'}}
+     </div>
+
+
+      <div class="input-field col s12">
+      {{> afQuickField  name='age'}}
+     </div>
+      </div>
+
+
+
+  <div class="row">
+    <div class="go-button">
+      GO
+    </div>
+  </div>
+
+
+ </div>
+ </div>
+  <div class="col s12 m4 l4">
+  <div class="global-quick">
+     <div class="questions">
+   Gender
+    </div>
+
+     <div>
+         {{> afQuickField  name='gender'}}
+
+    </div>
+  
+
+
+ </div>
+  <div class="global-quick">
+
+ <div class="questions">
+   Photo
+    </div>
+     <div>
+   <input type="checkbox" id="yes" />
+   <label for="yes">Yes</label>
+    </div>
+     <div>
+      <input type="checkbox" id="no" />
+   <label for="no">No</label>
+    </div>
+
+ </div>
+
+</div>
+{{/autoForm}}
+
+
+<!--
   <div class="row">
    <form class="col s12 new-members">
      <div class="row">
@@ -100,5 +171,5 @@
    </form>
  </div>
 
-
+-->
 </template>

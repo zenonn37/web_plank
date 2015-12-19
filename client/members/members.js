@@ -74,6 +74,12 @@ Template.globalDataPopout.events({
 });
 
 
+
+
+Template.newMembers.events({
+
+});
+
 Template.Members.events({
   "click #open-form": function(event, template){
    event.preventDefault();

@@ -12,7 +12,7 @@ Presentation = {
       var globalDataSeq = [
         {e:$dataCoverOverlay,p:{left:'0px'},o:{duration:100,easing:"ease-in"}},
         {e:$dataCoverOverlay,p:{opacity:0.9},o:{duration:200,easing:"ease-in"}},
-        {e:$globalWrap,p:{left:'150px'},o:{duration:800,easing:"spring"}},
+        {e:$globalWrap,p:{left:'0px'},o:{duration:600,easing:"spring"}},
         {e:$panelDecor,p:{left:'0px'},o:{stagger:100,duration:200,easing:"ease-in"}},
         {e:$qContent,p:{opacity:0.9},o:{stagger:100,duration:200,easing:"ease-in"}},
         {e:$globalQuick,p:{opacity:0.9},o:{stagger:100,duration:100,easing:"ease-in"}},
