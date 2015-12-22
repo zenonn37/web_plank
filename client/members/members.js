@@ -34,6 +34,7 @@ Template.Members.created = function(){
 Template.newMembers.onCreated(function() {
     this.slides = new ReactiveVar(0);
     var check = Template.instance().slides.get();
+    formsPres.globalSlidesCtrl();
     console.log(check);
 })
 
@@ -119,7 +120,7 @@ Template.newMembers.events({
   "click .go-button2": function(e, template){
     e.preventDefault();
     Session.set('slides',Number(Session.get('slides')) - 1 );
-    
+
         formsPres.globalSlidesCtrl();
       //console.log(c);
   }

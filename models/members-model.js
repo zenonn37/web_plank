@@ -43,7 +43,23 @@ Members.attachSchema(new SimpleSchema({
   email:{
     type:String
   },
-  phone:{
+  main:{
+    type:String
+  },
+  secondary:{
+    type:String
+  },
+  street:{
+    type:String
+  },
+  city:{
+    type:String
+  },
+  state:{
+    type:String
+  },
+
+  zip:{
     type:String
   },
 

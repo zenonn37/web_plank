@@ -51,8 +51,8 @@ formsPres = {
         case 1:
         var globalDataSeq = [
 
-          {e:$globalSlidesTwo,p:{opacity:0},o:{duration:300,easing:"ease-in-out"}},
-          {e:$globalSlidesOne,p:{opacity:1},o:{duration:300,easing:"ease-in-out"}}
+          {e:$globalSlidesTwo,p:{opacity:0,top:'-10px'},o:{display:'none',duration:300,easing:"ease-in-out"}},
+          {e:$globalSlidesOne,p:{opacity:1,top:'0px'},o:{display:'block',duration:300,easing:"ease-in-out"}}
         ];
              $.Velocity.RunSequence(globalDataSeq);
         console.log('called in switch slide one');
@@ -63,8 +63,8 @@ formsPres = {
             console.log('called in switch slide two');
             var globalDataSeq = [
 
-              {e:$globalSlidesOne,p:{opacity:0},o:{duration:300,easing:"ease-in-out"}},
-              {e:$globalSlidesTwo,p:{opacity:1},o:{duration:300,easing:"ease-in-out"}}
+              {e:$globalSlidesOne,p:{opacity:0,top:'-10px'},o:{display:'none',duration:300,easing:"ease-in-out"}},
+              {e:$globalSlidesTwo,p:{opacity:1,top:'0px'},o:{display:'block',duration:300,easing:"ease-in-out"}}
             ];
                  $.Velocity.RunSequence(globalDataSeq);
 
@@ -72,8 +72,8 @@ formsPres = {
         default:
         var globalDataSeq6 = [
 
-          {e:$globalSlidesTwo,p:{opacity:0},o:{duration:200,easing:"ease-in"}},
-          {e:$globalSlidesOne,p:{opacity:1},o:{duration:200,easing:"ease-in"}}
+          {e:$globalSlidesTwo,p:{opacity:0},o:{display:'none',duration:200,easing:"ease-in"}},
+          {e:$globalSlidesOne,p:{opacity:1},o:{display:'block',duration:200,easing:"ease-in"}}
         ];
             $.Velocity.RunSequence(globalDataSeq6);
 
