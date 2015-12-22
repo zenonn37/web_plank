@@ -1,4 +1,6 @@
 Session.setDefault("cursor", 0);
+Session.setDefault("slides", 1);
+
 
 
 Template.Members.onCreated(function() {
@@ -29,6 +31,11 @@ Template.Members.created = function(){
 
    //console.log(this.order.get());
 };
+Template.newMembers.onCreated(function() {
+    this.slides = new ReactiveVar(0);
+    var check = Template.instance().slides.get();
+    console.log(check);
+})
 
 
 
@@ -76,9 +83,49 @@ Template.globalDataPopout.events({
 
 
 
-Template.newMembers.events({
 
+Template.newMembers.helpers({
+  go: function(){
+    if (Session.get('slides') === 1) {
+       return true;
+    }else{
+      return false;
+    }
+
+
+  },
+  go2: function(){
+    if (Session.get('slides') === 2) {
+       return true;
+    }else{
+      return false;
+    }
+  },
+  destroyed: function(){
+
+  },
 });
+
+Template.newMembers.events({
+  "click .go-button": function(e, template){
+     e.preventDefault();
+      Session.set('slides',Number(Session.get('slides')) + 1 );
+
+    formsPres.globalSlidesCtrl();
+
+
+
+  },
+  "click .go-button2": function(e, template){
+    e.preventDefault();
+    Session.set('slides',Number(Session.get('slides')) - 1 );
+    
+        formsPres.globalSlidesCtrl();
+      //console.log(c);
+  }
+});
+
+
 
 Template.Members.events({
   "click #open-form": function(event, template){

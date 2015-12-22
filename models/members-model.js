@@ -40,6 +40,14 @@ Members.attachSchema(new SimpleSchema({
 
 
   },
+  email:{
+    type:String
+  },
+  phone:{
+    type:String
+  },
+
+
   gender:{
     type:String,
     autoform:{

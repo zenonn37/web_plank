@@ -6,8 +6,10 @@
  {{#autoForm collection = "Members" type="normal" id="newMembers"}}
   <div class="col s12 m6 l8">
  <div class="q-content">
+
+   <div class="slide-one">
     <div class="questions">
-      <p>Create A New  Member</p>
+      <p>Step 1</p>
       </div>
       <div class="row">
       <div class="input-field col s12">
@@ -24,14 +26,30 @@
       {{> afQuickField  name='age'}}
      </div>
       </div>
+       </div>
+
+
+       <div class="slide-two">
+        <div class="questions">
+          <p>Step 2</p>
+          </div>
+          <div class="row">
+          <div class="input-field col s12">
+          {{> afQuickField  name='email'}}
+         </div>
+
+
+          <div class="input-field col s12">
+          {{> afQuickField  name='phone'}}
+         </div>
+
+
+          </div>
+           </div>
 
 
 
-  <div class="row">
-    <div class="go-button">
-      GO
-    </div>
-  </div>
+
 
 
  </div>
@@ -46,22 +64,22 @@
          {{> afQuickField  name='gender'}}
 
     </div>
-  
+
 
 
  </div>
   <div class="global-quick">
 
- <div class="questions">
-   Photo
-    </div>
-     <div>
-   <input type="checkbox" id="yes" />
-   <label for="yes">Yes</label>
-    </div>
-     <div>
-      <input type="checkbox" id="no" />
-   <label for="no">No</label>
+    <div class="row">
+
+      <div class="go-button">
+        GO
+      </div>
+
+      <div class="go-button2">
+        GO Two
+      </div>
+
     </div>
 
  </div>
