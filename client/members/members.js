@@ -34,9 +34,14 @@ Template.Members.created = function(){
 Template.newMembers.onCreated(function() {
     this.slides = new ReactiveVar(0);
     var check = Template.instance().slides.get();
-    formsPres.globalSlidesCtrl();
+
     console.log(check);
-})
+});
+
+Template.newMembers.onRendered(function() {
+    formsPres.globalSlidesCtrl();
+    console.log('rendered');
+});
 
 
 
