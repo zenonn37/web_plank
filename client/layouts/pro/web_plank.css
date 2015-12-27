@@ -178,8 +178,8 @@ nav .brand-logo {
     color: #fff;
     display: inline-block;
     font-size: 2.1rem;
-    padding: 0;
-    padding-left: 100px;
+    padding: 20px 0 0 20px;
+
     padding-top: 4;
 
     white-space: nowrap;

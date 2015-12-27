@@ -1,0 +1,149 @@
+<template name="coachNav">
+
+<div class="coach-parent">
+
+  <nav>
+  <div class="nav-wrapper">
+     <img class="left mascot" width="100" height="100" src="svg/eagle.svg" alt="" />
+    <a href="#!" class="brand-logo">
+
+      Eagles
+      <small> 11 - 1 | 1st Place </small></a>
+    <ul class="right hide-on-med-and-down">
+      <li><a href="{{pathFor 'Dashboard'}}"><i class="Small material-icons ">home</i></a></li>
+
+      <li class="logout"><a href="#"><i class="Small material-icons">power_settings_new</i></a></li>
+    </ul>
+
+    <div class="side-nav" id="slide-out">
+      <div class="nav2">
+        <div class="avatar-header">
+          {{#if  currentUser}}
+          <img src="http://api.randomuser.me/portraits/men/42.jpg" alt="Avatar" class="circle img-size responsive-img"/>
+          <p>
+          {{currentUser.profile.firstname}} {{currentUser.profile.lastname}}
+          </p>
+           {{/if}}
+        </div>
+      </div>
+
+      <ul>
+
+      <li><a href="{{pathFor 'Dashboard'}}">Dashboard<i class="utility-icons-red ion-ios-speedometer left"></i></a></li>
+      <li><a href="{{pathFor 'Members'}}">Members<i class="utility-icons-green material-icons left">perm_identity</i></a></li>
+      <li><a href="{{pathFor 'Staff'}}">Staff<i class="utility-icons material-icons left">supervisor_account</i></a></li>
+      <li><a href="{{pathFor 'Companion'}}">Companion<i class="utility-icons-bgrey material-icons left">phonelink_setup</i></a></li>
+        <li><a href="{{pathFor 'Coach'}}">Coach<i class="utility-icons-bgrey material-icons left">phonelink_setup</i></a></li>
+      <li><a href="{{pathFor 'Services'}}">Services<i class="utility-icons material-icons left">work</i></a></li>
+      <li><a href="{{pathFor 'Schedule'}}">Schedule<i class="utility-icons material-icons left">perm_contact_calendar</i></a></li>
+        <li><a href="{{pathFor 'Challenges'}}">Challenges<i class="utility-icons fa fa-trophy left"></i></a></li>
+
+      <li><a href="{{pathFor 'Diet'}}">Diet<i class="utility-icons fa fa-cutlery left"></i></a></li>
+      <li><a href="{{pathFor 'Goals'}}">Goals<i class="utility-icons material-icons left">class</i></a></li>
+      <li><a href="{{pathFor 'Store'}}">Store<i class="utility-icons material-icons left">shopping_cart</i></a></li>
+      <li><a href="{{pathFor 'Settings'}}">Settings<i class="utility-icons material-icons left">settings</i></a></li>
+    </ul>
+    </div>
+  </div>
+</nav>
+<div class="nav-overlay">
+
+      <div class="nav-inner">
+        <div class="cursors close-overlay">
+            <i class="icon-size material-icons">close</i>
+            </div>
+      </div>
+
+
+</div>
+<!--
+<div class="nav-menu">
+  <a href="#" data-activates="slide-out" class="button-collapse show-on-large"><i class="ion-navicon"></i></a>
+</div>
+-->
+
+
+
+<div class="nav-one">
+
+<i class="cursors aside-colors ion-navicon"></i>
+
+</div>
+
+<div class="aside-nav">
+  <div class="user">
+    <img src="http://api.randomuser.me/portraits/men/42.jpg" alt="Avatar" class="circle" />
+
+  </div>
+</div>
+
+<div class="nav-two">
+  <a  href="{{pathFor 'Members'}}">
+<i class="aside-colors material-icons">perm_identity</i>
+</a>
+</div>
+
+<div class="nav-three">
+  <a  href="{{pathFor 'Staff'}}">
+<i class="aside-colors material-icons">supervisor_account</i>
+</a>
+</div>
+
+<div class="nav-four">
+  <a href="{{pathFor 'Companion'}}">
+<i class="aside-colors material-icons">phone_iphone</i>
+  </a>
+</div>
+
+
+
+
+<div class="nav-five">
+    <a href="{{pathFor 'Coach'}}">
+<i class="aside-colors material-icons">supervisor_account</i>
+</a>
+</div>
+<div class="nav-six">
+    <a href="{{pathFor 'Services'}}">
+<i class="aside-colors material-icons">work</i>
+</a>
+</div>
+
+<div class="nav-seven">
+    <a href="{{pathFor 'Schedule'}}">
+<i class="aside-colors material-icons">perm_contact_calendar</i>
+</a>
+</div>
+<div class="nav-eight">
+    <a href="{{pathFor 'Challenges'}}">
+<i class="aside-colors material-icons">supervisor_account</i>
+</a>
+</div>
+<div class="nav-nine">
+    <a href="{{pathFor 'Diet'}}">
+<i class="aside-colors material-icons">supervisor_account</i>
+</a>
+</div>
+<div class="nav-ten">
+    <a href="{{pathFor 'Goals'}}">
+<i class="aside-colors material-icons">supervisor_account</i>
+</a>
+</div>
+<div class="nav-11">
+    <a href="{{pathFor 'Store'}}">
+
+<i class="aside-colors material-icons">shopping_cart</i>
+</a>
+</div>
+<div class="nav-12">
+    <a href="{{pathFor 'Settings'}}">
+<i class="aside-colors material-icons">settings</i>
+</a>
+</div>
+
+  <div class="nav-bar-edge-coach">
+
+  </div>
+
+  </div>
+</template>
