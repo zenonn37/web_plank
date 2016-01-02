@@ -13,7 +13,7 @@ body{
 }
 
 nav{
-  background-color: #3E50B4;
+  background-color: #fff;
 }
 
 
@@ -24,15 +24,7 @@ nav .brand-logo small{
   color: gray;
 }
 
-.nav-bar-edge{
-  position: fixed;
-  left: 0;
-  top:0;
-  width: 81px;
-  height: 100%;
-  background: #fff;
-  border-right:1px solid #f0f0f0;
-}
+
 
 .nav-menu{
   position: fixed;
