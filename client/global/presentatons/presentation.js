@@ -15,7 +15,7 @@ Presentation = {
         {e:$globalWrap,p:{left:'0px'},o:{duration:600,easing:"spring"}},
         {e:$panelDecor,p:{left:'0px'},o:{stagger:100,duration:200,easing:"ease-in"}},
         {e:$qContent,p:{opacity:0.9},o:{stagger:100,duration:200,easing:"ease-in"}},
-        {e:$globalQuick,p:{opacity:0.9},o:{stagger:100,duration:100,easing:"ease-in"}},
+        //{e:$globalQuick,p:{opacity:0.9},o:{stagger:100,duration:100,easing:"ease-in"}},
         {e:$closeDataPopout,p:{rotateZ:'180deg',opacity:1.0},o:{stagger:100,duration:300,easing:"ease-in"}},
         {e:$dataCoverOverlay,p:{opacity:0.4},o:{stagger:100,duration:200,easing:"ease-in"}}
 
@@ -35,7 +35,7 @@ Presentation = {
      var globalDataSeq = [
        {e:$dataCoverOverlay,p:{opacity:0.9},o:{duration:100,easing:"ease-out"}},
        {e:$closeDataPopout,p:{rotateZ:'-180deg',opacity:0},o:{stagger:100,duration:100,easing:"ease-out"}},
-       {e:$globalQuick,p:{opacity:0},o:{stagger:50,duration:100,easing:"ease-out"}},
+       //{e:$globalQuick,p:{opacity:0},o:{stagger:50,duration:100,easing:"ease-out"}},
        {e:$qContent,p:{opacity:0},o:{stagger:50,duration:100,easing:"ease-out"}},
        {e:$panelDecor,p:{left:'-40px'},o:{stagger:100,duration:200,easing:"ease-out"}},
        {e:$globalWrap,p:{left:'-3000px'},o:{stagger:100,duration:300,easing:"ease-out"}},

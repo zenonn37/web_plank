@@ -4,7 +4,10 @@ accounts-oauth@1.1.8
 accounts-password@1.1.4
 alanning:roles@1.2.14
 aldeed:autoform@5.8.1
-aldeed:collection2@2.7.1
+aldeed:collection2@2.8.0
+aldeed:collection2-core@1.0.0
+aldeed:schema-deny@1.0.1
+aldeed:schema-index@1.0.1
 aldeed:simple-schema@1.5.3
 almogdesign:parsley.js@1.1.7
 aramk:ionicons@2.0.1
@@ -60,7 +63,7 @@ iron:middleware-stack@1.0.11
 iron:router@1.0.12
 iron:url@1.0.11
 jquery@1.11.4
-lai:collection-extensions@0.1.4
+lai:collection-extensions@0.2.1_1
 launch-screen@1.0.4
 less@2.5.1
 livedata@1.0.15
@@ -115,7 +118,7 @@ scmart:jquery-timepicker@1.3.8
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4
-softwarerero:accounts-t9n@1.1.7
+softwarerero:accounts-t9n@1.2.0
 spacebars@1.0.7
 spacebars-compiler@1.0.7
 srp@1.0.4

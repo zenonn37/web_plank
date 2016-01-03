@@ -27,9 +27,11 @@
     position relative
     opacity 0
     width 100%
-    height 250px
     margin 0 0 100px 0
-    padding 30px 8px 8px 15px
+    padding 0 8px 8px 15px
+
+    .current
+      font-size 20px
 
     div
       margin 0 0 10px 0
@@ -40,7 +42,9 @@
 
 
 .global-popout
-    background white
+    background white url(images/wb2.png) no-repeat
+    background-size cover
+    background-position center center
     position relative
     z-index 110
     width 100%
@@ -48,6 +52,26 @@
     border-radius(4px)
     overflow hidden
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    .percentage
+      font-size 60px
+      color #bdbdbd
+      font-weight 100
+      position absolute
+      right 60px
+      top 30px
+      span
+        font-size 14px
+        color gray
+        font-weight 200
+        
+    .controls
+     padding 50px 0 0 0
+     position absolute
+     right 20px
+     bottom 20px
+     button
+       font-size 20px
+       font-weight 100
     .panel-decor
       position absolute
       background decors
@@ -65,6 +89,7 @@
        z-index 150
      .q-content
        padding 15px 10px 10px  60px
+       position relative
        opacity 0
        width 100%
        height 100%
@@ -75,6 +100,7 @@
         opacity 1
         display none
         z-index 111
+        width 65%
       .slide-two
         position absolute
         top -10px
@@ -107,11 +133,3 @@
        font-size 30px
        font-weight 300
        cursor pointer
-     .go-button
-       background decors
-       width 100%
-       height 50px
-       border-radius 5px
-       padding 5px
-       text-align center
-       color white

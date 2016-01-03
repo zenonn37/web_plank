@@ -113,18 +113,18 @@ Template.newMembers.helpers({
 });
 
 Template.newMembers.events({
-  "click .go-button": function(e, template){
+  "click .go1": function(e, template){
      e.preventDefault();
-      Session.set('slides',Number(Session.get('slides')) + 1 );
+      Session.set('slides',Number(Session.get('slides')) - 1 );
 
     formsPres.globalSlidesCtrl();
 
 
 
   },
-  "click .go-button2": function(e, template){
+  "click .go2": function(e, template){
     e.preventDefault();
-    Session.set('slides',Number(Session.get('slides')) - 1 );
+    Session.set('slides',Number(Session.get('slides')) + 1 );
 
         formsPres.globalSlidesCtrl();
       //console.log(c);
