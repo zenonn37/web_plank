@@ -24,9 +24,9 @@
            </div>
            <div class="assist">
               <p class="flow-text">
-                Lets get started with some
-                basic information about your new Member!
-                Please enter their full name,age and gender.
+                {{intructions}}
+                {{checkUrl}}
+
               </p>
            </div>
      </div>
@@ -51,11 +51,11 @@
   <div class="slide-{{this.number}}">
     <div class="questions">
       <p>
-        test title 
+        {{this.title}}
       </p>
     </div>
     <div class="row">
-     {{> UI.contentBlock}}
+     {{> UI.contentBlock intro}}
     </div>
   </div>
 

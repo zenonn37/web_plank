@@ -22,6 +22,7 @@ formsPres = {
         console.log('slide two');
         break;
         case 3:
+        SlideFoward(3);
         console.log('slide three');
         break;
         case 4:
@@ -50,7 +51,7 @@ formsPres = {
       switch (n) {
         case 1:
         var globalDataSeq = [
-
+          {e:$globalSlidesThree,p:{opacity:0,top:'-10px'},o:{display:'none',duration:300,easing:"ease-in-out"}},
           {e:$globalSlidesTwo,p:{opacity:0,top:'-10px'},o:{display:'none',duration:300,easing:"ease-in-out"}},
           {e:$globalSlidesOne,p:{opacity:1,top:'0px'},o:{display:'block',duration:300,easing:"ease-in-out"}}
         ];
@@ -62,13 +63,23 @@ formsPres = {
           case 2:
             console.log('called in switch slide two');
             var globalDataSeq = [
-
+              {e:$globalSlidesThree,p:{opacity:0,top:'-10px'},o:{display:'none',duration:300,easing:"ease-in-out"}},
               {e:$globalSlidesOne,p:{opacity:0,top:'-10px'},o:{display:'none',duration:300,easing:"ease-in-out"}},
               {e:$globalSlidesTwo,p:{opacity:1,top:'0px'},o:{display:'block',duration:300,easing:"ease-in-out"}}
             ];
                  $.Velocity.RunSequence(globalDataSeq);
 
             break;
+            case 3:
+              console.log('called in switch slide three');
+              var globalDataSeq = [
+                {e:$globalSlidesTwo,p:{opacity:0,top:'-10px'},o:{display:'none',duration:300,easing:"ease-in-out"}},
+                {e:$globalSlidesOne,p:{opacity:0,top:'-10px'},o:{display:'none',duration:300,easing:"ease-in-out"}},
+                {e:$globalSlidesThree,p:{opacity:1,top:'0px'},o:{display:'block',duration:300,easing:"ease-in-out"}}
+              ];
+                   $.Velocity.RunSequence(globalDataSeq);
+
+              break;
         default:
         var globalDataSeq6 = [
 

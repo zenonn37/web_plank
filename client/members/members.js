@@ -93,21 +93,24 @@ Template.newMembers.helpers({
 
   intro:function() {
 
-    //presentation text new members
-    var intro = "Basic Information";
-      return intro;
-  },
-
-    intro2:function() {
+    switch (Session.get('slides')) {
+      case 1:
+      var intro = "Basic Information";
+        return intro;
+        console.log('one');
+        break;
+      case 2:
       var intro2 = "Contact Information";
-      return intro2;
-    },
-    intructions1:function() {
-      var intructions1 = "Lets get started with some basic information about your new Member! Please enter their full name,age and gender.";
-
-      return intructions1;
+        return intro2;
+          console.log('two');
+      default:
+      var intro = "Basic Information";
+        return intro;
     }
 
+
+
+  }
 });
 
 Template.newMembers.events({
