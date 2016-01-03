@@ -11,6 +11,8 @@ Template.globalDataPopout.helpers({
   },
 });
 
+
+
 Template.globalDataPopout.events({
   "click .back": function(event, template){
     Session.set('slides',Number(Session.get('slides')) - 1 );

@@ -55,9 +55,6 @@ Members.attachSchema(new SimpleSchema({
   city:{
     type:String
   },
-  state:{
-    type:String
-  },
 
   zip:{
     type:String
@@ -67,11 +64,40 @@ Members.attachSchema(new SimpleSchema({
   gender:{
     type:String,
     autoform:{
-      type:"select-checkbox-inline",
+      type:"select",
       options: function() {
         return[
           {label:"Male",value:"Male"},
           {label:"Female",value:"Female"}
+        ];
+      }
+
+
+    }
+
+  },
+  state:{
+    type:String,
+    autoform:{
+      type:"select",
+      options: function() {
+        return[
+          {label:"Alabama",value:"Alabama"},
+          {label:"Alaska",value:"Alaska"},
+          {label:"Alabama",value:"Alabama"},
+          {label:"Alaska",value:"Alaska"},
+          {label:"Alabama",value:"Alabama"},
+          {label:"Alaska",value:"Alaska"},
+          {label:"Alabama",value:"Alabama"},
+          {label:"Alaska",value:"Alaska"},
+          {label:"Alabama",value:"Alabama"},
+          {label:"Alaska",value:"Alaska"},
+          {label:"Alabama",value:"Alabama"},
+          {label:"Alaska",value:"Alaska"},
+          {label:"Alabama",value:"Alabama"},
+          {label:"Alaska",value:"Alaska"},
+          {label:"Alabama",value:"Alabama"},
+          {label:"Alaska",value:"Alaska"},
         ];
       }
 

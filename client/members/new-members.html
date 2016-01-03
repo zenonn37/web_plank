@@ -1,201 +1,63 @@
 <template name="newMembers">
 
+  {{#autoForm collection = "Members" type="method" id="newMembers"}}
+    <div class="col s12">
 
-
-
- {{#autoForm collection = "Members" type="normal" id="newMembers"}}
-  <div class="col s12">
-
-
-
-
- <div class="q-content">
-
-   <div class="slide-one">
-    <div class="questions">
-      <p>Step 1</p>
-      </div>
-      <div class="row">
-      <div class="input-field col s12">
-      {{> afQuickField  name='first'}}
-     </div>
-
-
-      <div class="input-field col s12">
-      {{> afQuickField  name='last'}}
-     </div>
-
-
-      <div class="input-field col s12">
-      {{> afQuickField  name='age'}}
-     </div>
-      </div>
-       </div>
-
-
-       <div class="slide-two">
-        <div class="questions">
-          <p>Step 2</p>
+      <div class="q-content">
+        {{#slides number="one"}}
+          <div class="input-field col s12">
+            {{> afQuickField  name='first'}}
           </div>
-          <div class="row">
-          <div class="input-field col s12">
-          {{> afQuickField  name='email'}}
-         </div>
-
 
           <div class="input-field col s12">
-          {{> afQuickField  name='main'}}
-         </div>
-
-         <div class="input-field col s12">
-         {{> afQuickField  name='secondary'}}
-        </div>
-        <div>
+            {{> afQuickField  name='last'}}
+          </div>
+          <div class="input-field col s12">
             {{> afQuickField  name='gender'}}
-
-       </div>
-
           </div>
-           </div>
-
-
-           <div class="slide-three">
-             <div class="row">
-             <div class="input-field col s12">
-             {{> afQuickField  name='street'}}
-            </div>
-
-
-             <div class="input-field col s12">
-             {{> afQuickField  name='city'}}
-            </div>
-
-            <div class="input-field col s12">
-            {{> afQuickField  name='state'}}
-           </div>
-
-
-                       <div class="input-field col s12">
-                       {{> afQuickField  name='zip'}}
-                      </div>
-             </div>
-
-           </div>
-
-
-
-
-
-
- </div>
-
- </div>
-
-
-
-{{/autoForm}}
-
-
-<!--
-  <div class="row">
-   <form class="col s12 new-members">
-     <div class="row">
-       <div class="input-field col s6">
-         <i class="material-icons prefix">account_circle</i>
-         <input  id="first_name" name="first" type="text" class="validate">
-         <label for="first_name">First Name</label>
-       </div>
-       <div class="input-field col s6">
-         <input id="last_name" type="text" name="last" class="validate">
-         <label for="last_name">Last Name</label>
-       </div>
-     </div>
-
-     <div class="row">
-       <div class="input-field col s6">
-         <input id="age" name="age" type="text" class="validate">
-         <label for="email">Age</label>
-       </div>
-
-       <div class="input-field col s6">
-      <select  class="select-gender" id="new-member">
-        <option value="" disabled selected>Gender</option>
-        <option data-gen="women">Female</option>
-        <option data-gen="men">Male</option>
-
-      </select>
-
-    </div>
-
-     </div>
-
-
-
-     <div class="row">
-       <div class="input-field col s6">
-         <input id="email" name="email" type="email" class="validate">
-         <label for="email">Email</label>
-       </div>
-
-       <div class="input-field col s6">
-         <input id="phone" name="phone" type="tel" class="validate">
-         <label for="phone">Phone</label>
-       </div>
-     </div>
-
-     <div class="row">
-       <div class="input-field col s6">
-         <input id="street" name="street" type="text" class="validate">
-         <label for="street">Street</label>
-       </div>
-
-       <div class="input-field col s6">
-         <input id="city" name="city" type="text" class="validate">
-         <label for="city">City</label>
-       </div>
-     </div>
-
-     <div class="row">
-       <div class="input-field col s6">
-      <select class="browser-default" id="member-state">
-        <option value="" disabled selected>State</option>
-        <option data-state="Arizona">Arizona</option>
-        <option data-state="Alabama">Alabama</option>
-
-      </select>
-
-    </div>
-
-
-    <div class="input-field col s6">
-      <input id="zip" name="zip" type="text" class="validate">
-      <label for="zip">Zip Code</label>
-    </div>
-
-     </div>
-
-      <div class="row">
-
 
           <div class="input-field col s12">
-            <input id="photo" name="photo" type="text" class="validate">
-            <label for="photo">Photo</label>
+            {{> afQuickField  name='age'}}
+          </div>
+        {{/slides}}
+
+        {{#slides number="two"}}
+          <div class="input-field col s12">
+            {{> afQuickField  name='email'}}
           </div>
 
+          <div class="input-field col s12">
+            {{> afQuickField  name='main'}}
+          </div>
 
+          <div class="input-field col s12">
+            {{> afQuickField  name='secondary'}}
+          </div>
+        {{/slides}}
 
+        {{#slides number="three"}}
+          <div class="input-field col s12">
+            {{> afQuickField  name='state'}}
+          </div>
+          <div class="input-field col s12">
+            {{> afQuickField  name='street'}}
+          </div>
+
+          <div class="input-field col s12">
+            {{> afQuickField  name='city'}}
+          </div>
+
+          <div class="input-field col s12">
+            {{> afQuickField  name='state'}}
+          </div>
+
+          <div class="input-field col s12">
+            {{> afQuickField  name='zip'}}
+          </div>
+        {{/slides}}
 
       </div>
+    </div>
+  {{/autoForm}}
 
-
-     <div class="row">
-       <div class="input-field col s12">
-         <input type="submit">
-
-       </div>
-     </div>
-   </form>
- </div>
-
--->
 </template>

@@ -89,27 +89,25 @@ Template.globalDataPopout.events({
 
 
 
-
 Template.newMembers.helpers({
-  go: function(){
-    if (Session.get('slides') === 1) {
-       return true;
-    }else{
-      return false;
+
+  intro:function() {
+
+    //presentation text new members
+    var intro = "Basic Information";
+      return intro;
+  },
+
+    intro2:function() {
+      var intro2 = "Contact Information";
+      return intro2;
+    },
+    intructions1:function() {
+      var intructions1 = "Lets get started with some basic information about your new Member! Please enter their full name,age and gender.";
+
+      return intructions1;
     }
 
-
-  },
-  go2: function(){
-    if (Session.get('slides') === 2) {
-       return true;
-    }else{
-      return false;
-    }
-  },
-  destroyed: function(){
-
-  },
 });
 
 Template.newMembers.events({
