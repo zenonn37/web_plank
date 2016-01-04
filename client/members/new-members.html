@@ -4,7 +4,7 @@
     <div class="col s12">
 
       <div class="q-content">
-        {{intro}}
+
         {{#slides number="one" title="Basic Information"}}
           <div class="input-field col s12">
             {{> afQuickField  name='first'}}
@@ -34,6 +34,9 @@
           <div class="input-field col s12">
             {{> afQuickField  name='secondary'}}
           </div>
+          <div class="input-field col s12">
+            {{> afQuickField  name='photo'}}
+          </div>
         {{/slides}}
 
         {{#slides number="three" title="Address Information"}}
@@ -46,10 +49,6 @@
 
           <div class="input-field col s12">
             {{> afQuickField  name='city'}}
-          </div>
-
-          <div class="input-field col s12">
-            {{> afQuickField  name='state'}}
           </div>
 
           <div class="input-field col s12">

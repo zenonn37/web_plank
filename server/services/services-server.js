@@ -52,7 +52,7 @@ Meteor.methods({
            console.log(error + " errors not good");
          }else{
            console.log("good");
-          
+
          }
        });
 
@@ -96,7 +96,7 @@ enrollMember:function(data) {
   'enrolled.member':data.member
  }});
   Members.update({_id:data.member}, {$addToSet:{
-  service:data.serid
+  'enrolled.service':data.serid
 }});
 
 

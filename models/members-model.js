@@ -27,37 +27,53 @@ Members.deny({
 
 Members.attachSchema(new SimpleSchema({
   first:{
-    type:String
+    type:String,
+    label:"Firstname"
   },
   last:{
-    type:String
+    type:String,
+    label:"Lastname"
   },
+
+
+photo:{
+  type:String,
+  label:"Photo"
+},
 
   age:{
     type:String,
+    label:"Age",
      min:1,
      max:100,
 
 
   },
   email:{
-    type:String
+    type:String,
+      label:"Email"
   },
   main:{
-    type:String
+    type:String,
+      label:"Main Phone"
   },
   secondary:{
-    type:String
+    type:String,
+      label:"Secondary Phone",
+      optional:true
   },
   street:{
-    type:String
+    type:String,
+      label:"Street"
   },
   city:{
-    type:String
+    type:String,
+      label:"City"
   },
 
   zip:{
-    type:String
+    type:String,
+    label:"Zip"
   },
 
 
@@ -67,8 +83,8 @@ Members.attachSchema(new SimpleSchema({
       type:"select",
       options: function() {
         return[
-          {label:"Male",value:"Male"},
-          {label:"Female",value:"Female"}
+          {label:"Male",value:"men"},
+          {label:"Female",value:"women"}
         ];
       }
 
@@ -84,20 +100,38 @@ Members.attachSchema(new SimpleSchema({
         return[
           {label:"Alabama",value:"Alabama"},
           {label:"Alaska",value:"Alaska"},
-          {label:"Alabama",value:"Alabama"},
-          {label:"Alaska",value:"Alaska"},
-          {label:"Alabama",value:"Alabama"},
-          {label:"Alaska",value:"Alaska"},
-          {label:"Alabama",value:"Alabama"},
-          {label:"Alaska",value:"Alaska"},
-          {label:"Alabama",value:"Alabama"},
-          {label:"Alaska",value:"Alaska"},
-          {label:"Alabama",value:"Alabama"},
-          {label:"Alaska",value:"Alaska"},
-          {label:"Alabama",value:"Alabama"},
-          {label:"Alaska",value:"Alaska"},
-          {label:"Alabama",value:"Alabama"},
-          {label:"Alaska",value:"Alaska"},
+          {label:"Arizona",value:"Arizona"},
+          {label:"Arkansas",value:"Arkansas"},
+          {label:"California",value:"California"},
+          {label:"Colorado",value:"Colorado"},
+          {label:"Connecticut",value:"Connecticut"},
+          {label:"Delaware",value:"Delaware"},
+          {label:"Florida",value:"Florida"},
+          {label:"Georgia ",value:"Georgia"},
+          {label:"Hawaii",value:"Hawaii"},
+          {label:"Idaho",value:"Idaho"},
+          {label:"Illinois",value:"Illinois"},
+          {label:"Indiana",value:"Indiana"},
+          {label:"Iowa ",value:"Iowa "},
+          {label:"Kansas",value:"Kansas"},
+          {label:"Kentucky",value:"Kentucky"},
+          {label:"Louisiana",value:"Louisiana"},
+          {label:"Maine",value:"Maine"},
+          {label:"Maryland",value:"Maryland"},
+          {label:"Massachusetts",value:"Massachusetts"},
+          {label:"Michigan",value:"Michigan"},
+          {label:"Minnesota",value:"Minnesota"},
+          {label:"Mississippi",value:"Mississippi"},
+          {label:"Missouri",value:"Missouri"},
+          {label:"Montana ",value:"Montana"},
+          {label:"Nebraska",value:"Nebraska"},
+          {label:"Nevada",value:"Nevada"},
+          {label:"New Hampshire",value:"New Hampshire"},
+          {label:"New Jersey",value:"New Jersey"},
+          {label:"New Mexico",value:"New Mexico"},
+          {label:"New York",value:"New York"},
+          {label:"North Carolina",value:"North Carolina"},
+          {label:"North Dakota",value:"North Dakota"}
         ];
       }
 
@@ -106,7 +140,19 @@ Members.attachSchema(new SimpleSchema({
 
   },
 
+  enrolled:{
+    type:Object,
+    optional:true,
+    blackbox: true,
+    autoform:{
+      omit:true
+    }
+  },
 
+  'enrolled.service':{
+    type:[String],
+    defaultValue: []
+  },
 
   user:{
     type:String,
@@ -126,7 +172,54 @@ Members.attachSchema(new SimpleSchema({
 
     }
 
+  },
+  evaluation:{
+    type:Boolean,
+    optional:true,
+    autoform:{
+      omit:true
+
+    }
+
+  },
+  goals:{
+    type:Boolean,
+    optional:true,
+    autoform:{
+      omit:true
+
+    }
+
+  },
+  challenges:{
+    type:Boolean,
+    optional:true,
+    autoform:{
+      omit:true
+
+    }
+
+  },
+  trainer:{
+    type:Boolean,
+    optional:true,
+    autoform:{
+      omit:true
+
+    }
+
+  },
+  connected:{
+    type:Boolean,
+    optional:true,
+    autoform:{
+      omit:true
+
+    }
+
   }
+
+
 
 
 }));

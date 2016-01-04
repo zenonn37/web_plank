@@ -1,7 +1,13 @@
+Session.setDefault("slides", 1);
+
+
+
 Template.globalDataPopout.onRendered(function() {
-  var routeName = Router.current().route.getName();
-  console.log(routeName);
-  return routeName;
+
+
+
+
+
 });
 Template.globalDataPopout.helpers({
 
@@ -32,9 +38,7 @@ Template.globalDataPopout.helpers({
     }
 });
 
-function memberForms() {
 
-}
 
 
 Template.slides.helpers({
@@ -58,6 +62,14 @@ Template.slides.helpers({
 Template.globalDataPopout.events({
   "click .back": function(event, template){
     Session.set('slides',Number(Session.get('slides')) - 1 );
+    if (Session.get('slides') === 1) {
+          $('#previous').addClass('disabled');
+    }else {
+
+
+
+
+    }
 
   formsPres.globalSlidesCtrl();
 
@@ -65,7 +77,10 @@ Template.globalDataPopout.events({
   },
   "click .forward": function(event, template){
     Session.set('slides',Number(Session.get('slides')) + 1 );
+    if (Session.get('slides') > 1) {
+      $('#previous').removeClass('disabled');
 
+    }
   formsPres.globalSlidesCtrl();
 
 

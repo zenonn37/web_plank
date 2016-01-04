@@ -1,5 +1,5 @@
 Session.setDefault("cursor", 0);
-Session.setDefault("slides", 1);
+
 
 
 
@@ -7,7 +7,8 @@ Template.Members.onCreated(function() {
   var self = this;
   self.autorun(function() {
     self.subscribe("members",Session.get('cursor'));
-  })
+      formsPres.setSlideCount(1,2);
+  });
 });
 
 
@@ -23,6 +24,7 @@ Session.setDefault("Order", -1);
 Template.Members.rendered = function() {
     $('.select-gender').material_select();
     $('.select-state').material_select();
+
 }
 
 Template.Members.created = function(){

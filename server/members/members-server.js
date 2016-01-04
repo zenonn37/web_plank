@@ -8,7 +8,8 @@ Meteor.methods({
       email:String,
       age:String,
       gender:String,
-      phone:String,
+      main:String,
+      secondary:String,
       street:String,
       city:String,
       zip:String,
@@ -22,7 +23,8 @@ Meteor.methods({
       email:obj.email,
       age:obj.age,
       gender:obj.gender,
-      phone:obj.phone,
+      main:obj.main,
+      secondary:obj.secondary,
       street:obj.street,
       city:obj.city,
       zip:obj.zip,
@@ -35,7 +37,11 @@ Meteor.methods({
      createdAt: new Date(),
      status:"Active",
      evaluation:false,
-     services:[]
+     goals:false,
+     challenges:false,
+     trainer:false,
+     connected:false
+
    })
     var membersId = Members.insert(data, function(error) {
       if (error) {

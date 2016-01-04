@@ -1,15 +1,21 @@
 formsPres = {
 
-  globalSlidesCtrl:function() {
-    var $globalSlidesOne  =   $('.slide-one');
-    var $globalSlidesTwo   =   $('.slide-two');
+  setSlideCount:function(reset,max) {
+    var reset = reset;
+    var max = max;
+    console.log(reset+ " in me "+max);
+    console.log('called from members');
     var tracker =  Session.get('slides');
-    if (tracker > 4) {
-      Session.set('slides',5);
+    if (tracker => reset) {
+      Session.set('slides',max);
     }
-    if (tracker < 2) {
+    if (tracker <= 2) {
       Session.set('slides',1);
     }
+  },
+
+  globalSlidesCtrl:function() {
+
 
     switch (Session.get('slides')) {
         case 1:
