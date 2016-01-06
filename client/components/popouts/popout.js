@@ -1,4 +1,6 @@
 Session.setDefault("slides", 1);
+Session.setDefault("slideSet", 1);
+
 
 
 

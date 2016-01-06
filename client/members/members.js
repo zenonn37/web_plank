@@ -7,13 +7,13 @@ Template.Members.onCreated(function() {
   var self = this;
   self.autorun(function() {
     self.subscribe("members",Session.get('cursor'));
-      formsPres.setSlideCount(1,2);
+
   });
 });
 
 
 Tracker.autorun(function(){
-   Meteor.subscribe("members",Session.get('cursor'));
+//  formsPres.setSlideCount(1,2);
 
 });
 
@@ -41,6 +41,7 @@ Template.newMembers.onCreated(function() {
 });
 
 Template.newMembers.onRendered(function() {
+      formsPres.setSlideCount(2);
     formsPres.globalSlidesCtrl();
     console.log('rendered');
 });

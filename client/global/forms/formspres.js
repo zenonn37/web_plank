@@ -1,21 +1,25 @@
 formsPres = {
 
-  setSlideCount:function(reset,max) {
-    var reset = reset;
+  setSlideCount:function(max) {
+
     var max = max;
-    console.log(reset+ " in me "+max);
-    console.log('called from members');
-    var tracker =  Session.get('slides');
-    if (tracker => reset) {
-      Session.set('slides',max);
-    }
-    if (tracker <= 2) {
-      Session.set('slides',1);
-    }
+      Session.set('slideSet',max);
+    console.log(max);
+
+
   },
 
   globalSlidesCtrl:function() {
+    //get current slide
+      var current  =  Session.get('slides');
+    var max =  Session.get('slideSet');
 
+    if (current === max || current  > max) {
+      Session.set('slides',max);
+    }
+    if (current === 1 || current < 1) {
+      Session.set('slides',1);
+    }
 
     switch (Session.get('slides')) {
         case 1:
