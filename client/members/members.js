@@ -1,4 +1,14 @@
-Session.setDefault("cursor", 0);
+AutoForm.debug();
+
+AutoForm.hooks({
+
+  newMembers:{
+     onSuccess:function(formType, result) {
+      console.log('excellent');
+       formsPres.resetSlides();
+     }
+  }
+});
 
 
 
@@ -6,16 +16,12 @@ Session.setDefault("cursor", 0);
 Template.Members.onCreated(function() {
   var self = this;
   self.autorun(function() {
-    self.subscribe("members",Session.get('cursor'));
+    self.subscribe("members");
 
   });
 });
 
 
-Tracker.autorun(function(){
-//  formsPres.setSlideCount(1,2);
-
-});
 
 Session.setDefault("Status", "Active");
 Session.setDefault("Order", -1);
@@ -145,48 +151,6 @@ Template.Members.events({
         Presentation.globalDataPopout();
   },
 
-
-  "submit .new-members":function(event) {
-    event.preventDefault();
-
-    var obj = {
-      first: event.target.first.value,
-      age:  event.target.age.value,
-      gender: $('#new-member').find(':selected').data('gen'),
-      last:  event.target.last.value,
-      email: event.target.email.value,
-      phone: event.target.phone.value,
-      street: event.target.street.value,
-      city: event.target.city.value,
-      state: $('#member-state').find(':selected').data('state'),
-      zip: event.target.zip.value,
-      photo: event.target.photo.value
-    }
-
-    //Members.insert(obj);
-
-    Meteor.call("newMembers", obj, function(error,result){
-      if(error){
-        console.log("error", error);
-      }else {
-
-         Router.go('memberPage',{_id:result._id});
-           Bert.alert( 'New Memeber Created', 'danger', 'growl-top-right', 'fa-bolt' );
-      }
-
-
-
-    });
-
-    event.target.first.value = "";
-    event.target.last.value = "";
-    event.target.email.value = "";
-
-      $('#member-form').closeModal();
-
-
-        console.log(obj.first + obj.last + obj.email);
-  },
   'click .toggle-status':function(e,template) {
     e.preventDefault();
     template.active.set(!template.active.get());

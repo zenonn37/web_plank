@@ -1,8 +1,8 @@
-Meteor.publish("members", function(cursor){
+Meteor.publish("members", function(){
 
-  Counts.publish(this,'mem-count', Members.find({userId:this.userId}),{noReady:true});
-   return Members.find({userId:this.userId},{
-     limit:5,skip:cursor
+  Counts.publish(this,'mem-count', Members.find({user:this.userId}),{noReady:true});
+   return Members.find({user:this.userId},{
+     limit:5
    });
 
 });

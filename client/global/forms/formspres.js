@@ -9,6 +9,29 @@ formsPres = {
 
   },
 
+  resetSlides:function() {
+
+    console.log('test');
+
+    Session.set('slides',1);
+      var $globalSlidesOne  =   $('.slide-one');
+      var $globalSlidesTwo   =   $('.slide-two');
+      var $globalSlidesThree =   $('.slide-three');
+      var $globalSlidesFour  =   $('.slide-four');
+      var $globalSlidesFive  =   $('.slide-five');
+
+
+      var globalDataSeq6 = [
+            //{e:$globalSlidesFive,p:{opacity:0,top:'0px'},o:{display:'block',duration:100,easing:"ease-in-out"}},
+            {e:$globalSlidesFour,p:{opacity:0,top:'-10px'},o:{display:'block',duration:100,easing:"ease-in-out"}},
+            {e:$globalSlidesThree,p:{opacity:0,top:'-10px'},o:{display:'block',duration:100,easing:"ease-in-out"}},
+            {e:$globalSlidesTwo,p:{opacity:0},o:{display:'none',duration:100,easing:"ease-in"}},
+            {e:$globalSlidesOne,p:{opacity:1},o:{display:'block',duration:100,easing:"ease-in"}}
+      ];
+          $.Velocity.RunSequence(globalDataSeq6);
+
+  },
+
   globalSlidesCtrl:function() {
     //get current slide
       var current  =  Session.get('slides');
@@ -133,9 +156,9 @@ formsPres = {
         var globalDataSeq6 = [
               {e:$globalSlidesFive,p:{opacity:0,top:'0px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
               {e:$globalSlidesFour,p:{opacity:0,top:'-10px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
-                {e:$globalSlidesThree,p:{opacity:0,top:'-10px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
-          {e:$globalSlidesTwo,p:{opacity:0},o:{display:'none',duration:200,easing:"ease-in"}},
-          {e:$globalSlidesOne,p:{opacity:1},o:{display:'block',duration:200,easing:"ease-in"}}
+              {e:$globalSlidesThree,p:{opacity:0,top:'-10px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
+              {e:$globalSlidesTwo,p:{opacity:0},o:{display:'none',duration:200,easing:"ease-in"}},
+              {e:$globalSlidesOne,p:{opacity:1},o:{display:'block',duration:200,easing:"ease-in"}}
         ];
             $.Velocity.RunSequence(globalDataSeq6);
 

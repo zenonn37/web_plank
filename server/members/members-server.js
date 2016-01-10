@@ -1,6 +1,6 @@
 Meteor.methods({
 
-  newMembers:function(obj){
+  newMember:function(obj){
     var user = Meteor.user();
     check(obj,{
       first:String,
@@ -33,8 +33,8 @@ Meteor.methods({
     }
 
    _.extend(data,{
-     userId:user._id,
-     createdAt: new Date(),
+     user:user._id,
+     created: new Date(),
      status:"Active",
      evaluation:false,
      goals:false,
@@ -46,6 +46,8 @@ Meteor.methods({
     var membersId = Members.insert(data, function(error) {
       if (error) {
         console.log(error);
+      }else{
+        console.log('good');
       }
     });
 
