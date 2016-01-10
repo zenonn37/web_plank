@@ -41,7 +41,8 @@ Template.newMembers.onCreated(function() {
 });
 
 Template.newMembers.onRendered(function() {
-      formsPres.setSlideCount(2);
+
+      formsPres.setSlideCount(3);
     formsPres.globalSlidesCtrl();
     console.log('rendered');
 });

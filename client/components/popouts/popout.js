@@ -5,13 +5,20 @@ Session.setDefault("slideSet", 1);
 
 
 Template.globalDataPopout.onRendered(function() {
-
-
-
-
+ //Session.set("slideSet",1);
 
 });
 Template.globalDataPopout.helpers({
+
+    finish:function() {
+      if (Session.get('slides') === Session.get('slideSet')) {
+          formsPres.setSlideCount(4);
+         return "Finish";
+      }else {
+        //  formsPres.setSlideCount(3);
+        return "Next";
+      }
+    },
 
     intructions:function() {
       switch (Session.get('slides')) {

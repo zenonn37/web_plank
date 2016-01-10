@@ -36,13 +36,16 @@ formsPres = {
         console.log('slide three');
         break;
         case 4:
+        SlideFoward(4);
         console.log('slide four');
         break;
         case 5:
+        SlideFoward(5);
         console.log('slide five');
         break;
 
       default:
+        SlideFoward(1);
         console.log('slide one');
         break;
 
@@ -64,6 +67,7 @@ formsPres = {
       switch (n) {
         case 1:
         var globalDataSeq = [
+              {e:$globalSlidesFour,p:{opacity:0,top:'-10px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
           //{e:$assist,p:{opacity:0},o:{stagger:150,display:'block',duration:durn,easing:"ease-in-out"}},
           {e:$globalSlidesThree,p:{opacity:0,top:'-10px'},o:{display:'none',duration:durn,easing:"ease-in-out"}},
           {e:$globalSlidesTwo,p:{opacity:0,top:'-10px'},o:{display:'none',duration:durn,easing:"ease-in-out"}},
@@ -78,6 +82,7 @@ formsPres = {
           case 2:
             console.log('called in switch slide two');
             var globalDataSeq = [
+                  {e:$globalSlidesFour,p:{opacity:0,top:'-10px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
               //{e:$assist,p:{opacity:0},o:{stagger:150,display:'block',duration:durn,easing:"ease-in-out"}},
               {e:$globalSlidesThree,p:{opacity:0,top:'-10px'},o:{display:'none',duration:durn,easing:"ease-in-out"}},
               {e:$globalSlidesOne,p:{opacity:0,top:'-10px'},o:{display:'none',duration:durn,easing:"ease-in-out"}},
@@ -90,6 +95,7 @@ formsPres = {
             case 3:
               console.log('called in switch slide three');
               var globalDataSeq = [
+                    {e:$globalSlidesFour,p:{opacity:0,top:'-10px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
                 {e:$globalSlidesTwo,p:{opacity:0,top:'-10px'},o:{display:'none',duration:durn,easing:"ease-in-out"}},
                 {e:$globalSlidesOne,p:{opacity:0,top:'-10px'},o:{display:'none',duration:durn,easing:"ease-in-out"}},
                 {e:$globalSlidesThree,p:{opacity:1,top:'0px'},o:{display:'block',duration:durn,easing:"ease-in-out"}}
@@ -97,9 +103,37 @@ formsPres = {
                    $.Velocity.RunSequence(globalDataSeq);
 
               break;
+
+
+              case 4:
+                console.log('called in switch slide four');
+                var globalDataSeq = [
+                  {e:$globalSlidesThree,p:{opacity:0,top:'-10px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
+                  {e:$globalSlidesTwo,p:{opacity:0,top:'-10px'},o:{display:'none',duration:durn,easing:"ease-in-out"}},
+                  {e:$globalSlidesOne,p:{opacity:0,top:'-10px'},o:{display:'none',duration:durn,easing:"ease-in-out"}},
+                  {e:$globalSlidesFour,p:{opacity:1,top:'0px'},o:{display:'block',duration:durn,easing:"ease-in-out"}}
+                ];
+                     $.Velocity.RunSequence(globalDataSeq);
+
+                break;
+
+                case 5:
+                  console.log('called in switch slide five');
+                  var globalDataSeq = [
+                    {e:$globalSlidesFour,p:{opacity:0,top:'-10px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
+                    {e:$globalSlidesThree,p:{opacity:0,top:'-10px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
+                    {e:$globalSlidesTwo,p:{opacity:0,top:'-10px'},o:{display:'none',duration:durn,easing:"ease-in-out"}},
+                    {e:$globalSlidesOne,p:{opacity:0,top:'-10px'},o:{display:'none',duration:durn,easing:"ease-in-out"}},
+                    {e:$globalSlidesFive,p:{opacity:1,top:'0px'},o:{display:'block',duration:durn,easing:"ease-in-out"}}
+                  ];
+                       $.Velocity.RunSequence(globalDataSeq);
+
+                  break;
         default:
         var globalDataSeq6 = [
-
+              {e:$globalSlidesFive,p:{opacity:0,top:'0px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
+              {e:$globalSlidesFour,p:{opacity:0,top:'-10px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
+                {e:$globalSlidesThree,p:{opacity:0,top:'-10px'},o:{display:'block',duration:durn,easing:"ease-in-out"}},
           {e:$globalSlidesTwo,p:{opacity:0},o:{display:'none',duration:200,easing:"ease-in"}},
           {e:$globalSlidesOne,p:{opacity:1},o:{display:'block',duration:200,easing:"ease-in"}}
         ];

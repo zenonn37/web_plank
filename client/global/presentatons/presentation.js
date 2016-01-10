@@ -26,6 +26,7 @@ Presentation = {
   },
   //reverse function
   globalDataPopoutClose:function() {
+    Session.set('slides',1);
     var $globalPopout = $('.global-popout');
     var $closeDataPopout = $('.close-data-popout');
     var $globalWrap = $('.wrap-presentation');
