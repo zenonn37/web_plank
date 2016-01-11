@@ -1,0 +1,69 @@
+<template name="newChallenge">
+  <!-- Modal Structure -->
+
+
+    {{#autoForm collection = "Challenges" type="method" meteormethod ="newChallenge" id="newChallenges"}}
+      <div class="col s12">
+
+        <div class="q-content">
+
+          {{#slides number="one" title="New Challenge"}}
+            <div class="input-field col s12">
+
+              {{> afQuickField  name='name'}}
+            </div>
+
+            <div class="input-field col s12">
+              {{> afQuickField  name='challenge'}}
+            </div>
+
+                        <div class="input-field col s12">
+                          {{> afQuickField  name='goal'}}
+                        </div>
+                        <div class="input-field col s6">
+                          {{> afQuickField  name='start'}}
+                        </div>    <div class="input-field col s6">
+                              {{> afQuickField  name='end'}}
+                            </div>
+
+          {{/slides}}
+          {{#slides number="two" title="Challenge Description"}}
+
+          <div class="input-field col s12">
+            {{> afQuickField  name='desp'}}
+          </div>
+          {{/slides}}
+
+          {{#slides number="three" title="What You Submitted"}}
+
+            <div class="input-field col s12">
+              <button class="btn">Complete</button>
+            </div>
+          {{/slides}}
+
+
+          {{#slides number="four" title=""}}
+
+
+          {{/slides}}
+
+        </div>
+      </div>
+    {{/autoForm}}
+
+  </template>
+<template name="editChallengeModel">
+  <!-- Modal Structure -->
+  <div id="edit-challenge-form" class="modal">
+    <div class="modal-content">
+    {{> quickForm doc=this
+      collection="Challenges" id="editChallenge"
+      type="method-update"
+      meteormethod="editChallenges"
+      buttonContent="Update"}}
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat right ">Close</a>
+    </div>
+  </div>
+</template>

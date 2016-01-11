@@ -9,7 +9,7 @@ Template.globalDataPopout.onRendered(function() {
 
 });
 Template.globalDataPopout.helpers({
-
+    //wrong!!!
     finish:function() {
       if (Session.get('slides') === Session.get('slideSet')) {
           formsPres.setSlideCount(4);

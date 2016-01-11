@@ -145,7 +145,7 @@ Template.newMembers.events({
 
 
 Template.Members.events({
-  "click #open-form": function(event, template){
+  "click .open-data ": function(event, template){
    event.preventDefault();
         //$('#member-form').openModal();
         Presentation.globalDataPopout();

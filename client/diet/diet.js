@@ -1,3 +1,53 @@
+AutoForm.debug();
+
+AutoForm.hooks({
+
+  newChallenges:{
+     onSuccess:function(formType, result) {
+      console.log('excellent');
+       formsPres.resetSlides();
+     }
+  }
+});
+
+Template.newDiet.onRendered(function() {
+
+    formsPres.setSlideCount(3);
+    formsPres.globalSlidesCtrl();
+    console.log('rendered');
+    $('.datepicker')
+      .pickadate({
+        selectMonths:true,
+        selectYears:1
+      });
+      $('.counts')
+        .characterCounter();
+});
+
+
+
+Template.newDiet.helpers({
+  create: function(){
+
+  },
+  rendered: function(){
+
+  },
+  destroyed: function(){
+
+  },
+});
+
+Template.Diet.events({
+  "click .open-data ": function(event, template){
+   event.preventDefault();
+
+        //$('#member-form').openModal();
+        Presentation.globalDataPopout();
+  }
+});
+
+
 Template.Diet.onCreated(function() {
     this.subscribe("diets");
 });

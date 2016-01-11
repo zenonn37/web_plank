@@ -1,3 +1,30 @@
+AutoForm.debug();
+
+AutoForm.hooks({
+
+  newChallenges:{
+     onSuccess:function(formType, result) {
+      console.log('excellent');
+       formsPres.resetSlides();
+     }
+  }
+});
+
+Template.newChallenge.onRendered(function() {
+
+    formsPres.setSlideCount(3);
+    formsPres.globalSlidesCtrl();
+    console.log('rendered');
+    $('.datepicker')
+      .pickadate({
+        selectMonths:true,
+        selectYears:1
+      });
+      $('.counts')
+        .characterCounter();
+});
+
+
 Meteor.subscribe("challenges");
 Template.Challenges.helpers({
   items: function(){
@@ -13,10 +40,10 @@ Template.Challenges.helpers({
 });
 
 Template.Challenges.events({
-  "click .new-challenge": function(e, template){
-      e.preventDefault();
-      $('#challenge-form').openModal();
-
+  "click .open-data ": function(event, template){
+   event.preventDefault();
+        //$('#member-form').openModal();
+        Presentation.globalDataPopout();
   }
 
 

@@ -1,4 +1,15 @@
 <template name="Challenges">
+
+  {{#globalDataPopout}}
+       {{> newChallenge}}
+
+  {{/globalDataPopout}}
+  <div class="fixed-action-btn" style="bottom:125px; right:22px;">
+    <a class="open-data btn-floating btn-large blue waves-effect waves-light">
+        <i class="material-icons">add</i>
+    </a>
+  </div>
+
   <div class="content">
 
 
@@ -13,9 +24,9 @@
     </li>
     {{/each}}
   </ul>
-  <a href="#" class="btn new-challenge"><i class="material-icons">add</i></a>
 
-  {{> challengeModel}}
+
+
 
 </div>
 </template>

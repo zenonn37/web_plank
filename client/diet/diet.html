@@ -1,4 +1,16 @@
 <template name="Diet">
+
+
+    {{#globalDataPopout}}
+         {{> newDiet}}
+
+    {{/globalDataPopout}}
+    <div class="fixed-action-btn" style="bottom:125px; right:22px;">
+      <a class="open-data btn-floating btn-large blue waves-effect waves-light">
+          <i class="material-icons">add</i>
+      </a>
+    </div>
+
   <div class="content">
 
 
@@ -19,6 +31,6 @@
 
 <a href="#" class="btn open-modal"><i class="material-icons">add</i></a>
 
-{{> dietModel}}
+
   </div>
 </template>
