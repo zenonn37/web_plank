@@ -59,6 +59,22 @@ AutoForm.hooks({
 
 });
 
+Template.newServices.onRendered(function() {
+  formsPres.setSlideCount(3);
+formsPres.globalSlidesCtrl();
+console.log('rendered');
+});
+
+Template.newServices.helpers({
+
+});
+
+Template.newServices.events({
+  "click #foo": function(event, template){
+
+  }
+});
+
 
 Template.newSchedule.helpers({
   services: function(){
@@ -115,9 +131,10 @@ Template.serviceView.helpers({
 })
 
 Template.Services.events({
-  "click .open-modal": function(e, template){
-       e.preventDefault();
-       $('#services-form').openModal();
+  "click .open-data ": function(event, template){
+   event.preventDefault();
+        //$('#member-form').openModal();
+        Presentation.globalDataPopout();
   }
 });
 

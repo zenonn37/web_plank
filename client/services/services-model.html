@@ -17,10 +17,12 @@
       {{> afQuickField  name='goal'}}
       {{> afQuickField  name='advert'}}
       {{> afQuickField  name='paid'}}
+      <!--
       {{> afQuickField  name='trial' options="allowed" noselect=true}}
         {{#if afFieldValueIs name="trial" value="yes"}}
-            {{> afQuickField  name='period'}}
+            {{> afQuickField  name='period' value="0"}}
         {{/if}}
+      -->
    </fieldset>
    <button class="btn">Go</button>
       {{/autoForm}}

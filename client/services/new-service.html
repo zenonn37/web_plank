@@ -1,0 +1,72 @@
+<template name="newService">
+
+  {{#autoForm collection="Goals" id="newGoals" type="method" meteormethod="newGoals"}}
+    <div class="col s12">
+
+      <div class="q-content">
+
+        {{#slides number="one" title="New Service"}}
+          <div class="input-field col s12">
+
+            {{> afQuickField  name='name'}}
+          </div>
+
+          <div class="input-field col s12">
+            {{> afQuickField  name='genre'}}
+          </div>
+          <div class="input-field col s12">
+            {{> afQuickField  name='weekly'}}
+          </div>
+          <div class="input-field col s12">
+            {{> afQuickField  name='revenue'}}
+          </div>
+
+
+
+        {{/slides}}
+        {{#slides number="two" title="Goal Description"}}
+        <div class="input-field col s6">
+
+          {{> afQuickField  name='min'}}
+        </div>
+
+        <div class="input-field col s6">
+          {{> afQuickField  name='max'}}
+        </div>
+        <div class="input-field col s12">
+          {{> afQuickField  name='duration'}}
+        </div>
+        <div class="input-field col s12">
+          {{> afQuickField  name='goal'}}
+        </div>
+        <div class="input-field col s12">
+          {{> afQuickField  name='paid'}}
+        </div>
+
+        {{/slides}}
+
+        {{#slides number="three" title="Step 3"}}
+
+        <div class="input-field col s12">
+          {{> afQuickField  name='advert'}}
+        </div>
+        {{/slides}}
+
+        {{#slides number="three" title="What You Submitted"}}
+
+          <div class="input-field col s12">
+            <button class="btn">Complete New Service</button>
+          </div>
+        {{/slides}}
+
+
+        {{#slides number="four" title=""}}
+
+
+        {{/slides}}
+
+      </div>
+    </div>
+  {{/autoForm}}
+
+</template>

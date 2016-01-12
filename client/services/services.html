@@ -1,10 +1,15 @@
 <template name="Services">
 
-  <div class="fixed-action-btn" style="bottom:125px; right:22px;">
-    <a class="btn-floating btn-large blue waves-effect waves-light open-modal">
-        <i class="material-icons">add</i>
-    </a>
-  </div>
+
+    {{#globalDataPopout}}
+         {{> newService}}
+
+    {{/globalDataPopout}}
+    <div class="fixed-action-btn" style="bottom:125px; right:22px;">
+      <a class="open-data btn-floating btn-large blue waves-effect waves-light">
+          <i class="material-icons">add</i>
+      </a>
+    </div>
 <div class="content">
 
 
@@ -139,7 +144,7 @@
         </div>
       </div>
 
-{{> servicesModel}}
+
  </div>
 </div>
 </template>

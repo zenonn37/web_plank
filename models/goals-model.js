@@ -5,10 +5,22 @@ Goals.attachSchema(new SimpleSchema({
       label:"Name",
       max:200
     },
-    challenge:{
+    type:{
       type:String,
       label:"Type",
       max:60
+    },
+    desp:{
+      type:String,
+      max:2000,
+      autoform:{
+        afFieldInput:{
+          type:"textarea",
+          rows:10,
+          class:"counts"
+
+        }
+      }
     },
     user:{
       type:String,

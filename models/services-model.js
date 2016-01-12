@@ -132,6 +132,7 @@ Services.attachSchema(new SimpleSchema({
       allowedValues:["no","yes"],
       autoform:{
         type:"select-radio",
+          omit:true
 
       }
 
@@ -144,7 +145,8 @@ Services.attachSchema(new SimpleSchema({
       max:100,
       autoform:{
         placeholder:'Trial',
-        value:0
+        omit:true
+
       }
     },
     user:{

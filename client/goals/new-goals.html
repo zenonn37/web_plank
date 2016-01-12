@@ -1,0 +1,43 @@
+<template name="newGoals">
+  {{#autoForm collection="Goals" id="newGoals" type="method" meteormethod="newGoals"}}
+    <div class="col s12">
+
+      <div class="q-content">
+
+        {{#slides number="one" title="New Goal"}}
+          <div class="input-field col s12">
+
+            {{> afQuickField  name='name'}}
+          </div>
+
+          <div class="input-field col s12">
+            {{> afQuickField  name='type'}}
+          </div>
+
+
+
+        {{/slides}}
+        {{#slides number="two" title="Goal Description"}}
+
+        <div class="input-field col s12">
+          {{> afQuickField  name='desp'}}
+        </div>
+        {{/slides}}
+
+        {{#slides number="three" title="What You Submitted"}}
+
+          <div class="input-field col s12">
+            <button class="btn">Complete</button>
+          </div>
+        {{/slides}}
+
+
+        {{#slides number="four" title=""}}
+
+
+        {{/slides}}
+
+      </div>
+    </div>
+  {{/autoForm}}
+</template>
