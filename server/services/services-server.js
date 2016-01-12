@@ -14,8 +14,7 @@ Meteor.methods({
        goal:String,
        advert:String,
        paid:Boolean,
-       trial:String,
-       period:Number
+
 
 
      });
@@ -31,14 +30,14 @@ Meteor.methods({
         goal:doc.goal,
         advert:doc.advert,
         paid:doc.paid,
-        trial:doc.trial,
-        period:doc.period
+      
       }
 
 
      _.extend(data,{
        created:new Date(),
        user:user._id,
+       scheduled:false
 
 
      });

@@ -1,10 +1,8 @@
-Template.Schedule.created = function() {
-  // body...
-}
 
-Template.Schedule.rendered = function() {
-  // body...
-}
+
+Template.Schedule.onRendered(function() {
+
+});
 
 
 Template.Schedule.helpers({

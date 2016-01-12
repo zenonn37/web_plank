@@ -38,7 +38,19 @@ Services.attachSchema(new SimpleSchema({
       label:"Service Type",
       max:60,
       autoform:{
-        placeholder:'Genre',
+        type:"select",
+        options: function() {
+          return[
+            {label:"Boxing",value:"Boxing"},
+            {label:"Ballet",value:"Ballet"},
+            {label:"Gymnastics",value:"Gymnastics"},
+            {label:"Kick Boxing",value:"Kick Boxing"},
+            {label:"Suspension",value:"Suspension"},
+            {label:"UFC",value:"UFC"},
+            {label:"Yoga",value:"Yoga"},
+            {label:"Zumba",value:"Zumba"}
+          ];
+        }
 
 
       }
@@ -122,33 +134,12 @@ Services.attachSchema(new SimpleSchema({
 
       autoform:{
         type:"switch",
-        trueLabel:"Free Service",
-        falseLabel:"Paid Service"
+
+        falseLabel:"Paid Service",
+        trueLabel:"Free Service"
       }
     },
-    trial:{
-      type:String,
-      label:"Trial Period",
-      allowedValues:["no","yes"],
-      autoform:{
-        type:"select-radio",
-          omit:true
 
-      }
-
-
-    },
-    period:{
-      type:Number,
-      optional:true,
-      label:"Trial Period",
-      max:100,
-      autoform:{
-        placeholder:'Trial',
-        omit:true
-
-      }
-    },
     user:{
       type:String,
        optional:true,
@@ -161,6 +152,15 @@ Services.attachSchema(new SimpleSchema({
     },
     created:{
       type:Date,
+      optional:true,
+      autoform:{
+        omit:true
+
+      }
+
+    },
+    scheduled:{
+      type:Boolean,
       optional:true,
       autoform:{
         omit:true

@@ -68,7 +68,7 @@ console.log('rendered');
 
 
 
-Template.newSchedule.helpers({
+Template.newSchedules.helpers({
   services: function(){
      return "Yoga Advanced";
   }
@@ -80,13 +80,14 @@ Template.newSchedule.helpers({
 
 
 
-Template.newSchedule.rendered = function() {
-
-  $('.time-start')
-    .timepicker();
-
-   $('.end-start')
-     .timepicker();
+Template.newSchedules.rendered = function() {
+  formsPres.setSlideCount(2);
+formsPres.globalSlidesCtrl();
+console.log('rendered schedule');
+$('.time-start')
+  .timepicker();
+$('.end-start')
+  .timepicker();
 
   $('.datepicker')
     .pickadate({
@@ -192,6 +193,10 @@ Template.serviceView.events({
       }
 
     });
+  },
+  'click .note':function(e,tmpl) {
+      e.preventDefault();
+        Presentation.globalDataPopout();
   }
 });
 

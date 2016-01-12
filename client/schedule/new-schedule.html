@@ -1,18 +1,43 @@
-<template name="newSchedule">
-  <div class="content">
+<template name="newSchedules">
+  {{#autoForm collection = "Schedule" id="newSchedules" type="method" meteormethod="newSchedules"}}
+    <div class="col s12">
+
+      <div class="q-content">
+
+        {{#slides number="one" title="New Schedule"}}
+          <div class="input-field col s6">
+
+            {{> afQuickField  name='start'}}
+          </div>
+
+          <div class="input-field col s6">
+            {{> afQuickField  name='end'}}
+          </div>
+
+          <div class="input-field col s12">
+            {{> afQuickField  name='day'}}
+          </div>
+
+        {{/slides}}
+        {{#slides number="two" title="What You Submitted"}}
+
+                  <div class="input-field col s12">
+                    <button class="btn">Complete Schedule</button>
+                  </div>
+
+        {{/slides}}
+
+        {{#slides number="three" title=""}}
+
+        {{/slides}}
 
 
-  <div class="row">
-    <div class="col s12 m8 l10">
-      <!--
-        {{> quickForm collection="Schedule" id="newSchedule" type="method" meteormethod="newSchedule"}}
-      -->
-      {{#autoForm collection="Schedule" id="newSchedule" type="method" meteormethod="newSchedule"}}
-              {{> afQuickField name="start"}}
-              {{> afQuickField name="end"}}
-      {{/autoForm}}
+        {{#slides number="four" title=""}}
+
+
+        {{/slides}}
+
+      </div>
     </div>
-
-  </div>
-  </div>
+  {{/autoForm}}
 </template>

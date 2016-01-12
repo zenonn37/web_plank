@@ -1,11 +1,6 @@
 Schedule = new Mongo.Collection('schedule');
 Schedule.attachSchema(new SimpleSchema({
-    name:{
-      type:String,
-      label:"Name",
-      max:200
 
-    },
     start:{
       type:String,
       autoform:{
@@ -32,12 +27,13 @@ Schedule.attachSchema(new SimpleSchema({
     day:{
       type:Date,
       autoform:{
-        type:"pickadate"
+          placeholder:"Day",
+        afFieldInput:{
+          class:"datepicker active"
+        }
       }
     },
-    time:{
-      type:String
-    },
+
     user:{
       type:String,
        optional:true,
