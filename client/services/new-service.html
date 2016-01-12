@@ -1,6 +1,7 @@
 <template name="newService">
 
-  {{#autoForm collection="Goals" id="newGoals" type="method" meteormethod="newGoals"}}
+  {{#autoForm collection="Services" id="newServices"
+  type="method" meteormethod="newService"}}
     <div class="col s12">
 
       <div class="q-content">
@@ -52,7 +53,7 @@
         </div>
         {{/slides}}
 
-        {{#slides number="three" title="What You Submitted"}}
+        {{#slides number="four" title="What You Submitted"}}
 
           <div class="input-field col s12">
             <button class="btn">Complete New Service</button>
@@ -60,10 +61,7 @@
         {{/slides}}
 
 
-        {{#slides number="four" title=""}}
-
-
-        {{/slides}}
+      
 
       </div>
     </div>

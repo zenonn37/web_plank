@@ -1,0 +1,72 @@
+<template name="newStaff">
+
+  {{#autoForm collection="Staff" id="newStaff" type="method" meteormethod="newStaff"}}
+    <div class="col s12">
+
+      <div class="q-content">
+
+        {{#slides number="one" title="Step One New Staff Member"}}
+          <div class="input-field col s12">
+
+            {{> afQuickField  name='firstname'}}
+          </div>
+
+          <div class="input-field col s12">
+            {{> afQuickField  name='lastname'}}
+          </div>
+          <div class="input-field col s12">
+            {{> afQuickField  name='gender'}}
+          </div>
+          <div class="input-field col s12">
+            {{> afQuickField  name='photo'}}
+          </div>
+
+
+
+        {{/slides}}
+        {{#slides number="two" title="Goal Description"}}
+        <div class="input-field col s12">
+
+          {{> afQuickField  name='email'}}
+        </div>
+
+        <div class="input-field col s6">
+          {{> afQuickField  name='main'}}
+        </div>
+        <div class="input-field col s6">
+          {{> afQuickField  name='secondary'}}
+        </div>
+        <div class="input-field col s12">
+          {{> afQuickField  name='city'}}
+        </div>
+        <div class="input-field col s6">
+          {{> afQuickField  name='state'}}
+        </div>
+        <div class="input-field col s6">
+          {{> afQuickField  name='zip'}}
+        </div>
+
+        {{/slides}}
+
+        {{#slides number="three" title="Step 3"}}
+
+        <div class="input-field col s12">
+          {{> afQuickField  name='position'}}
+        </div>
+        {{/slides}}
+
+        {{#slides number="four" title="What You Submitted"}}
+
+          <div class="input-field col s12">
+            <button class="btn">Add New Staff Member</button>
+          </div>
+        {{/slides}}
+
+
+
+
+      </div>
+    </div>
+  {{/autoForm}}
+
+</template>

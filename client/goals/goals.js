@@ -9,7 +9,12 @@ AutoForm.hooks({
      }
   }
 });
+Template.newGoals.onRendered(function() {
 
+      formsPres.setSlideCount(2);
+    formsPres.globalSlidesCtrl();
+    console.log('rendered');
+});
 
 Template.Goals.onCreated(function() {
   var self = this;

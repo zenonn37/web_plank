@@ -13,6 +13,26 @@ Template.staffView.onCreated(function() {
 });
 
 
+AutoForm.debug();
+
+AutoForm.hooks({
+
+  newStaff:{
+     onSuccess:function(formType, result) {
+      console.log('excellent');
+       formsPres.resetSlides();
+     }
+  }
+});
+Template.newStaff.onRendered(function() {
+
+      formsPres.setSlideCount(4);
+    formsPres.globalSlidesCtrl();
+    console.log('rendered');
+});
+
+
+
 Template.staffView.helpers({
   go: function(){
     var test = 'hello'
@@ -41,10 +61,11 @@ Template.Staff.helpers({
 });
 
 Template.Staff.events({
-  "click .open-form": function(event, template){
+  "click .open-data ": function(event, template){
    event.preventDefault();
-        $('#staff-form').openModal();
-  },
+        //$('#member-form').openModal();
+        Presentation.globalDataPopout();
+  }
 
 });
 Template.staffView.events({

@@ -2,18 +2,15 @@ Staff = new Mongo.Collection('staff');
 Staff.attachSchema(new SimpleSchema({
     firstname:{
       type:String,
-
+      label:"Firstname",
       max:200
     },
     lastname:{
       type:String,
-
+      label:"Lastname",
       max:200
     },
-    phone:{
-      type:String,
-      max:25
-    },
+
     email:{
       type:String,
       regEx: SimpleSchema.RegEx.Email,
@@ -23,6 +20,75 @@ Staff.attachSchema(new SimpleSchema({
           length:"100"
         }
       }
+    },
+    main:{
+      type:String,
+        label:"Main Phone"
+    },
+    secondary:{
+      type:String,
+        label:"Secondary Phone",
+        optional:true
+    },
+    street:{
+      type:String,
+        label:"Street"
+    },
+    city:{
+      type:String,
+        label:"City"
+    },
+    state:{
+      type:String,
+      autoform:{
+        type:"select",
+        options: function() {
+          return[
+            {label:"Alabama",value:"Alabama"},
+            {label:"Alaska",value:"Alaska"},
+            {label:"Arizona",value:"Arizona"},
+            {label:"Arkansas",value:"Arkansas"},
+            {label:"California",value:"California"},
+            {label:"Colorado",value:"Colorado"},
+            {label:"Connecticut",value:"Connecticut"},
+            {label:"Delaware",value:"Delaware"},
+            {label:"Florida",value:"Florida"},
+            {label:"Georgia ",value:"Georgia"},
+            {label:"Hawaii",value:"Hawaii"},
+            {label:"Idaho",value:"Idaho"},
+            {label:"Illinois",value:"Illinois"},
+            {label:"Indiana",value:"Indiana"},
+            {label:"Iowa ",value:"Iowa "},
+            {label:"Kansas",value:"Kansas"},
+            {label:"Kentucky",value:"Kentucky"},
+            {label:"Louisiana",value:"Louisiana"},
+            {label:"Maine",value:"Maine"},
+            {label:"Maryland",value:"Maryland"},
+            {label:"Massachusetts",value:"Massachusetts"},
+            {label:"Michigan",value:"Michigan"},
+            {label:"Minnesota",value:"Minnesota"},
+            {label:"Mississippi",value:"Mississippi"},
+            {label:"Missouri",value:"Missouri"},
+            {label:"Montana ",value:"Montana"},
+            {label:"Nebraska",value:"Nebraska"},
+            {label:"Nevada",value:"Nevada"},
+            {label:"New Hampshire",value:"New Hampshire"},
+            {label:"New Jersey",value:"New Jersey"},
+            {label:"New Mexico",value:"New Mexico"},
+            {label:"New York",value:"New York"},
+            {label:"North Carolina",value:"North Carolina"},
+            {label:"North Dakota",value:"North Dakota"}
+          ];
+        }
+
+
+      }
+
+    },
+
+    zip:{
+      type:String,
+      label:"Zip"
     },
     position:{
       type:String,
@@ -47,7 +113,19 @@ Staff.attachSchema(new SimpleSchema({
       type:String
     },
     gender:{
-      type:String
+      type:String,
+      autoform:{
+        type:"select",
+        options: function() {
+          return[
+            {label:"Male",value:"men"},
+            {label:"Female",value:"women"}
+          ];
+        }
+
+
+      }
+
     },
     enrolled:{
       type:Object,

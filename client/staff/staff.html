@@ -1,10 +1,17 @@
 <template name="Staff">
+  {{#globalDataPopout}}
+       {{> newStaff}}
+
+  {{/globalDataPopout}}
 <div class="content">
-  <div class="fixed-action-btn" style="bottom:125px; right:22px;">
-    <a class="btn-floating btn-large blue waves-effect waves-light open-form">
-        <i class="material-icons">add</i>
-    </a>
-  </div>
+
+
+
+    <div class="fixed-action-btn" style="bottom:125px; right:22px;">
+      <a class="open-data btn-floating btn-large blue waves-effect waves-light" id="open-form">
+          <i class="material-icons">add</i>
+      </a>
+    </div>
 
   <div class="row">
 

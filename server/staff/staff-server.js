@@ -9,7 +9,13 @@ Meteor.methods({
        position:String,
        photo:String,
        gender:String,
-       phone:String,
+       main:String,
+       secondary:String,
+       street:String,
+       city:String,
+       zip:String,
+       photo: String,
+       state: String,
        email:String
 
 
@@ -17,13 +23,19 @@ Meteor.methods({
      });
 
       var data = {
-       firstname:doc. firstname,
+        firstname:doc.firstname,
         lastname:doc.lastname,
         position:doc.position,
         photo:doc.photo,
         gender:doc.gender,
         phone:doc.phone,
-        email:doc.email
+        email:doc.email,
+        main:doc.main,
+        secondary:doc.secondary,
+        street:doc.street,
+        city:doc.city,
+        zip:doc.zip,
+        state: doc.state,
 
       }
 

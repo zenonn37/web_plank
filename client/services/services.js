@@ -59,21 +59,13 @@ AutoForm.hooks({
 
 });
 
-Template.newServices.onRendered(function() {
+Template.newService.onRendered(function() {
   formsPres.setSlideCount(3);
 formsPres.globalSlidesCtrl();
 console.log('rendered');
 });
 
-Template.newServices.helpers({
 
-});
-
-Template.newServices.events({
-  "click #foo": function(event, template){
-
-  }
-});
 
 
 Template.newSchedule.helpers({
