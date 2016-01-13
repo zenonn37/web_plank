@@ -55,6 +55,53 @@ AutoForm.hooks({
      Router.go('service-view',{_id:result._id});
       Bert.alert( 'New Service Created', 'success', 'fixed-top', 'fa-bolt' );
     }
+  },
+  newSchedules:{
+    onSubmit:function(insertDoc) {
+      this.event.preventDefault();
+      var serid = Router.current().params;
+      console.log(this.insertDoc.day1);
+      console.log(this.insertDoc.start1);
+      var data = {
+        start1:this.insertDoc.start1,
+        start2:this.insertDoc.start2,
+        start3:this.insertDoc.start3,
+        start4:this.insertDoc.start4,
+        start5:this.insertDoc.start5,
+        start6:this.insertDoc.start6,
+        start7:this.insertDoc.start7,
+        end1:this.insertDoc.end1,
+        end2:this.insertDoc.end2,
+        end3:this.insertDoc.end3,
+        end4:this.insertDoc.end4,
+        end5:this.insertDoc.end5,
+        end6:this.insertDoc.end6,
+        end7:this.insertDoc.end7,
+        serviceID:serid._id,
+        day1:this.insertDoc.day1,
+        day2:this.insertDoc.day2,
+        day3:this.insertDoc.day3,
+        day4:this.insertDoc.day4,
+        day5:this.insertDoc.day5,
+        day6:this.insertDoc.day6,
+        day7:this.insertDoc.day7,
+
+      }
+
+      Meteor.call("newSchedule", data, function(error, result){
+        if(error){
+          console.log("error", error);
+        }
+        if(result){
+       console.log(result._id);
+        }
+      });
+    this.done();
+    return false;
+    },
+    onSuccess:function(formType, result) {
+      console.log(result._id);
+    }
   }
 
 });

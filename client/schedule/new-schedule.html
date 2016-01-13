@@ -1,25 +1,56 @@
 <template name="newSchedules">
-  {{#autoForm collection = "Schedule" id="newSchedules" type="method" meteormethod="newSchedules"}}
+  {{#autoForm collection = "Schedule" id="newSchedules" type="normal"}}
     <div class="col s12">
 
       <div class="q-content">
-
-        {{#slides number="one" title="New Schedule"}}
+            {{slideCount}}
+        {{#slides number="one" title="Day One"}}
           <div class="input-field col s6">
 
-            {{> afQuickField  name='start'}}
+            {{> afQuickField  name='start1' value="no time"}}
           </div>
 
           <div class="input-field col s6">
-            {{> afQuickField  name='end'}}
+            {{> afQuickField  name='end1' value="no time"}}
           </div>
 
           <div class="input-field col s12">
-            {{> afQuickField  name='day'}}
+            {{> afQuickField  name='day1' value="no date"}}
           </div>
 
         {{/slides}}
-        {{#slides number="two" title="What You Submitted"}}
+        {{#slides number="two" title="Day Two"}}
+        <div class="input-field col s6">
+
+          {{> afQuickField  name='start2' value="no time"}}
+        </div>
+
+        <div class="input-field col s6">
+          {{> afQuickField  name='end2' value="no time"}}
+        </div>
+
+        <div class="input-field col s12">
+          {{> afQuickField  name='day2' value="no date"}}
+        </div>
+        {{/slides}}
+
+
+        {{#slides number="three" title="Day Three"}}
+        <div class="input-field col s6">
+
+          {{> afQuickField  name='start3' value="no time"}}
+        </div>
+
+        <div class="input-field col s6">
+          {{> afQuickField  name='end3' value="no time"}}
+        </div>
+
+        <div class="input-field col s12">
+          {{> afQuickField  name='day3' value="no date"}}
+        </div>
+
+        {{/slides}}
+        {{#slides number="four" title="What You Submitted"}}
 
                   <div class="input-field col s12">
                     <button class="btn">Complete Schedule</button>
@@ -27,15 +58,81 @@
 
         {{/slides}}
 
-        {{#slides number="three" title=""}}
+        {{#slides number="five" title=""}}
+          <div class="input-field col s6">
+        {{> afQuickField  name='start4' value="no time" }}
+      </div>
+
+      <div class="input-field col s6">
+        {{> afQuickField  name='end4' value="no time"}}
+      </div>
+
+      <div class="input-field col s12">
+        {{> afQuickField  name='day4' value="no date"}}
+      </div>
 
         {{/slides}}
 
 
-        {{#slides number="four" title=""}}
+        {{#slides number="six" title=""}}
+          <div class="input-field col s6">
+        {{> afQuickField  name='start5' value="no time"}}
+      </div>
+
+      <div class="input-field col s6">
+        {{> afQuickField  name='end5' value="no time"}}
+      </div>
+
+      <div class="input-field col s12">
+        {{> afQuickField  name='day5' value="no time"}}
+      </div>
 
 
         {{/slides}}
+
+
+                {{#slides number="seven" title=""}}
+                  <div class="input-field col s6">
+                {{> afQuickField  name='start6' value="no time" }}
+              </div>
+
+              <div class="input-field col s6">
+                {{> afQuickField  name='end6' value="no time" }}
+              </div>
+
+              <div class="input-field col s12">
+                {{> afQuickField  name='day6' value="no date" }}
+              </div>
+
+
+                {{/slides}}
+
+                {{#slides number="eight" title=""}}
+                  <div class="input-field col s6">
+                {{> afQuickField  name='start7' value="no time" }}
+              </div>
+
+              <div class="input-field col s6">
+                {{> afQuickField  name='end7' value="no time" }}
+              </div>
+
+              <div class="input-field col s12">
+                {{> afQuickField  name='day7' value="no date" }}
+              </div>
+
+
+                {{/slides}}
+                {{#slides number="nine" title=""}}
+
+
+
+                {{/slides}}
+                {{#slides number="ten" title=""}}
+
+
+
+                {{/slides}}
+
 
       </div>
     </div>

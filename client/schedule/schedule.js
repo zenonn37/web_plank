@@ -1,21 +1,30 @@
 
-
+Template.newSchedules.onCreated(function() {
+  var self = this;
+    var ID = Router.current().params;
+  self.autorun(function() {
+    self.subscribe("service",ID._id);
+  });
+});
 Template.Schedule.onRendered(function() {
-
+//blank
 });
 
 
-Template.Schedule.helpers({
-  create: function(){
+Template.newSchedules.helpers({
+  slideCount: function(){
 
-  },
-  rendered: function(){
+    var query = Services.findOne({_id:this._id});
 
-  },
-  destroyed: function(){
+    if (query) {
+      Session.set('slideSet',query.weekly);
+    }
+    console.log(query._id);
+    return query.weekly
 
-  },
+  }
 });
+
 
 Template.Schedule.events({
   "click #foo": function(event, template){
