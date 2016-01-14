@@ -1,0 +1,65 @@
+<template name="roster">
+
+  {{#floatingButton content="add" color="green"}} {{/floatingButton}}
+  <div class="content">
+    <div class="row">
+      <div class="col s12 m4">
+        <div class="team-stat-card">
+          <div class="coach-title">
+            Navigation
+          </div>
+          <div class="team-stat-card-body">
+            <ul>
+              <li>Roster</li>
+              <li>Depth Chart</li>
+              <li>Offense</li>
+              <li>Defense</li>
+              <li>Special Teams</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m8">
+        <div class="team-stat-card">
+          <div class="coach-title">
+            Roster
+          </div>
+          <div class="team-stat-card-body">
+            <table class="striped highlight responsive-table">
+              <thead>
+                <tr>
+                  <th data-field="id">NUM</th>
+                  <th data-field="id">Name</th>
+                  <th data-field="name">POS</th>
+                  <th data-field="price">AGE</th>
+                  <th data-field="price">HT</th>
+                  <th data-field="price">WT</th>
+                  <th data-field="price">EXP</th>
+                    <th data-field="price">POS/2</th>
+
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                    <td>8</td>
+                  <td>Lucas Whitehouse</td>
+                  <td>QB</td>
+                  <td>18</td>
+                  <td>6'2"</td>
+                  <td>190</td>
+                  <td>4</td>
+                    <td>SS</td>
+
+
+
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</template>

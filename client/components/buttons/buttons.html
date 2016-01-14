@@ -1,8 +1,8 @@
-<template name="editButton">
-  <div class="super-button">
-    <div class="btn-floating btn-small blue results">
-            <i class="material-icons open-overlay-edit">mode_edit</i>
-    </div>
+<template name="floatingButton">
+  <div class="fixed-action-btn" style="bottom:125px; right:22px;">
+    <a class="btn-floating btn-large {{this.color}} waves-effect waves-light open-form">
+        <i class="material-icons">{{this.content}}</i>
+    </a>
   </div>
 
 </template>
