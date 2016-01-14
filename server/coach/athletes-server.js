@@ -1,5 +1,5 @@
 Meteor.methods({
-  newAthlete:function(obj){
+  newAthletes:function(obj){
 
       var user = Meteor.user();
       check(obj,{
@@ -13,7 +13,10 @@ Meteor.methods({
         street:String,
         city:String,
         zip:String,
-        photo: String
+        photo: String,
+        number:String,
+        class:String
+
 
       })
 

@@ -32,6 +32,10 @@ Athletes.attachSchema(new SimpleSchema({
     label:"Lastname"
   },
 
+  number:{
+    type:String,
+    label:"Jersey Number"
+  },
 
 photo:{
   type:String,
@@ -89,6 +93,19 @@ photo:{
     }
 
   },
+  position:{
+    type:Object,
+    optional:true,
+    blackbox: true,
+    autoform:{
+      omit:true
+    }
+  },
+
+  'position.positions':{
+    type:[String],
+    defaultValue: []
+  },
 
   enrolled:{
     type:Object,
@@ -103,6 +120,7 @@ photo:{
     type:[String],
     defaultValue: []
   },
+
 
   user:{
     type:String,
