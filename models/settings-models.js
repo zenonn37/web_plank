@@ -5,7 +5,7 @@ Settings.attachSchema(new SimpleSchema({
       label:"Name",
       max:200
     },
-    challenge:{
+    test:{
       type:String,
       label:"Type",
       max:60

@@ -1,34 +1,33 @@
-<template name="newGoals">
-  {{#autoForm collection="Goals" id="newGoals" type="method" meteormethod="newGoals"}}
+<template name="update-settings">
+
+  {{#autoForm collection = "Settings" type="method" meteormethod ="editSettings" id="editSettings"}}
     <div class="col s12">
 
       <div class="q-content">
 
-        {{#slides number="one" title="New Goal"}}
+        {{#slides number="one" title="New Challenge"}}
           <div class="input-field col s12">
 
             {{> afQuickField  name='name'}}
           </div>
 
           <div class="input-field col s12">
-            {{> afQuickField  name='type'}}
+            {{> afQuickField  name='test'}}
           </div>
 
 
 
         {{/slides}}
-        {{#slides number="two" title="Goal Description"}}
-
+        {{#slides number="two" title="What You Submitted"}}
         <div class="input-field col s12">
-          {{> afQuickField  name='desp'}}
+          <button class="btn">Complete</button>
         </div>
+
         {{/slides}}
 
-        {{#slides number="three" title="What You Submitted"}}
+        {{#slides number="three" title=""}}
 
-          <div class="input-field col s12">
-            <button class="btn">Complete</button>
-          </div>
+
         {{/slides}}
 
 
@@ -36,7 +35,6 @@
 
 
         {{/slides}}
-
         {{#slides number="five" title=""}}
 
         {{/slides}}
@@ -55,8 +53,9 @@
         {{#slides number="ten" title=""}}
 
         {{/slides}}
-
       </div>
+
     </div>
-  {{/autoForm}}
+    {{/autoForm}}
+
 </template>

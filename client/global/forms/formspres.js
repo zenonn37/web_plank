@@ -14,19 +14,35 @@ formsPres = {
     console.log('test');
 
     Session.set('slides',1);
-      var $globalSlidesOne  =   $('.slide-one');
-      var $globalSlidesTwo   =   $('.slide-two');
-      var $globalSlidesThree =   $('.slide-three');
-      var $globalSlidesFour  =   $('.slide-four');
-      var $globalSlidesFive  =   $('.slide-five');
+    var $globalSlidesOne  =   $('.slide-one');
+    var $globalSlidesTwo   =   $('.slide-two');
+    var $globalSlidesThree =   $('.slide-three');
+    var $globalSlidesFour  =   $('.slide-four');
+    var $globalSlidesFive  =   $('.slide-five');
+    var $globalSlidesSix  =   $('.slide-six');
+    var $globalSlidesSeven   =   $('.slide-seven');
+    var $globalSlidesEight =   $('.slide-eight');
+    var $globalSlidesNine =   $('.slide-nine');
+    var $globalSlidesTen  =   $('.slide-ten');
+    var $assist = $('.assist');
+    var $percentage = $('.percentage');
+    var durn = 100;
+    var disNo = "none";
+    var disYes = "block";
 
 
       var globalDataSeq6 = [
-            //{e:$globalSlidesFive,p:{opacity:0,top:'0px'},o:{display:'block',duration:100,easing:"ease-in-out"}},
-            {e:$globalSlidesFour,p:{opacity:0,top:'-10px'},o:{display:'block',duration:100,easing:"ease-in-out"}},
-            {e:$globalSlidesThree,p:{opacity:0,top:'-10px'},o:{display:'block',duration:100,easing:"ease-in-out"}},
-            {e:$globalSlidesTwo,p:{opacity:0},o:{display:'none',duration:100,easing:"ease-in"}},
-            {e:$globalSlidesOne,p:{opacity:1},o:{display:'block',duration:100,easing:"ease-in"}}
+        {e:$globalSlidesTen,p:{opacity:0,top:'-10px'},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+        {e:$globalSlidesNine,p:{opacity:0,top:'-10px'},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+         {e:$globalSlidesEight,p:{opacity:0,top:'-10px'},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+          {e:$globalSlidesSeven,p:{opacity:0,top:'-10px'},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+          {e:$globalSlidesSix,p:{opacity:0,top:'-10px'},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+          {e:$globalSlidesFive,p:{opacity:0,top:'-10px'},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+            {e:$globalSlidesFive,p:{opacity:0,top:'0px'},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+            {e:$globalSlidesFour,p:{opacity:0,top:'-10px'},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+            {e:$globalSlidesThree,p:{opacity:0,top:'-10px'},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+            {e:$globalSlidesTwo,p:{opacity:0},o:{display:disNo,duration:200,easing:"ease-in"}},
+            {e:$globalSlidesOne,p:{opacity:1},o:{display:disYes,duration:200,easing:"ease-in"}}
       ];
           $.Velocity.RunSequence(globalDataSeq6);
 
