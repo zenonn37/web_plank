@@ -62,16 +62,16 @@ formsPres = {
 
     switch (Session.get('slides')) {
         case 1:
-      SlideFoward(1);
+      slideOne();
         console.log('slide one');
         break;
         case 2:
-        SlideFoward(2);
+        slideTwo();
 
         console.log('slide two');
         break;
         case 3:
-        SlideFoward(3);
+        slideThree();
         console.log('slide three');
         break;
         case 4:
@@ -90,6 +90,61 @@ formsPres = {
 
     }
     console.log(Session.get('slides'));
+
+    function slideOne() {
+      var $globalSlidesOne  =   $('.slide-one');
+      var $globalSlidesTwo   =   $('.slide-two');
+        var $globalSlidesThree   =   $('.slide-three');
+      var durn = 100;
+      var disNo = "none";
+      var disYes = "block";
+
+      var globalDataSeq = [
+         {e:$globalSlidesThree,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+         {e:$globalSlidesTwo,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+        {e:$globalSlidesOne,p:{opacity:1,top:'0px'},o:{display:disYes,duration:durn,easing:"ease-in-out"}}
+      ];
+           $.Velocity.RunSequence(globalDataSeq);
+      console.log('called in switch slide one');
+
+    };
+    function slideTwo() {
+      var $globalSlidesOne  =   $('.slide-one');
+      var $globalSlidesTwo   =   $('.slide-two');
+      var $globalSlidesThree   =   $('.slide-three');
+      var durn = 100;
+      var disNo = "none";
+      var disYes = "block";
+
+      var globalDataSeq = [
+          {e:$globalSlidesThree,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+           {e:$globalSlidesOne,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+           {e:$globalSlidesTwo,p:{opacity:1,top:'0px'},o:{stagger:100,display:disYes,duration:durn,easing:"ease-in-out"}},
+
+      ];
+           $.Velocity.RunSequence(globalDataSeq);
+      console.log('called in switch slide two');
+
+    };
+
+    function slideThree() {
+      var $globalSlidesOne  =   $('.slide-one');
+      var $globalSlidesTwo   =   $('.slide-two');
+      var $globalSlidesThree   =   $('.slide-three');
+      var durn = 100;
+      var disNo = "none";
+      var disYes = "block";
+
+      var globalDataSeq = [
+        {e:$globalSlidesOne,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+        {e:$globalSlidesTwo,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+        {e:$globalSlidesThree,p:{opacity:1,top:'0px'},o:{stagger:100,display:disYes,duration:durn,easing:"ease-in-out"}},
+
+      ];
+           $.Velocity.RunSequence(globalDataSeq);
+      console.log('called in switch slide three');
+
+    };
 
     function SlideFoward(n) {
       var n = n;
