@@ -12,7 +12,7 @@ Template.globalDataPopout.helpers({
     //wrong!!!
     finish:function() {
       if (Session.get('slides') === Session.get('slideSet')) {
-          formsPres.setSlideCount(4);
+          formsPres.setSlideCount(5);
          return "Finish";
       }else {
         //  formsPres.setSlideCount(3);

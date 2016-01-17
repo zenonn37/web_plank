@@ -1,6 +1,9 @@
 <template name="roster">
-
-{{#globalDataPopout back="fitness"}}
+<!--
+revist when we build the settings module
+this should be controlled programically
+-->
+{{#globalDataPopout back="futball"}}
     {{> newAthlete}}
 {{/globalDataPopout}}
 
@@ -47,19 +50,22 @@
               </thead>
 
               <tbody>
+                {{#each athletes}}
                 <tr>
-                    <td>8</td>
-                  <td>Lucas Whitehouse</td>
-                  <td>QB</td>
-                  <td>18</td>
-                  <td>6'2"</td>
-                  <td>190</td>
-                  <td>4</td>
-                    <td>SS</td>
+                    <td>{{number}}</td>
+                  <td>{{first}} {{last}}</td>
+                  <td>{{pos1}}</td>
+                  <td>{{age}}</td>
+
+                  <td>{{height}}</td>
+                  <td>{{weight}}</td>
+                  <td>{{class}}</td>
+                    <td>{{pos2}}</td>
 
 
 
                 </tr>
+                {{/each}}
               </tbody>
             </table>
           </div>

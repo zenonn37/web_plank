@@ -15,7 +15,11 @@ Meteor.methods({
         zip:String,
         photo: String,
         number:String,
-        class:String
+        class:String,
+        state:String,
+        pos1:String,
+        pos2:String,
+        pos3:String
 
 
       })
@@ -32,6 +36,12 @@ Meteor.methods({
         city:obj.city,
         zip:obj.zip,
         photo: parseInt(obj.photo),
+        number:obj.number,
+        class:obj.class,
+        state:obj.state,
+        pos1:obj.pos1,
+        pos2:obj.pos2,
+        pos3:obj.pos3
 
       }
 

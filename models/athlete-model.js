@@ -41,6 +41,14 @@ photo:{
   type:String,
   label:"Photo"
 },
+class:{
+  type:String,
+  label:'Class'
+},
+state:{
+  type:String,
+  label:"State"
+},
 
   age:{
     type:String,
@@ -93,19 +101,23 @@ photo:{
     }
 
   },
-  position:{
-    type:Object,
-    optional:true,
-    blackbox: true,
-    autoform:{
-      omit:true
-    }
+
+  pos1:{
+    type:String,
+    label:"Position Main"
+
+  },
+  pos2:{
+    type:String,
+    label:"Position Secondary"
+
+  },
+  pos3:{
+    type:String,
+    label:"Position Third"
+
   },
 
-  'position.positions':{
-    type:[String],
-    defaultValue: []
-  },
 
   enrolled:{
     type:Object,

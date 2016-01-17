@@ -19,12 +19,14 @@ Template.roster.onCreated(function() {
 
 Template.newAthlete.onRendered(function() {
 
-      formsPres.setSlideCount(2);
+      formsPres.setSlideCount(5);
     formsPres.globalSlidesCtrl();
     console.log('rendered athelete form');
 });
 Template.roster.helpers({
-  create: function(){
+  athletes: function(){
+var query = Athletes.find({});
+  return query;
 
   },
   rendered: function(){

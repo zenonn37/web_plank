@@ -75,11 +75,11 @@ formsPres = {
         console.log('slide three');
         break;
         case 4:
-        SlideFoward(4);
+        slideFour();
         console.log('slide four');
         break;
         case 5:
-        SlideFoward(5);
+          slideFive();
         console.log('slide five');
         break;
 
@@ -94,15 +94,27 @@ formsPres = {
     function slideOne() {
       var $globalSlidesOne  =   $('.slide-one');
       var $globalSlidesTwo   =   $('.slide-two');
-        var $globalSlidesThree   =   $('.slide-three');
+      var $globalSlidesThree   =   $('.slide-three');
+      var $globalSlidesFour  =   $('.slide-four');
+      var $globalSlidesFive =   $('.slide-five');
       var durn = 100;
+      var invisible =  0.1;
       var disNo = "none";
       var disYes = "block";
 
       var globalDataSeq = [
-         {e:$globalSlidesThree,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
-         {e:$globalSlidesTwo,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
-        {e:$globalSlidesOne,p:{opacity:1,top:'0px'},o:{display:disYes,duration:durn,easing:"ease-in-out"}}
+        //get rid of current slide first!
+        {e:$globalSlidesTwo,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+        //current
+        //prior slide
+          {e:$globalSlidesFive,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        //
+        {e:$globalSlidesFour,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        {e:$globalSlidesThree,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        {e:$globalSlidesTwo,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        //render needed slide
+        {e:$globalSlidesOne,p:{opacity:1},o:{display:disYes,duration:durn,easing:"ease-in-out"}}
+
       ];
            $.Velocity.RunSequence(globalDataSeq);
       console.log('called in switch slide one');
@@ -112,18 +124,30 @@ formsPres = {
       var $globalSlidesOne  =   $('.slide-one');
       var $globalSlidesTwo   =   $('.slide-two');
       var $globalSlidesThree   =   $('.slide-three');
+      var $globalSlidesFour  =   $('.slide-four');
+      var $globalSlidesFive =   $('.slide-five');
       var durn = 100;
+      var invisible =  0.1;
       var disNo = "none";
       var disYes = "block";
 
       var globalDataSeq = [
-          {e:$globalSlidesThree,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
-           {e:$globalSlidesOne,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
-           {e:$globalSlidesTwo,p:{opacity:1,top:'0px'},o:{stagger:100,display:disYes,duration:durn,easing:"ease-in-out"}},
+        //get rid of current slide first!
+        {e:$globalSlidesOne,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+        //current
+        //prior slide
+          {e:$globalSlidesThree,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        //
+        {e:$globalSlidesFive,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        {e:$globalSlidesFour,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+
+        //render needed slide
+        {e:$globalSlidesTwo,p:{opacity:1},o:{display:disYes,duration:durn,easing:"ease-in-out"}}
 
       ];
            $.Velocity.RunSequence(globalDataSeq);
       console.log('called in switch slide two');
+
 
     };
 
@@ -131,14 +155,84 @@ formsPres = {
       var $globalSlidesOne  =   $('.slide-one');
       var $globalSlidesTwo   =   $('.slide-two');
       var $globalSlidesThree   =   $('.slide-three');
+      var $globalSlidesFour  =   $('.slide-four');
+      var $globalSlidesFive =   $('.slide-five');
       var durn = 100;
+      var invisible =  0.1;
       var disNo = "none";
       var disYes = "block";
 
       var globalDataSeq = [
-        {e:$globalSlidesOne,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+        //get rid of current slide first!
         {e:$globalSlidesTwo,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
-        {e:$globalSlidesThree,p:{opacity:1,top:'0px'},o:{stagger:100,display:disYes,duration:durn,easing:"ease-in-out"}},
+        //current
+        //prior slide
+          {e:$globalSlidesOne,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        //
+        {e:$globalSlidesFive,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        {e:$globalSlidesFour,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+
+        //render needed slide
+        {e:$globalSlidesThree,p:{opacity:1},o:{display:disYes,duration:durn,easing:"ease-in-out"}}
+
+      ];
+           $.Velocity.RunSequence(globalDataSeq);
+      console.log('called in switch slide three');
+
+    };
+
+    function slideFour() {
+      var $globalSlidesOne  =   $('.slide-one');
+      var $globalSlidesTwo   =   $('.slide-two');
+      var $globalSlidesThree   =   $('.slide-three');
+      var $globalSlidesFour  =   $('.slide-four');
+      var $globalSlidesFive =   $('.slide-five');
+      var durn = 100;
+      var invisible =  0.1;
+      var disNo = "none";
+      var disYes = "block";
+
+      var globalDataSeq = [
+        //get rid of current slide first!
+        {e:$globalSlidesThree,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+        //current
+        //prior slide
+          {e:$globalSlidesTwo,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        //
+        {e:$globalSlidesFive,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        {e:$globalSlidesOne,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+
+        //render needed slide
+        {e:$globalSlidesFour,p:{opacity:1},o:{display:disYes,duration:durn,easing:"ease-in-out"}}
+
+      ];
+           $.Velocity.RunSequence(globalDataSeq);
+      console.log('called in switch slide three');
+
+    };
+    function slideFive() {
+      var $globalSlidesOne  =   $('.slide-one');
+      var $globalSlidesTwo   =   $('.slide-two');
+      var $globalSlidesThree   =   $('.slide-three');
+      var $globalSlidesFour  =   $('.slide-four');
+      var $globalSlidesFive =   $('.slide-five');
+      var durn = 100;
+      var invisible =  0.1;
+      var disNo = "none";
+      var disYes = "block";
+
+      var globalDataSeq = [
+        //get rid of current slide first!
+        {e:$globalSlidesFour,p:{opacity:0},o:{display:disNo,duration:durn,easing:"ease-in-out"}},
+        //current
+        //prior slide
+          {e:$globalSlidesThree,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        //
+
+        {e:$globalSlidesOne,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        {e:$globalSlidesTwo,p:{opacity:0},o:{display:disNo,duration:invisible,easing:"ease-in-out"}},
+        //render needed slide
+        {e:$globalSlidesFive,p:{opacity:1},o:{display:disYes,duration:durn,easing:"ease-in-out"}}
 
       ];
            $.Velocity.RunSequence(globalDataSeq);
