@@ -16,7 +16,7 @@ Accounts.onCreateUser(function(options, user){
    }
 
   Meteor.setTimeout(function(){
-       Roles.addUsersToRoles(user._id,'admin');
+       Roles.addUsersToRoles(user._id,'customer');
   }, 1000);
 
 

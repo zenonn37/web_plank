@@ -37,7 +37,7 @@ Members.attachSchema(new SimpleSchema({
 
 
 photo:{
-  type:String,
+  type:Number,
   label:"Photo"
 },
 

@@ -3,8 +3,15 @@
   <header>
 
 <div class="navbar">
-
+  <!--
    {{> yield region='nav'}}
+-->
+{{#if isInRole 'staff'}}
+   {{> staffNav}}
+   {{/if}}
+   {{#if isInRole 'customer'}}
+      {{> customerNav}}
+      {{/if}}
 
 </div>
 
@@ -18,6 +25,6 @@
 
 
   {{> yield}}
-  
+
   </main>
 </template>

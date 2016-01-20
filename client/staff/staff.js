@@ -1,3 +1,4 @@
+
 Template.Staff.onCreated(function() {
   var self = this;
   self.autorun(function() {
@@ -56,7 +57,11 @@ Template.Staff.helpers({
   },
   count: function(){
   return Counts.get('count');
-  }
+},
+getOut:function() {
+  console.log('get out');
+  Router.go('/');
+}
 
 });
 

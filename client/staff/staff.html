@@ -1,4 +1,8 @@
 <template name="Staff">
+
+  {{#if isInRole 'staff'}}
+
+
   {{#globalDataPopout}}
        {{> newStaff}}
 
@@ -70,10 +74,18 @@
       </div>
 
     </div>
+
     <div class="col sm12 m4">
       <div class="cards">
         <div class="cards-body">
-            <h1>card</h1>
+          {{#if isInRole 'staff'}}
+            <h1>Staff Only</h1>
+          {{/if}}
+
+          {{#if isInRole 'customer'}}
+            <h1>Customer Only</h1>
+          {{/if}}
+
 
         </div>
 
@@ -98,7 +110,7 @@
 
 
                          <small>
-                        Hired:{{epochToHuman created}}
+                        Hired:{{formatDate created}}
                          </small>
           </p>
 
@@ -126,5 +138,11 @@
 
 
 </div>
-{{> staffModel}}
+  {{/if}}
+
+
+  {{#if isInRole 'customer'}}
+     404 Page no found
+     {{getOut}}
+  {{/if}}
 </template>

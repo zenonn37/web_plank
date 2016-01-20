@@ -13,7 +13,7 @@ Meteor.methods({
       street:String,
       city:String,
       zip:String,
-      photo: String,
+      photo: Number,
       state: String
     })
 
@@ -28,13 +28,13 @@ Meteor.methods({
       street:obj.street,
       city:obj.city,
       zip:obj.zip,
-      photo: parseInt(obj.photo),
+      photo:obj.photo,
       state: obj.state
     }
 
    _.extend(data,{
      user:user._id,
-     created: new Date(),
+     created: new Date().getTime(),
      status:"Active",
      evaluation:false,
      goals:false,

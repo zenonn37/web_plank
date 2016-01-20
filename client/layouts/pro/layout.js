@@ -83,7 +83,21 @@ Template.layout.events({
 
 
 Template.plankNav.events({
-  "click #logout": function(e){
+  "click .logout": function(e){
+     e.preventDefault();
+    AccountsTemplates.logout();
+    Router.go('signin');
+  }
+});
+Template.customerNav.events({
+  "click .logout": function(e){
+     e.preventDefault();
+    AccountsTemplates.logout();
+    Router.go('signin');
+  }
+});
+Template.staffNav.events({
+  "click .logout": function(e){
      e.preventDefault();
     AccountsTemplates.logout();
     Router.go('signin');

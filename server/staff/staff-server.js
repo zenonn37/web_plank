@@ -1,3 +1,5 @@
+
+
 Meteor.methods({
   newStaff:function(doc){
      console.log("called staff" + doc.name + doc.positon);
