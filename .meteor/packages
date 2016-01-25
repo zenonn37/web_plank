@@ -46,3 +46,10 @@ tmeasday:publish-counts
 materialize:materialize
 scmart:jquery-timepicker
 planettraining:jquery-timepicker
+audit-argument-checks
+email
+gfk:mailgun-api
+meteorhacks:ssr
+reactive-dict
+dbarrett:dropzonejs
+tomi:upload-server

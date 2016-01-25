@@ -5,7 +5,14 @@
 <div class="navbar">
   <!--
    {{> yield region='nav'}}
+
+
 -->
+
+
+{{#if isInRole 'admin'}}
+   {{> plankNav}}
+   {{/if}}
 {{#if isInRole 'staff'}}
    {{> staffNav}}
    {{/if}}

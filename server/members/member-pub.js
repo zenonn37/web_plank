@@ -3,11 +3,11 @@ if (this.userId !== null) {
   Counts.publish(this,'mem-count', Members.find({user:this.userId}),{noReady:true});
    return Members.find({user:this.userId},{
      fields:{
-       first:1,
-       last:1,
-       created:1,
-       photo:1
-     }  
+       "first":1,
+       "last":1,
+       "created":1,
+       "photo":1
+     }
    });
 }
 
@@ -17,9 +17,9 @@ Meteor.publish("members-global", function(){
   if (this.userId !== null) {
     return Members.find({userId:this.userId},{
       fields:{
-        first:1,
-        last:1,
-        photo:1
+        "first":1,
+        "last":1,
+        "photo":1
       }
 
     });

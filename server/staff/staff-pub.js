@@ -4,10 +4,10 @@ Meteor.publish("staff", function(){
       return Staff.find(
         {user:this.userId},{
           fields:{
-            firstname:1,
-            lastname:1,
-            photo:1,
-            created:1
+            "firstname":1,
+            "lastname":1,
+            "photo":1,
+            "created":1
           }
         }
       );

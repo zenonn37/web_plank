@@ -1,0 +1,10 @@
+{
+  "name": "plank",
+  "version": "1.0.0",
+  "description": "Plank Platform.",
+  "scripts": {
+    "start": "meteor --settings settings-developments.json",
+    "staging": "meteor deploy plank.staging.meteor.com --settings settings-stage.json",
+    "production": "meteor deploy plank.production.meteor.com --settings settings-production.json"
+  }
+}
