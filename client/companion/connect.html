@@ -1,0 +1,18 @@
+<template name="newConnect">
+<form class="connect-client">
+  <div class="input-field col s12">
+    <select class="select-email browser-default"  name="memId">
+      <option value="">Select Member</option>
+     {{#each member}}
+      <option value="{{_id}}">{{first}} {{last}} --- {{email}}</option>
+      {{else}}
+      No Members ....
+      {{/each}}
+    </select>
+  </div>
+  <div class="input-field col s12">
+    <input class="large btn-flat green right" type="submit" name="submit" value="Connect">
+
+  </div>
+</form>
+</template>

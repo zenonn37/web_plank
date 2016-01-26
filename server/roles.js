@@ -10,7 +10,8 @@ Meteor.methods({
           email:doc.email,
           date:(new Date()).toISOString(),
           token:Random.hexString(16),
-          memId:doc.memId
+          memId:doc.memId,
+          user:this.userId,
         })
       } catch (e) {
         return e

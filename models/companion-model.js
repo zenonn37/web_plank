@@ -1,32 +1,25 @@
 Companion = new Mongo.Collection('companion');
 Companion.attachSchema(new SimpleSchema({
-    name:{
+    email:{
       type:String,
-      label:"Name",
-      max:200
+      label:"Email",
+
     },
-    challenge:{
-      type:String,
-      label:"Type",
-      max:60
+      token:{
+        type:String,
+
     },
     user:{
       type:String,
-       optional:true,
-      autoform:{
-           omit:true
 
-      }
+    },
+    date:{
+      type:Date,
 
 
     },
-    created:{
-      type:Date,
-      optional:true,
-      autoform:{
-        omit:true
-
-      }
+    memId:{
+      type:String,
 
     }
 }));

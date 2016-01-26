@@ -12,12 +12,16 @@ var connect  = function(docs) {
   //call setupEmail funtion
 var template =   _setupEmail(docs.token);
   //send email with connect address and email template
-  _sendConnectEmail( docs.email, template)
+  _sendConnectEmail( docs.email, template);
 
 };
 //private function to insert connect invite toDB
 var _insertConnect = function(docs) {
-   Connect.insert(docs);
+  Companion.insert(docs,function(err) {
+if (err) {
+  console.log(err);
+}
+  });
 };
 
 //private function to pull from settings fro email setup

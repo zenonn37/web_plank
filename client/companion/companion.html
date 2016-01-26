@@ -1,9 +1,56 @@
 <template name="Companion">
-
+  {{#if isInRole 'super-admin,admin'}}
+   {{#bottomSheet title="Connect"}}
+    {{> newConnect}}
+   {{/bottomSheet}}
   <div class="content">
+    <div class="row">
+      <div class="col s12">
+
+     <table class="highlight">
+       <thead>
+         <tr>
+           <th>Email address</th>
+            <th>Permissions/Role</th>
+         </tr>
+       </thead>
+
+       <tbody>
+         {{#each users}}
+         <tr>
+          <td class="text-left text-middle">{{#if isCurrentUser _id}}<label class="label label-success">You!</label>{{/if}} {{emails.[0].address}}</td>
+          <td>
+            <div class="input-field col 12">
+
+            <select class="select-roles" {{disableIfAdmin _id}} {{disableIfSuperUser _id}} name="userRole">
+                <option class="disabled" selected="" value="">{{roles}}</option>
+              <option selected="{{selected roles.[0] 'admin'}}" value="admin">Admin</option>
+              <option selected="{{selected roles.[0] 'manager'}}" value="manager">Manager</option>
+              <option selected="{{selected roles.[0] 'employee'}}" value="employee">Employee</option>
+                <option selected="{{selected roles.[0] 'basic-user'}}" value="basic">Basic</option>
+            </select>
+              </div>
+          </td>
+        </tr>
+         {{/each}}
+       </tbody>
+
+     </table>
+      </div>
 
 
-  <h3>Companion</h3>
+   </div>
+  <hr/>
+   <div class="row">
+     <div class="col s12">
+       <div class="left">
+         <h4>Connect with Customer or Employee</h4>
+       </div>
+       <div class="btn green right open-bottom">
+         Connect
+       </div>
+     </div>
+   </div>
   </div>
-
+  {{/if}}
 </template>
