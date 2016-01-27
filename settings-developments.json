@@ -8,6 +8,6 @@
       "apiKey":"key-76078f09a6109846dee43ea6990f062c",
       "domain":"sandbox59434e6626c145228d94647fd2d07e50.mailgun.org"
     },
-    "domain":"localhost:300"
+    "domain":"plank.staging.meteor.com"
   }
 }
