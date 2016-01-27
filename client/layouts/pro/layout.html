@@ -12,12 +12,15 @@
 
 {{#if isInRole 'admin'}}
    {{> plankNav}}
+
    {{/if}}
 {{#if isInRole 'staff'}}
    {{> staffNav}}
+
    {{/if}}
-   {{#if isInRole 'customer'}}
+   {{#if isInRole 'Customer'}}
       {{> customerNav}}
+
       {{/if}}
 
 </div>

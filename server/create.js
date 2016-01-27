@@ -15,9 +15,9 @@ Accounts.onCreateUser(function(options, user){
      user.profile = options.profile
    }
 
-  Meteor.setTimeout(function(){
-       Roles.addUsersToRoles(user._id,'admin');
-  }, 1000);
+//  Meteor.setTimeout(function(){
+//       Roles.addUsersToRoles(user._id,'admin');
+//  }, 1000);
 
 
         //Roles.addUsersToRoles(userId,['roleOne','roleTwo','roleThree']);

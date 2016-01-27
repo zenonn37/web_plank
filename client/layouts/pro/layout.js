@@ -14,6 +14,16 @@ Template.plankNav.helpers({
   },
 });
 
+
+Template.layout.helpers({
+  check: function(){
+     Router.go('/404');
+  }
+});
+
+
+
+
 Template.plankNav.events({
   "click .back": function(e, template){
      e.preventDefault();

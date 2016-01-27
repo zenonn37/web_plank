@@ -10,14 +10,17 @@ Meteor.publish("Companion", function(){
         Staff.find({user:this.userId},{fields:{"firstname":1,"lastname":1}})
 
       ];
-
-
     }
 
     this.stop();
     return;
 
 
+});
+Meteor.publish("Companions", function(token){
+  check(token, String);
+
+    return Companion.find({"token":token});
 
 });
 
