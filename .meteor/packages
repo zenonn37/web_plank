@@ -54,3 +54,6 @@ reactive-dict
 dbarrett:dropzonejs
 tomi:upload-server
 gquemart:meteor-reactive-fullcalendar
+react
+kadira:flow-router
+kadira:react-layout

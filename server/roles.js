@@ -11,7 +11,7 @@ Meteor.methods({
           date:(new Date()).toISOString(),
           token:Random.hexString(16),
           memId:doc.memId,
-          user:this.userId,
+          owned:this.userId,
         })
       } catch (e) {
         return e
