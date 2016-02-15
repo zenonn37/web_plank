@@ -1,4 +1,5 @@
 Store = new Mongo.Collection('store');
+/*
 Store.attachSchema(new SimpleSchema({
     name:{
       type:String,
@@ -30,6 +31,7 @@ Store.attachSchema(new SimpleSchema({
 
     }
 }));
+*/
 Store.allow({
   insert: function(){
     return false;

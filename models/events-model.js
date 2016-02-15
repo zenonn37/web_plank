@@ -1,4 +1,5 @@
 Events = new Mongo.Collection('events');
+/*
 Events.attachSchema(new SimpleSchema({
     name:{
       type:String,
@@ -30,6 +31,7 @@ Events.attachSchema(new SimpleSchema({
 
     }
 }));
+*/
 Events.allow({
   insert: function(){
     return false;

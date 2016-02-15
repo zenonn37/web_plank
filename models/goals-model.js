@@ -1,4 +1,4 @@
-Goals = new Mongo.Collection('goals');
+Goals = new Mongo.Collection('goals');/*
 Goals.attachSchema(new SimpleSchema({
     name:{
       type:String,
@@ -42,6 +42,7 @@ Goals.attachSchema(new SimpleSchema({
 
     }
 }));
+*/
 Goals.allow({
   insert: function(){
     return false;

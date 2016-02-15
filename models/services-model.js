@@ -21,7 +21,7 @@ Services.deny({
     return true;
   }
 });
-
+/*
 //schema
 Services.attachSchema(new SimpleSchema({
     name:{
@@ -182,3 +182,4 @@ Services.attachSchema(new SimpleSchema({
       defaultValue: []
     }
 }));
+*/

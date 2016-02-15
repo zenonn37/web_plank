@@ -1,4 +1,5 @@
 Settings = new Mongo.Collection('settings');
+/*
 Settings.attachSchema(new SimpleSchema({
     name:{
       type:String,
@@ -30,6 +31,7 @@ Settings.attachSchema(new SimpleSchema({
 
     }
 }));
+*/
 Settings.allow({
   insert: function(){
     return false;

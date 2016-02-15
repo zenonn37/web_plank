@@ -1,4 +1,5 @@
 Staff = new Mongo.Collection('staff');
+/*
 Staff.attachSchema(new SimpleSchema({
     firstname:{
       type:String,
@@ -141,6 +142,7 @@ Staff.attachSchema(new SimpleSchema({
       defaultValue: []
     }
 }));
+*/
 Staff.allow({
   insert: function(){
     return false;

@@ -1,4 +1,5 @@
 Training  = new Mongo.Collection("training");
+
 Training.allow({
   insert: function(){
     return false;
@@ -21,7 +22,7 @@ Training.deny({
     return true;
   }
 });
-
+/*
 //schema
 Training.attachSchema(new SimpleSchema({
     name:{
@@ -182,3 +183,4 @@ Training.attachSchema(new SimpleSchema({
       defaultValue: []
     }
 }));
+*/

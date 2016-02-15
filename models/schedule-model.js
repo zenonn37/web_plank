@@ -1,4 +1,5 @@
 Schedule = new Mongo.Collection('schedule');
+/*
 Schedule.attachSchema(new SimpleSchema({
 
     start1:{
@@ -260,6 +261,7 @@ Schedule.attachSchema(new SimpleSchema({
 
     }
 }));
+*/
 Schedule.allow({
   insert: function(){
     return false;

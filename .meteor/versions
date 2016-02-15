@@ -3,7 +3,6 @@ accounts-facebook@1.0.6
 accounts-oauth@1.1.8
 accounts-password@1.1.4
 alanning:roles@1.2.14
-aldeed:autoform@5.8.1
 aldeed:collection2@2.8.0
 aldeed:collection2-core@1.0.0
 aldeed:schema-deny@1.0.1
@@ -50,7 +49,6 @@ fortawesome:fontawesome@4.5.0
 fourseven:scss@3.4.1
 geojson-utils@1.0.4
 gfk:mailgun-api@1.1.0
-gildaspk:autoform-materialize@0.0.26
 gquemart:meteor-reactive-fullcalendar@1.0.1
 gwendall:body-events@0.1.6
 hot-code-push@1.0.0
@@ -59,14 +57,6 @@ htmljs@1.0.5
 http@1.1.1
 id-map@1.0.4
 insecure@1.0.4
-iron:controller@1.0.12
-iron:core@1.0.11
-iron:dynamic-template@1.0.12
-iron:layout@1.0.12
-iron:location@1.0.11
-iron:middleware-stack@1.0.11
-iron:router@1.0.12
-iron:url@1.0.11
 jquery@1.11.4
 jsx@0.2.3
 kadira:flow-router@2.10.1
@@ -77,7 +67,6 @@ less@2.5.1
 livedata@1.0.15
 localstorage@1.0.5
 logging@1.0.8
-maazalik:highcharts@0.4.0
 materialize:materialize@0.97.5
 mdg:validation-error@0.2.0
 meteor@1.1.10
@@ -135,7 +124,6 @@ scmart:jquery-timepicker@1.3.8
 service-configuration@1.0.5
 session@1.1.1
 sha@1.0.4
-softwarerero:accounts-t9n@1.2.1
 spacebars@1.0.7
 spacebars-compiler@1.0.7
 srp@1.0.4
@@ -150,8 +138,5 @@ tracker@1.0.9
 ui@1.0.8
 underscore@1.0.4
 url@1.0.5
-useraccounts:core@1.13.1
-useraccounts:iron-routing@1.13.1
-useraccounts:materialize@1.13.1
 webapp@1.2.3
 webapp-hashing@1.0.5

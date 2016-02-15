@@ -23,7 +23,7 @@ Members.deny({
     return true;
   }
 });
-
+/*
 
 Members.attachSchema(new SimpleSchema({
   first:{
@@ -227,7 +227,7 @@ photo:{
 
 
 //schema
-
+*/
 Account = new Mongo.Collection("accounts");
 Account.allow({
   insert: function(){
@@ -277,7 +277,7 @@ Account.deny({
   }
 });
 
-
+/*
 //schema
 Evaluation.attachSchema(new SimpleSchema({
   memberID:{
@@ -483,3 +483,4 @@ Evaluation.attachSchema(new SimpleSchema({
   },
 
 }));
+*/

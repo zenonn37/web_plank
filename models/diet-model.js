@@ -1,4 +1,5 @@
 Diets = new Mongo.Collection('diets');
+/*
 Diets.attachSchema(new SimpleSchema({
     name:{
       type:String,
@@ -41,7 +42,7 @@ Diets.attachSchema(new SimpleSchema({
       }
 
     }
-}));
+}));*/
 Diets.allow({
   insert: function(){
     return false;

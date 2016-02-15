@@ -17,15 +17,11 @@ es5-shim                # ECMAScript 5 compatibility for older browsers.
 ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 insecure                # Allow all DB writes from clients (for prototyping)
-iron:router
 aramk:ionicons
 fortawesome:fontawesome
 meteortoys:allthings
-useraccounts:materialize
 accounts-password
 accounts-facebook
-maazalik:highcharts
-useraccounts:iron-routing
 random
 check
 chart:chart
@@ -37,8 +33,6 @@ chriswessels:back-behaviour
 reactive-var
 aldeed:collection2
 fourseven:scss
-gildaspk:autoform-materialize@0.0.25
-aldeed:autoform@5.0.0
 natestrauser:animate-css
 stylus
 alanning:roles

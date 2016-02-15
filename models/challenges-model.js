@@ -1,4 +1,5 @@
 Challenges = new Mongo.Collection('challenges');
+/*
 Challenges.attachSchema(new SimpleSchema({
     name:{
       type:String,
@@ -90,6 +91,7 @@ Challenges.attachSchema(new SimpleSchema({
 
     }
 }));
+*/
 Challenges.allow({
   insert: function(){
     return true;

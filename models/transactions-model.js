@@ -21,7 +21,7 @@ Transactions.deny({
     return true;
   }
 });
-
+/*
 //schema
 Transactions.attachSchema(new SimpleSchema({
     amount:{
@@ -83,3 +83,4 @@ Transactions.attachSchema(new SimpleSchema({
       }
     }
 }));
+*/

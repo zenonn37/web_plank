@@ -1,4 +1,5 @@
 Companion = new Mongo.Collection('companion');
+/*
 Companion.attachSchema(new SimpleSchema({
     email:{
       type:String,
@@ -23,6 +24,7 @@ Companion.attachSchema(new SimpleSchema({
 
     }
 }));
+*/
 Companion.allow({
   insert: function(){
     return false;
