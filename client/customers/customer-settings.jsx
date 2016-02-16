@@ -3,7 +3,7 @@ Customers.BaseSettings = React.createClass({
     return(
       <div>
       <h2>Base Settings</h2>
-      <Profile/>
+      <Setting/>
       </div>
     )
   }

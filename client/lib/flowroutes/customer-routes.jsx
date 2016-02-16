@@ -4,7 +4,7 @@ var customers = FlowRouter.group({
     console.log("customers only");
 
   }],
-  prefix:'/customers'
+  prefix:'/companion'
 });
 
 customers.route('/',{

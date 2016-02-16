@@ -1,7 +1,11 @@
 Dashboard = React.createClass({
   render:function() {
+    var title = this.props.title;
+    var color = this.props.color;
     return(
-      <h1>Dashboard</h1>
+      <div>
+      <h5 className={color}>{title}</h5>
+      </div>
     )
   }
 });

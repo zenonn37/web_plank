@@ -98,6 +98,7 @@ mrt:jquery-ui@1.9.2
 mrt:moment@2.8.1
 msavin:jetsetter@1.5.2
 msavin:mongol@1.6.2
+nahue:simple-line-icons@1.0.0
 natestrauser:animate-css@3.4.0
 npm-bcrypt@0.7.8_2
 npm-mongo@1.4.39_1
