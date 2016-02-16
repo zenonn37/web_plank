@@ -71,6 +71,8 @@ materialize:materialize@0.97.5
 mdg:validation-error@0.2.0
 meteor@1.1.10
 meteor-base@1.0.1
+meteorhacks:async@1.0.0
+meteorhacks:npm@1.5.0
 meteorhacks:ssr@2.2.0
 meteortoys:allthings@2.3.1
 meteortoys:authenticate@2.1.0
@@ -101,6 +103,7 @@ msavin:mongol@1.6.2
 nahue:simple-line-icons@1.0.0
 natestrauser:animate-css@3.4.0
 npm-bcrypt@0.7.8_2
+npm-container@1.2.0
 npm-mongo@1.4.39_1
 oauth@1.1.6
 oauth2@1.1.5

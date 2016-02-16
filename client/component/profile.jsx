@@ -1,6 +1,7 @@
 Profile = React.createClass({
   render:function() {
     return(
+      <div>
     <div className="row">
         <div className="col s12">
           <div className="team-stat-card">
@@ -47,7 +48,7 @@ Profile = React.createClass({
                         <li><h6>Age</h6><span>27</span>  </li>
                         <li><h6>Phone</h6><span>1-212-456-7897</span>  </li>
                         <li><h6>Email</h6><span>ann@gmail.com</span>  </li>
-                        
+
 
 
                       </ul>
@@ -70,6 +71,18 @@ Profile = React.createClass({
              </div>
             </div>
 
+            <div className="row">
+            <div className="col s12">
+             <div className="profile-titles">
+             <h6>Bio</h6>
+             <p>Aliquam sit amet placerat dui. Nullam eu orci quis libero porttitor consequat.
+              Ut fermentum sapien mi. Donec pharetra, tortor nec placerat laoreet, tortor elit
+              interdum tortor, at eleifend metus urna sit amet ex. Pellentesque quis mattis tortor.
+              Suspendisse eget lobortis mauris, et mollis dui. Nunc tempor neque ac quam efficitur pretium. Donec vitae eros ac sem hendrerit consectetur. Phasellus sagittis dapibus metus vehicula venenatis. Sed tincidunt orci metus. Nunc sed libero non eros dapibus scelerisque in at velit. Maecenas nec justo id justo vehicula dapibus. Integer et lectus sit amet est iaculis aliquam in sagittis felis. Suspendisse lacus ex, tristique ut dictum et, dapibus eget ante.
+              Duis iaculis tortor a dui imperdiet, nec euismod quam dignissim. Nam quis augue a augue pretium eleifend sit amet at mauris.</p>
+             </div>
+            </div>
+            </div>
           </div>
 
 
@@ -77,6 +90,8 @@ Profile = React.createClass({
 
      </div>
      </div>
+    </div>
+
     </div>
     )
   }

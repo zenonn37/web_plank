@@ -5,7 +5,7 @@ Customers.BaseDash = React.createClass({
     return(
       <div>
         <h2>Base Parent</h2>
-      <Dashboard title={title} color={titleColor}/>
+      <CompanionDashboard title={title} color={titleColor}/>
       </div>
     )
   }

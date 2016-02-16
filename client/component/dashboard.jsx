@@ -1,4 +1,4 @@
-Dashboard = React.createClass({
+CompanionDashboard = React.createClass({
   render:function() {
     var title = this.props.title;
     var color = this.props.color;
