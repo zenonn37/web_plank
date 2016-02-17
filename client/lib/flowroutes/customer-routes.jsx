@@ -60,13 +60,6 @@ companion.route('/profile',{
   }
 
 });
-companion.route('/challenges',{
-  name:'challenges',
-  action:function() {
-    ReactLayout.render(Customers.Customer,{yield:<Customers.Challenges />});
-  }
-
-});
 companion.route('/goals',{
   name:'goals',
   action:function() {
@@ -120,5 +113,52 @@ companion.route('/gallery',{
   name:'gallery',
   action:function() {
     ReactLayout.render(Customers.Customer,{yield:<Customers.Gallery />});
+  }
+});
+//challenges
+
+companion.route('/challenges',{
+  name:'challenges',
+  action:function() {
+    ReactLayout.render(Customers.Customer,{yield:<Customers.CustomerChallenge />});
+  }
+
+});
+
+
+companion.route('/mychallenges',{
+  name:'mychallenges',
+  action:function() {
+    ReactLayout.render(Customers.Customer,{yield:<Challenge.MyChallenges />});
+  }
+});
+companion.route('/friendchallenges',{
+  name:'friendchallenges',
+  action:function() {
+    ReactLayout.render(Customers.Customer,{yield:<Challenge.FriendChallenges />});
+  }
+});
+companion.route('/prochallenges',{
+  name:'prochallenges',
+  action:function() {
+    ReactLayout.render(Customers.Customer,{yield:<Challenge.ProChallenges />});
+  }
+});
+companion.route('/friendchallenges/:_id',{
+  name:'friendchallenges',
+  action:function() {
+    ReactLayout.render(Customers.Customer,{yield:<Challenge.FriendChallenge />});
+  }
+});
+companion.route('/prochallenges/:_id',{
+  name:'prochallenges',
+  action:function() {
+    ReactLayout.render(Customers.Customer,{yield:<Challenge.proChallenge />});
+  }
+});
+companion.route('/mychallenge/:_id',{
+  name:'mychallenge',
+  action:function() {
+    ReactLayout.render(Customers.Customer,{yield:<Challenge.MyChallenge />});
   }
 });

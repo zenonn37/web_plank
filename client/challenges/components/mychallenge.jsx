@@ -1,8 +1,8 @@
-Customers.Challenges = React.createClass({
+Challenge.MyChallenge = React.createClass({
   render:function() {
     return(
       <div>
-      <h1>Challenges</h1>
+      <h1>My Challenge</h1>
       </div>
     )
   }
